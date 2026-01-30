@@ -1,0 +1,222 @@
+{
+  "products": [
+    {
+      "id": "ff-001",
+      "name": "Red Apples",
+      "description": "Crisp and sweet red apples, perfect for snacking or baking. Rich in fiber and antioxidants.",
+      "price": 4.99,
+      "originalPrice": 6.99,
+      "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&h=400&fit=crop",
+      "categoryId": "fresh-fruits",
+      "stock": 150,
+      "unit": "kg",
+      "rating": 4.8,
+      "reviews": 124,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-01-15"
+    },
+    {
+      "id": "ff-002",
+      "name": "Bananas",
+      "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
+      "price": 2.49,
+      "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=400&fit=crop",
+      "categoryId": "fresh-fruits",
+      "stock": 200,
+      "unit": "bunch",
+      "rating": 4.6,
+      "reviews": 89,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-01-14"
+    },
+    {
+      "id": "ff-003",
+      "name": "Fresh Oranges",
+      "description": "Juicy navel oranges bursting with vitamin C. Perfect for juicing or eating fresh.",
+      "price": 5.99,
+      "originalPrice": 7.49,
+      "image": "https://images.unsplash.com/photo-1547514701-42782101795e?w=400&h=400&fit=crop",
+      "categoryId": "fresh-fruits",
+      "stock": 120,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 156,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-01-13"
+    },
+    {
+      "id": "fv-001",
+      "name": "Tomatoes",
+      "description": "Vine-ripened tomatoes, perfect for salads, sauces, and cooking.",
+      "price": 3.99,
+      "image": "https://images.unsplash.com/photo-1546470427-227c7369d730?w=400&h=400&fit=crop",
+      "categoryId": "fresh-vegetables",
+      "stock": 180,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 145,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-01-15"
+    },
+    {
+      "id": "hg-001",
+      "name": "Fresh Basil",
+      "description": "Aromatic fresh basil leaves, perfect for Italian dishes and pesto.",
+      "price": 2.99,
+      "image": "https://images.unsplash.com/photo-1618375569909-3c8616cf7733?w=400&h=400&fit=crop",
+      "categoryId": "herbs-greens",
+      "stock": 100,
+      "unit": "bunch",
+      "rating": 4.8,
+      "reviews": 89,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-01-15"
+    },
+    {
+      "id": "df-001",
+      "name": "Medjool Dates",
+      "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
+      "price": 12.99,
+      "image": "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?w=400&h=400&fit=crop",
+      "categoryId": "dried-fruits",
+      "stock": 60,
+      "unit": "500g",
+      "rating": 4.9,
+      "reviews": 234,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-01-15"
+    },
+    {
+      "id": "nt-001",
+      "name": "Raw Almonds",
+      "description": "Premium raw almonds, perfect for snacking and baking.",
+      "price": 14.99,
+      "originalPrice": 17.99,
+      "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400&h=400&fit=crop",
+      "categoryId": "nuts",
+      "stock": 80,
+      "unit": "500g",
+      "rating": 4.9,
+      "reviews": 267,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-01-15"
+    }
+  ],
+
+  "categories": [
+    {
+      "id": "fresh-fruits",
+      "name": "Fresh Fruits",
+      "description": "Handpicked fresh fruits from local and international farms",
+      "image": "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&h=300&fit=crop",
+      "productCount": 49,
+      "slug": "fresh-fruits"
+    },
+    {
+      "id": "fresh-vegetables",
+      "name": "Fresh Vegetables",
+      "description": "Farm-fresh vegetables delivered daily",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop",
+      "productCount": 22,
+      "slug": "fresh-vegetables"
+    },
+    {
+      "id": "herbs-greens",
+      "name": "Herbs & Greens",
+      "description": "Aromatic herbs and leafy greens",
+      "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&h=300&fit=crop",
+      "productCount": 22,
+      "slug": "herbs-greens"
+    },
+    {
+      "id": "dried-fruits",
+      "name": "Dried Fruits",
+      "description": "Premium quality dried fruits and berries",
+      "image": "https://images.unsplash.com/photo-1596273501048-f0f0c9e7a7f8?w=400&h=300&fit=crop",
+      "productCount": 9,
+      "slug": "dried-fruits"
+    },
+    {
+      "id": "dried-vegetables",
+      "name": "Dried Vegetables",
+      "description": "Sun-dried vegetables for long-lasting freshness",
+      "image": "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=400&h=300&fit=crop",
+      "productCount": 0,
+      "slug": "dried-vegetables"
+    },
+    {
+      "id": "nuts",
+      "name": "Nuts",
+      "description": "Premium nuts and seeds for healthy snacking",
+      "image": "https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=400&h=300&fit=crop",
+      "productCount": 21,
+      "slug": "nuts"
+    },
+    {
+      "id": "ready-to-cook",
+      "name": "Ready to Cook",
+      "description": "Pre-prepared ingredients for quick cooking",
+      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      "productCount": 0,
+      "slug": "ready-to-cook"
+    },
+    {
+      "id": "ready-to-use-vegetables",
+      "name": "Ready-to-use Vegetables",
+      "description": "Pre-cut and washed vegetables ready to use",
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+      "productCount": 0,
+      "slug": "ready-to-use-vegetables"
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "name": "Hassan",
+      "email": "hassan@gmail.com",
+      "password": "123456",
+      "country": "Egypt",
+      "city": "Cairo",
+      "role": "customer"
+    }
+  ],
+
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 4.99,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 9.98,
+      "status": "pending",
+      "createdAt": "2024-01-20"
+    }
+  ],
+
+  "carts": [
+     { 
+      "id": 1, 
+      "userId": 1, 
+      "items": [ 
+        { 
+          "productId": 1, 
+          "quantity": 1
+        } 
+      ] 
+    } 
+  ]
+}
