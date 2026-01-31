@@ -3,74 +3,145 @@
     <p class="mb-1 text-xl font-bold">Create account</p>
     <p style="color: #8e9c98">Join Fresh Market for fresh products delivered to you</p>
   </div>
-  <form class="w-full flex flex-col gap-3">
+  <form [formGroup]="signUpForm" (submit)="signUp()" class="w-full flex flex-col gap-3">
     <div class="flex flex-col gap-1">
       <label for="name" class="font-semibold">Full Name</label>
       <input
+        formControlName="name"
         type="text"
         name="name"
         placeholder="hassan elgraihy"
         class="py-1.5 px-2 rounded-lg outline-0"
         style="background-color: #f9faf9"
       />
+      @if (inValidName()) {
+        @if (signUpForm?.controls?.name?.errors!['required']) {
+          <p class="text-sm text-red-500">Name is required</p>
+        } @else if (signUpForm?.controls?.name?.errors!['minlength']) {
+          <p class="text-sm text-red-500">Name must be at least 3 characters long.</p>
+        } @else if (signUpForm?.controls?.name?.errors!['maxlength']) {
+          <p class="text-sm text-red-500">Name must be no more than 24 characters.</p>
+        } @else {
+          <p class="text-sm text-red-500">Name contains invalid characters.</p>
+        }
+      }
     </div>
     <div class="flex flex-col gap-1">
-      <label for="emial" class="font-semibold">Email</label>
+      <label for="email" class="font-semibold">Email</label>
       <input
+        formControlName="email"
         type="email"
-        name="emial"
+        name="email"
         placeholder="hassan@gmail.com"
         class="py-1.5 px-2 rounded-lg outline-0"
         style="background-color: #f9faf9"
       />
+      @if (inValidEmail()) {
+        @if (signUpForm?.controls?.email?.errors!['required']) {
+          <p class="text-sm text-red-500">Email is required</p>
+        } @else if (signUpForm?.controls?.email?.errors!['email']) {
+          <p class="text-sm text-red-500">Please enter a valid email address.</p>
+        }
+      }
     </div>
     <div class="flex gap-3 w-full">
       <div class="flex flex-col gap-1 flex-1 min-w-0">
         <label for="country" class="font-semibold">Country</label>
-        <select name="country" class="py-1.5 px-2 rounded-lg outline-0 bg-[#f9faf9]">
+        <select
+          formControlName="country"
+          name="country"
+          class="py-1.5 px-2 rounded-lg outline-0 bg-[#f9faf9]"
+        >
           <option value="" disabled selected>Select country</option>
           <option value="eg">Egypt</option>
           <option value="sa">Saudi Arabia</option>
           <option value="ae">UAE</option>
         </select>
+        @if (inValidCountry()) {
+          @if (signUpForm?.controls?.country?.errors!['required']) {
+            <p class="text-sm text-red-500">Country is required</p>
+          }
+        }
       </div>
       <div class="flex flex-col gap-1 flex-1 min-w-0">
         <label for="city" class="font-semibold">City</label>
         <input
+          formControlName="city"
           type="text"
           name="city"
           placeholder="Cairo"
           class="py-1.5 px-2 rounded-lg outline-0"
           style="background-color: #f9faf9"
         />
+        @if (inValidCity()) {
+          @if (signUpForm?.controls?.city?.errors!['required']) {
+            <p class="text-sm text-red-500">city is required</p>
+          } @else if (signUpForm?.controls?.city?.errors!['minlength']) {
+            <p class="text-sm text-red-500">city must be at least 3 characters long.</p>
+          } @else if (signUpForm?.controls?.city?.errors!['maxlength']) {
+            <p class="text-sm text-red-500">city must be no more than 24 characters.</p>
+          } @else {
+            <p class="text-sm text-red-500">city contains invalid characters.</p>
+          }
+        }
       </div>
     </div>
     <div class="flex flex-col gap-1">
       <label for="password" class="font-semibold">Password</label>
       <input
+        formControlName="password"
         type="password"
         name="password"
         placeholder="****"
         class="py-1.5 px-2 rounded-lg outline-0"
         style="background-color: #f9faf9"
       />
+      @if (inValidPassword()) {
+        @if (signUpForm?.controls?.password?.errors!['required']) {
+          <p class="text-sm text-red-500">Password is required</p>
+        } @else if (signUpForm?.controls?.password?.errors!['pattern']) {
+          <p class="text-sm text-red-500">
+            Password must contain at least 8 characters, 1 uppercase, 1 lowercase, 1 number, and 1
+            special character.
+          </p>
+        }
+      }
     </div>
     <div class="flex flex-col gap-1">
-      <label for="Confirm Password" class="font-semibold">Confirm Password</label>
+      <label for="confirmPassword" class="font-semibold">Confirm Password</label>
       <input
+        formControlName="confirmPassword"
         type="password"
-        name="Confirm Password"
+        name="confirmPassword"
         placeholder="****"
         class="py-1.5 px-2 rounded-lg outline-0"
         style="background-color: #f9faf9"
       />
+      @if (inValidConfirmPassword()) {
+        @if (signUpForm?.controls?.confirmPassword?.errors!['required']) {
+          <p class="text-sm text-red-500">Confirm Password is required</p>
+        }
+      }
+      @if (
+        signUpForm.get('confirmPassword')?.value !== signUpForm.get('password')?.value &&
+        (signUpForm.get('confirmPassword')?.touched || signUpForm.get('confirmPassword')?.dirty) &&
+        !inValidConfirmPassword()
+      ) {
+        <p class="text-sm text-red-500">Passwords do not match</p>
+      }
     </div>
     <button
       type="submit"
       class="py-2 px-2 mt-4 rounded-lg text-white font-semibold"
       style="background-color: #638c7f"
     >
-      Sign Up
+      @if (!isSigned()) {
+        Sign Up
+      } @else {
+        <div class="w-full flex justify-center">
+          <span class="loading loading-spinner text-white"></span>
+        </div>
+      }
     </button>
   </form>
 </div>

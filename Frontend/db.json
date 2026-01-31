@@ -109,7 +109,6 @@
       "createdAt": "2024-01-15"
     }
   ],
-
   "categories": [
     {
       "id": "fresh-fruits",
@@ -176,22 +175,218 @@
       "slug": "ready-to-use-vegetables"
     }
   ],
-
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Hassan",
       "email": "hassan@gmail.com",
       "password": "123456",
       "country": "Egypt",
       "city": "Cairo",
       "role": "customer"
+    },
+    {
+      "id": "dcc6",
+      "userName": "hassan elgraihy",
+      "email": "hassanelgraihy2002@yahoo.com",
+      "country": "eg",
+      "city": "cairo",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "519b",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "3af8",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "99db",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "fba8",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "6bfe",
+      "userName": "hassan elgraihyyyy",
+      "email": "hassanelgraihy2002@yahoo.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan__123",
+      "role": "customer"
+    },
+    {
+      "id": "e2e3",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "cairooo",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "ac81",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "cairooo",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "6fb8",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "cairooo",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "2e7a",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "2ed3",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_1234",
+      "role": "customer"
+    },
+    {
+      "id": "8393",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Saidd",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "28ef",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "7f6b",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "3a4b",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "501c",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "632d",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "2437",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "12e6",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "be16",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "98ef",
+      "userName": "hassan elgraihy",
+      "email": "hassanelgraihy2002@yahoo.com",
+      "country": "eg",
+      "city": "cairo",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "54a8",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
     }
   ],
-
   "orders": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "items": [
         {
@@ -206,17 +401,16 @@
       "createdAt": "2024-01-20"
     }
   ],
-
   "carts": [
-     { 
-      "id": 1, 
-      "userId": 1, 
-      "items": [ 
-        { 
-          "productId": 1, 
+    {
+      "id": "1",
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
           "quantity": 1
-        } 
-      ] 
-    } 
+        }
+      ]
+    }
   ]
 }

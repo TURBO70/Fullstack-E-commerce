@@ -1,4 +1,26 @@
 <div class="page-container w-full min-h-screen flex flex-col justify-center py-4">
+  @if (showMessage()) {
+    <div
+      role="alert"
+      class="text-white font-semibold duration-1000 alert alert-success fixed top-3 right-3 z-20 transition-opacity duration-500"
+      [style.opacity]="messageOpacity()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 shrink-0 stroke-current"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      <span>successfull registeration!</span>
+    </div>
+  }
   <div class="main-container md:w-[450px] w-[90%] flex flex-col gap-6 mx-auto">
     <div class="header flex justify-center items-center gap-2">
       <svg
@@ -47,7 +69,7 @@
       @if (isLogin) {
         <app-login class="w-full"></app-login>
       } @else {
-        <app-sign-up class="w-full"></app-sign-up>
+        <app-sign-up class="w-full" (isSignedEvent)="reset($event)"></app-sign-up>
       }
     </div>
     <p class="back cursor-pointer w-full text-center">← Back to Home</p>
