@@ -1,0 +1,48 @@
+=<div
+  class="group cursor-pointer rounded overflow-hidden bg-white shadow hover:shadow-lg transition-all"
+  (click)="goToDetails()"
+>
+  <div class="relative aspect-square overflow-hidden bg-gray-100">
+    <img
+      [src]="product.image"
+      [alt]="product.name"
+      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+    />
+
+    <!-- Organic Badge -->
+    <span
+      *ngIf="product.isOrganic"
+      class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded flex items-center gap-1"
+    >
+      🌿 Organic
+    </span>
+  </div>
+
+  <div class="p-4 flex flex-col">
+    <h3 class="font-semibold text-lg line-clamp-1 group-hover:text-[#354c48] transition-colors">
+      {{ product.name }}
+    </h3>
+    <p class="text-gray-700 mt-1 text-sm line-clamp-2">{{ product.description }}</p>
+
+    <div class="flex items-center gap-2 mt-2">
+      <div class="flex items-center gap-1">
+        ⭐
+        <span class="text-sm font-medium">{{ product.rating }}</span>
+      </div>
+      <span class="text-xs text-gray-500">({{ product.reviews }} reviews)</span>
+    </div>
+
+    <div class="flex items-baseline gap-2 mt-2">
+      <span class="text-lg font-bold text-[#679089]">${{ product.price.toFixed(2) }}</span>
+      <span
+        *ngIf="product.originalPrice"
+        class="text-sm text-gray-400 line-through"
+      >
+        ${{ product.originalPrice.toFixed(2) }}
+      </span>
+      <span class="text-xs text-gray-500">/{{ product.unit }}</span>
+    </div>
+
+   
+  </div>
+</div>
