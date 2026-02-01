@@ -1,0 +1,16 @@
+<div
+  class="bg-amber-300 aspect-[4/3] relative rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-200 hover:-translate-y-1 group cursor-pointer"
+>
+  <div
+    class="z-2 w-full h-3/5 bg-gradient-to-t from-black/80 via-black/20 to-transparent absolute bottom-0"
+  ></div>
+  <img
+    [src]="src"
+    alt="Fresh Fruits"
+    class="h-full w-full object-cover group-hover:scale-107 transition-transform duration-150"
+  />
+  <div class="z-5 absolute bottom-3 left-2.5 flex flex-col">
+    <p class="text-white font-bold text-lg">{{name}}</p>
+    <p class="text-white/70 text-sm">{{productCounts}} products</p>
+  </div>
+</div>

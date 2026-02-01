@@ -382,6 +382,15 @@
       "city": "Port Said",
       "password": "Hassan_123",
       "role": "customer"
+    },
+    {
+      "id": "6f79",
+      "userName": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_23",
+      "role": "customer"
     }
   ],
   "orders": [

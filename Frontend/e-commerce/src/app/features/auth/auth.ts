@@ -20,7 +20,7 @@ export class Auth {
       setTimeout(() => {
         this.messageOpacity.set(0);
         this.showMessage.set(false);
-      }, 200);
+      }, 2000);
     }
   }
   isSigned = signal(false);
