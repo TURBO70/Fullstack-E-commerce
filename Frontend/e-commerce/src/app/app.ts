@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Auth } from "./features/auth/auth";
+import { CategoryService } from './core/services/category_service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,5 @@ import { Auth } from "./features/auth/auth";
 })
 export class App {
   protected readonly title = signal('e-commerce');
-}
+  
+  }
