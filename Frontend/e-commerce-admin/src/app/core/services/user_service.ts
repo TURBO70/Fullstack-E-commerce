@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { user } from '../../shared/models/user_model';
+import { user } from '../../models/user_model';
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   constructor(private http: HttpClient) {}
   private BaseUrl = 'http://localhost:3000/users';
-  
+
   getAllUsers() {
     return this.http.get<user[]>(this.BaseUrl);
   }

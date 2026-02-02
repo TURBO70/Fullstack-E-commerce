@@ -3,7 +3,6 @@ import { ProductsList } from './features/products/products-list/products-list';
 import { Auth } from './features/auth/auth';
 import { Home } from './features/home/home';
 import { CategoriesPage } from './features/categories/categories-page/categories-page';
-
 import { Cart } from './features/cart/cart';
 
 export const routes: Routes = [
