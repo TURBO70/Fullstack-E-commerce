@@ -9,4 +9,5 @@ export const routes: Routes = [
   { path: 'auth', component: Auth },
   { path: 'categories', component: CategoriesPage },
   { path: 'products', component: ProductsList },
+
 ];
