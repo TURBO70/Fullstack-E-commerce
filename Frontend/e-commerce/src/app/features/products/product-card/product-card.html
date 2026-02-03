@@ -8,8 +8,6 @@
       [alt]="product.name"
       class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
     />
-
-    <!-- Organic Badge -->
     <span
       *ngIf="product.isOrganic"
       class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded flex items-center gap-1"
@@ -44,6 +42,7 @@
     </div>
 
     <button
+    (click)="handleAddToCart($event)"
             class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer bg-[#afd2cd] hover:bg-[#354c48] hover:text-white"
           >
             <svg
