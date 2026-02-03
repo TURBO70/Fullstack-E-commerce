@@ -1,15 +1,20 @@
-name: Node.js CI
+name: Angular CI
+
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: Frontend/e-commerce
+
     steps:
     - uses: actions/checkout@v4
     
@@ -21,5 +26,6 @@ jobs:
         cache-dependency-path: Frontend/e-commerce/package-lock.json
         
     - run: npm ci
-    - run: npm run build --if-present
+    # - run: npm run build --if-present
+    - run: npm run build
     # - run: npm test
