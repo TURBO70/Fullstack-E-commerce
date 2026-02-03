@@ -391,6 +391,60 @@
       "city": "Port Said",
       "password": "Hassan_23",
       "role": "customer"
+    },
+    {
+      "id": "ca0f",
+      "name": "adds fdsfs",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "cd2d",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "1aa6",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "3c18",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "7316",
+      "name": "hassan",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "ae16",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "ae",
+      "city": "Port Said",
+      "password": "Hassan_1",
+      "role": "customer"
     }
   ],
   "orders": [

@@ -10,7 +10,7 @@ import { UserService } from '../../../../core/services/user_service';
 })
 export class SignUp {
   constructor(private user: UserService) {}
-
+  confirmPass = signal(true);
   textReg = '^[A-Za-z]+(?: [A-Za-z]+)*$';
   passReg = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{8,}$';
   signUpForm = new FormGroup({
@@ -32,6 +32,7 @@ export class SignUp {
     password: new FormControl('', [Validators.required, Validators.pattern(this.passReg)]),
     confirmPassword: new FormControl('', [Validators.required]),
   });
+
   inValidName() {
     return (
       this.signUpForm.get('name')?.invalid &&
@@ -68,22 +69,37 @@ export class SignUp {
   }
 
   inValidConfirmPassword() {
+    const confirm = this.signUpForm.get('confirmPassword');
     return (
-      this.signUpForm.get('confirmPassword')?.invalid &&
-      (this.signUpForm.get('confirmPassword')?.touched ||
-        this.signUpForm.get('confirmPassword')?.dirty)
+      (confirm?.invalid || this.signUpForm.hasError('passwordMismatch')) &&
+      (confirm?.touched || confirm?.dirty)
     );
+  }
+
+  mathcPass() {
+    if (
+      this.signUpForm.get('confirmPassword')?.value !== this.signUpForm.get('password')?.value &&
+      (this.signUpForm.get('confirmPassword')?.touched ||
+        this.signUpForm.get('confirmPassword')?.dirty) &&
+      !this.inValidConfirmPassword()
+    ) {
+      this.confirmPass.set(false);
+      console.log('not match');
+    } else {
+      this.confirmPass.set(true);
+    }
   }
   @Output() isSignedEvent = new EventEmitter<boolean>();
 
   isSigned = signal(false);
 
   signUp() {
+    this.mathcPass();
     this.signUpForm.markAllAsTouched();
-    if (this.signUpForm.valid) {
+    if (this.signUpForm.valid && this.confirmPass() == true) {
       this.isSigned.set(true);
       let _user = {
-        userName: this.signUpForm.get('name')?.value!,
+        name: this.signUpForm.get('name')?.value!,
         email: this.signUpForm.get('email')?.value!,
         country: this.signUpForm.get('country')?.value!,
         city: this.signUpForm.get('city')?.value!,

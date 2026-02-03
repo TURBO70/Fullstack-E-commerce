@@ -10,12 +10,18 @@ import { RouterLink } from "@angular/router";
 })
 export class Header {
   isMenuOpen = false;
+  isOpenProfile = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+  toggleProfile() {
+    this.isOpenProfile = !this.isOpenProfile;
+  }
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.isOpenProfile = false;
   }
+
 }

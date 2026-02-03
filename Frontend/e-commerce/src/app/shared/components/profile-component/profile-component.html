@@ -1,0 +1,70 @@
+<div class="max-w-5xl mx-auto p-8 font-sans text-slate-900">
+  <h1 class="text-2xl font-bold mb-6">My Account</h1>
+
+  <div class="flex gap-3 mb-6">
+    <button 
+      (click)="setTab('profile')"
+      [class.bg-white]="activeTab() === 'profile'"
+      [class.shadow-sm]="activeTab() === 'profile'"
+      [class.text-slate-500]="activeTab() !== 'profile'"
+      class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all border border-slate-200">
+      👤 Profile
+    </button>
+    
+    <button 
+      (click)="setTab('orders')"
+      [class.bg-white]="activeTab() === 'orders'"
+      [class.text-slate-500]="activeTab() !== 'orders'"
+      class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all bg-slate-100/60 border border-transparent">
+      🛍️ Orders
+    </button>
+  </div>
+
+  @if (currentUser()) {
+    @if (activeTab() === 'profile') {
+      <div class="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+        <div class="flex justify-between items-start mb-10">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">👤</span>
+            <h2 class="text-xl font-semibold">Profile Information</h2>
+          </div>
+          <button class="px-4 py-1.5 border border-slate-300 rounded-lg text-sm font-medium hover:bg-slate-50">
+            ✏️ Edit
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+          <div class="space-y-1">
+            <p class="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Full Name</p>
+            <p class="font-bold text-[15px]">{{ currentUser()?.name }}</p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Email</p>
+            <p class="font-bold text-[15px]">{{ currentUser()?.email }}</p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Location</p>
+            <p class="font-bold text-[15px]">📍 {{ currentUser()?.city }}</p>
+          </div>
+
+          <div class="space-y-2">
+            <p class="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Role</p>
+            <span class="inline-flex px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-[12px] font-semibold">
+              {{ currentUser()?.role || 'Customer' }}
+            </span>
+          </div>
+        </div>
+      </div>
+    }
+  } @else {
+    <div class="p-8 border border-slate-200 rounded-xl bg-white animate-pulse">
+      <div class="h-6 bg-slate-200 rounded w-1/4 mb-4"></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="h-10 bg-slate-100 rounded"></div>
+        <div class="h-10 bg-slate-100 rounded"></div>
+      </div>
+    </div>
+  }
+</div>
