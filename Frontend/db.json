@@ -111,7 +111,7 @@
   ],
   "categories": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Fresh Fruits",
       "description": "Handpicked fresh fruits from local and international farms",
       "image": "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&h=300&fit=crop",
@@ -119,7 +119,7 @@
       "slug": "fresh-fruits"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Fresh Vegetables",
       "description": "Farm-fresh vegetables delivered daily",
       "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop",
@@ -127,7 +127,7 @@
       "slug": "fresh-vegetables"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Herbs & Greens",
       "description": "Aromatic herbs and leafy greens",
       "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&h=300&fit=crop",
@@ -135,7 +135,7 @@
       "slug": "herbs-greens"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Dried Fruits",
       "description": "Premium quality dried fruits and berries",
       "image": "https://images.unsplash.com/photo-1596273501048-f0f0c9e7a7f8?w=400&h=300&fit=crop",
@@ -143,7 +143,7 @@
       "slug": "dried-fruits"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Dried Vegetables",
       "description": "Sun-dried vegetables for long-lasting freshness",
       "image": "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=400&h=300&fit=crop",
@@ -151,7 +151,7 @@
       "slug": "dried-vegetables"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Nuts",
       "description": "Premium nuts and seeds for healthy snacking",
       "image": "https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=400&h=300&fit=crop",
@@ -159,7 +159,7 @@
       "slug": "nuts"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Ready to Cook",
       "description": "Pre-prepared ingredients for quick cooking",
       "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
@@ -167,7 +167,7 @@
       "slug": "ready-to-cook"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Ready-to-use Vegetables",
       "description": "Pre-cut and washed vegetables ready to use",
       "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",

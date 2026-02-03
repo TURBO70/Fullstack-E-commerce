@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Product } from '../../../shared/models/product_model';
 import { ProductService } from '../../../core/services/product_service';
 import { ProductsGrid } from "../products-grid/products-grid";
@@ -16,14 +16,13 @@ import { ProductCard } from "../product-card/product-card";
   templateUrl: './products-list.html',
 })
 export class ProductsList {
-products: Product[] = [];
-  filteredProducts: Product[] = [];
+  products=signal([] as Product[] );
+  filteredProducts=signal([] as Product[] );
 
   categories: Category[] = [];
 
-  // Filters
   searchQuery: string = '';
-  selectedCategory: string = 'all';
+  selectedCategory: number = 0;
   showOrganic: boolean = false;
   priceRange: [number, number] = [0, 50];
   sortBy: string = 'featured';
@@ -36,9 +35,11 @@ products: Product[] = [];
   ) {}
 
   ngOnInit() {
-  this.productService.getAll().subscribe((data: Product[]) => {
-    this.products = data;
-    this.filteredProducts = [...data]; 
+
+  this.productService.getAll().subscribe(
+   (data: Product[]) => {
+    this.products.set(data);
+    this.filteredProducts.set(data); 
   });
 
   this.categoryService.getAll().subscribe((cats: Category[]) => {
@@ -47,8 +48,9 @@ products: Product[] = [];
 }
 
 
-  filterProducts() {
-    let result = [...this.products];
+  filterProducts2() {
+    let result = [...this.products()];
+          console.log(55);
 
     if (this.searchQuery) {
       const query = this.searchQuery.toLowerCase();
@@ -59,9 +61,10 @@ products: Product[] = [];
       );
     }
 
-    if (this.selectedCategory && this.selectedCategory !== 'all') {
-      result = result.filter(p => p.categoryId.toString() === this.selectedCategory);
+    if (this.selectedCategory && this.selectedCategory !== 0) {
+      result = result.filter(p => p.categoryId === this.selectedCategory);
     }
+    
 
     if (this.showOrganic) {
       result = result.filter(p => p.isOrganic);
@@ -91,20 +94,20 @@ products: Product[] = [];
         result.sort((a, b) => (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0));
     }
 
-    this.filteredProducts = result;
+    this.filteredProducts.set(result) ;
   }
 
   clearFilters() {
     this.searchQuery = '';
-    this.selectedCategory = 'all';
+    this.selectedCategory = 0;
     this.showOrganic = false;
     this.priceRange = [0, 50];
     this.sortBy = 'featured';
-    this.filterProducts();
+    this.filterProducts2();
   }
 
   activeFiltersCount(): number {
-    return [this.searchQuery, this.selectedCategory !== 'all', this.showOrganic].filter(Boolean).length;
+    return [this.searchQuery, this.selectedCategory !== 0, this.showOrganic].filter(Boolean).length;
   }
 
   setViewMode(mode: 'grid' | 'list') {
