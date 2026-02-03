@@ -27,7 +27,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          # Lockfile is inside the Angular app directory
           cache-dependency-path: Frontend/e-commerce/package-lock.json
 
       - name: Install dependencies
