@@ -1,8 +1,10 @@
 export interface Category {
   id: number;
-  username: string;
+  name: string;
   description: string;
   image: string;
   productCount: number;
    slug: string;
 }
+
+
