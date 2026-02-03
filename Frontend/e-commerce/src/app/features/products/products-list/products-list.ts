@@ -2,7 +2,6 @@ import { Component, signal } from '@angular/core';
 import { Product } from '../../../shared/models/product_model';
 import { ProductService } from '../../../core/services/product_service';
 import { ProductsGrid } from "../products-grid/products-grid";
-import { Filters } from "../filters/filters";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Category } from '../../../shared/models/category_model';
@@ -11,7 +10,7 @@ import { ProductCard } from "../product-card/product-card";
 
 @Component({
   selector: 'app-products-list',
-  imports: [ProductsGrid, Filters, FormsModule, CommonModule, ProductCard],
+  imports: [ProductsGrid, FormsModule, CommonModule, ProductCard],
   
   templateUrl: './products-list.html',
 })
