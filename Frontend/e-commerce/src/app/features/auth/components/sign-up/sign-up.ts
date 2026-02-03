@@ -7,7 +7,10 @@ import { UserService } from '../../../../core/services/user_service';
   imports: [ReactiveFormsModule],
   templateUrl: './sign-up.html',
   styleUrl: './sign-up.css',
-})
+}) 
+
+
+
 export class SignUp {
   constructor(private user: UserService) {}
 
