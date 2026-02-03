@@ -20,6 +20,7 @@ export class CartService {
 
     shipping = computed(() => (this.subtotal() > 50 ? 0 : 10));
 
+
     total = computed(() => this.subtotal() + this.tax() + this.shipping());
 
     addToCart(product: Product) {
