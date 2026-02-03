@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core'; // Import signal
+import { Component, Input, OnInit, Signal, signal } from '@angular/core'; // Import signal
 import { CommonModule } from '@angular/common';
 import { user } from '../../models/user_model';
 import { UserService } from '../../../core/services/user_service';
@@ -10,25 +10,28 @@ import { UserService } from '../../../core/services/user_service';
   templateUrl: './profile-component.html',
   styleUrl: './profile-component.css',
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent{
   // 1. Initialize as a signal
-  currentUser = signal<user | undefined>(undefined);
-  activeTab = signal<'profile' | 'orders'>('profile');
+  // currentUser = signal<user | undefined>(undefined);
+  // activeTab = signal<'profile' | 'orders'>('profile');
 
-  constructor(private userService: UserService) { }
+  // constructor(private userService: UserService) { }
 
-  ngOnInit() {
-    this.userService.getUserById("1").subscribe({
-      next: (data) => {
-        // 2. Use .set() to update the signal value
-        this.currentUser.set(data);
-        console.log('Signal updated with:', data);
-      },
-      error: (err) => console.error('Service Error:', err)
-    });
-  }
+  // ngOnInit() {
+  //   this.userService.getUserById("1").subscribe({
+  //     next: (data) => {
+  //       // 2. Use .set() to update the signal value
+  //       this.currentUser.set(data);
+  //       console.log('Signal updated with:', data);
+  //     },
+  //     error: (err) => console.error('Service Error:', err)
+  //   });
+  // }
 
-  setTab(tab: 'profile' | 'orders') {
-    this.activeTab.set(tab);
-  }
+  // setTab(tab: 'profile' | 'orders') {
+  //   this.activeTab.set(tab);
+  // }
+  
+  @Input() currentUser!: Signal<user | null>;
+  
 }
