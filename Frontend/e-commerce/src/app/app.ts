@@ -8,11 +8,13 @@ import { Header } from './shared/components/header/header';
 import { Footer } from './shared/components/footer/footer';
 import { OrderComponent } from "./features/profile/order_component/order_component";
 import { ParentComponent } from './features/profile/parent-component/parent-component';
+import { ProductDetails } from "./features/products/product-details/product-details";
+import { ProfileComponent } from './features/profile/profile-component/profile-component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Auth, Header, Footer, ProductsList, OrderComponent, ParentComponent],
+  imports: [RouterOutlet, Auth, Header, Footer, ProductsList, OrderComponent, ParentComponent, ProductDetails, ProfileComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
