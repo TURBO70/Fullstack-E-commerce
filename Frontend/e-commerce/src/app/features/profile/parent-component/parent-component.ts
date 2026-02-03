@@ -1,11 +1,11 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfileComponent } from '../profile-component/profile-component';
-import { OrderComponent } from "../order_component/order_component";
+import { ProfileComponent } from '../../../features/profile/profile-component/profile-component';
+import { OrderComponent } from "../../../features/profile/order_component/order_component";
 import { UserService } from '../../../core/services/user_service';
-import { user } from '../../models/user_model';
-import { Order } from '../../models/order_model';
 import { OrderService } from '../../../core/services/order_service';
+import { user } from '../../../shared/models/user_model';
+import { Order } from '../../../shared/models/order_model';
 
 @Component({
   selector: 'app-parent-component',
