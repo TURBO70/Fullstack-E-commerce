@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Red Apples",
       "description": "Crisp and sweet red apples, perfect for snacking or baking. Rich in fiber and antioxidants.",
       "price": 4.99,
@@ -17,7 +17,7 @@
       "createdAt": "2024-01-15"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Bananas",
       "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
       "price": 2.49,
@@ -32,7 +32,7 @@
       "createdAt": "2024-01-14"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Fresh Oranges",
       "description": "Juicy navel oranges bursting with vitamin C. Perfect for juicing or eating fresh.",
       "price": 5.99,
@@ -48,7 +48,7 @@
       "createdAt": "2024-01-13"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Tomatoes",
       "description": "Vine-ripened tomatoes, perfect for salads, sauces, and cooking.",
       "price": 3.99,
@@ -63,7 +63,7 @@
       "createdAt": "2024-01-15"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Fresh Basil",
       "description": "Aromatic fresh basil leaves, perfect for Italian dishes and pesto.",
       "price": 2.99,
@@ -78,7 +78,7 @@
       "createdAt": "2024-01-15"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Medjool Dates",
       "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
       "price": 12.99,
@@ -93,7 +93,7 @@
       "createdAt": "2024-01-15"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Raw Almonds",
       "description": "Premium raw almonds, perfect for snacking and baking.",
       "price": 14.99,
