@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Signal, signal } from '@angular/core'; // Import signal
 import { CommonModule } from '@angular/common';
-import { user } from '../../models/user_model';
+import { user } from '../../../shared/models/user_model';
 import { UserService } from '../../../core/services/user_service';
 
 @Component({

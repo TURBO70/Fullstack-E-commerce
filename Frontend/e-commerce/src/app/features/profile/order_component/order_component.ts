@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, Signal, signal } from '@angular/core';
 // import { createNewOrder } from '../../../core/utils/orders.helpers';
 import { OrderService } from '../../../core/services/order_service';
-import { Order } from '../../models/order_model';
+import { Order } from '../../../shared/models/order_model';
 
 
 @Component({
