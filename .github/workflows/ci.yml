@@ -1,10 +1,6 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - main
-      - master
   pull_request:
     branches:
       - main
@@ -33,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: npm test -- --watch=false --browsers=ChromeHeadless || echo "Tests failed or not configured, continuing build"
+        run: npm test
 
       - name: Build Angular app
         run: npm run build -- --configuration=production
