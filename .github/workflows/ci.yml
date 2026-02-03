@@ -34,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: npm test -- --watch=false --browsers=ChromeHeadless || echo "Tests failed or not configured, continuing build"
+        run: npm test -- --run
 
       - name: Build Angular app
         run: npm run build -- --configuration=production
