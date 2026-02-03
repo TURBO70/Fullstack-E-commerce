@@ -86,7 +86,7 @@ export class SignUp {
     if (this.signUpForm.valid) {
       this.isSigned.set(true);
       let _user = {
-        name: this.signUpForm.get('name')?.value!,
+        Username: this.signUpForm.get('name')?.value!,
         email: this.signUpForm.get('email')?.value!,
         country: this.signUpForm.get('country')?.value!,
         city: this.signUpForm.get('city')?.value!,
