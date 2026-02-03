@@ -6,3 +6,5 @@ export interface Category {
   productCount: number;
    slug: string;
 }
+
+
