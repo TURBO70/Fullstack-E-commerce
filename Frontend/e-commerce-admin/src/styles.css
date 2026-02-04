@@ -1,14 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
 @theme {
   --color-primary: #638c7f;
   --color-secondary: #5c706a;
   --color-third: #d3dedb;
   --color-fourth: #e1e8e5;
   --color-myOrange: #e89c30;
+
   --color-myBg: #f9fbf9;
   --color-myCardBg: #fffeff;
   --color-darkerBg: #eff3f3;
+
   --color-border: #dee6e4;
+
+  --color-navbarBg: #f1f4f3;
+  --color-navbarText: #5c706a;
+  --color-success: #23c35d;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  --color-accent: #e89c30;
+  --color-accent-foreground: #111827;
+
+  --color-ring: #94a3b8;
+}
+
+.navbarActive {
+  background-color: var(--color-myCardBg);
+  color: black;
 }

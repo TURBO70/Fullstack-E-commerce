@@ -178,12 +178,12 @@
   "users": [
     {
       "id": "1",
-      "name": "Hassan",
+      "userName": "Hassan",
       "email": "hassan@gmail.com",
       "password": "123456",
       "country": "Egypt",
       "city": "Cairo",
-      "role": "customer"
+      "role": "admin"
     },
     {
       "id": "dcc6",
@@ -407,6 +407,57 @@
       ],
       "totalPrice": 9.98,
       "status": "pending",
+      "createdAt": "2024-01-20"
+    },
+    {
+      "id": "2",
+      "userId": 3,
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 15,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 30,
+      "status": "pending",
+      "createdAt": "2024-01-20"
+    },
+    {
+      "id": "3",
+      "userId": 4,
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 200,
+          "quantity": 5
+        }
+      ],
+      "totalPrice": 1000,
+      "status": "delivered",
+      "createdAt": "2024-01-20"
+    },
+    {
+      "id": "4",
+      "userId": 10,
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 4.99,
+          "quantity": 2
+        },
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 66,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 141.98,
+      "status": "shipped",
       "createdAt": "2024-01-20"
     }
   ],

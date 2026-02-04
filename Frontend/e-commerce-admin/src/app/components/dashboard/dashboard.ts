@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { Overview } from "../overview/overview";
 import { DashboardHeader } from "../dashboard-header/dashboard-header";
+import { DashboardOverview } from '../dashboard-overview/dashboard-overview';
+import { DashboardNavbar } from "../dashboard-navbar/dashboard-navbar";
+import { RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Overview, DashboardHeader],
+  imports: [DashboardOverview, DashboardHeader, DashboardNavbar, RouterModule],
   templateUrl: './dashboard.html',
   styles: ``,
 })

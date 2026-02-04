@@ -6,10 +6,10 @@ export interface OrderItem {
 }
 
 export interface Order {
-  // id?: string;
+  id?: string;
   userId: number;
   items: OrderItem[];
   totalPrice: number;
-  status: 'pending' | 'confirmed' | 'shipped';
+  status: 'pending' | 'delivered' | 'shipped';
   createdAt: string;
 }

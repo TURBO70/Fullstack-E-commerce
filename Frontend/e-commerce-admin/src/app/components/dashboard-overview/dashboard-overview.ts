@@ -7,12 +7,12 @@ import { user } from '../../models/user_model';
 import { Order } from '../../models/order_model';
 
 @Component({
-  selector: 'app-overview',
+  selector: 'app-dashboard-overview',
   imports: [],
-  templateUrl: './overview.html',
+  templateUrl: './dashboard-overview.html',
   styles: ``,
 })
-export class Overview {
+export class DashboardOverview {
   constructor(private productsService: ProductService, private userService: UserService, private orderService: OrderService) { }
   products = signal<Product[]>([]);
   users = signal<user[]>([]);
