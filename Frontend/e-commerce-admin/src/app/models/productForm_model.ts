@@ -4,7 +4,7 @@ export interface ProductForm {
   price: number;
   originalPrice?: number;
   image: string;
-  categoryId: number;
+  categoryId: string;
   stock: number;
   unit: string;
   isOrganic: boolean;
