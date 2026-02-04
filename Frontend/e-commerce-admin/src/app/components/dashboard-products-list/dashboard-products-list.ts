@@ -21,14 +21,6 @@ export class DashboardProductsList {
   selectedProduct: ProductForm | null = null;
   showModal = false;
 
-  newProduct = {
-    name: '',
-    price: 0,
-    stock: 0,
-    categoryId: null,
-    image: ''
-  };
-
   constructor(private productService: ProductService, private categoryService: CategoryService) { }
 
   ngOnInit() {
@@ -66,7 +58,7 @@ export class DashboardProductsList {
   });
 
   editProduct(product: Product) {
-    this.editedProduct = product;
+    this.editedProduct = { ...product };;
   }
 
   deleteProduct(product: Product) {
@@ -112,7 +104,7 @@ export class DashboardProductsList {
       description: '',
       price: 0,
       image: '',
-      categoryId: 0,
+      categoryId: '',
       stock: 0,
       unit: 'kg',
       isOrganic: false,

@@ -35,7 +35,7 @@
 
                     <td class="py-4 px-4 font-medium text-gray-800">
                         @if(product.id === editedProduct?.id) {
-                        <input type="text" [(ngModel)]="product.name"
+                        <input type="text" [(ngModel)]="editedProduct!.name"
                             class="border border-gray-300 rounded-md px-2 py-1 w-full" />
                         } @else {
                         {{ product.name }}
@@ -44,8 +44,15 @@
 
                     <td class="py-4 px-4 text-gray-600">
                         @if(product.id === editedProduct?.id) {
-                        <input type="text" [(ngModel)]="product.categoryName"
-                            class="border border-gray-300 rounded-md px-2 py-1 w-full" />
+                        <select class="border border-gray-300 rounded-md px-2 py-1 w-full"
+                            [(ngModel)]="editedProduct!.categoryId">
+                            <option value="" disabled>
+                                --- Select Category ---
+                            </option>
+                            @for (cat of categories(); track cat.id) {
+                            <option [value]="cat.id">{{ cat.name }}</option>
+                            }
+                        </select>
                         } @else {
                         {{ product.categoryName }}
                         }
@@ -53,7 +60,7 @@
 
                     <td class="py-4 px-4 text-gray-800">
                         @if(product.id === editedProduct?.id) {
-                        <input type="number" [(ngModel)]="product.price"
+                        <input type="number" [(ngModel)]="editedProduct!.price"
                             class="border border-gray-300 rounded-md px-2 py-1 w-full" />
                         } @else {
                         ${{ product.price }}
@@ -62,7 +69,7 @@
 
                     <td class="py-4 px-4 text-gray-800">
                         @if(product.id === editedProduct?.id) {
-                        <input type="number" [(ngModel)]="product.stock"
+                        <input type="number" [(ngModel)]="editedProduct!.stock"
                             class="border border-gray-300 rounded-md px-2 py-1 w-full" />
                         } @else {
                         {{ product.stock }}
@@ -73,7 +80,7 @@
                         <div class="flex items-center gap-4">
                             @if(product.id === editedProduct?.id) {
                             <!-- Save -->
-                            <button id="saveBtn" (click)="saveProduct(product)"
+                            <button id="saveBtn" (click)="saveProduct(editedProduct!)"
                                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground hover:cursor-pointer h-10 w-10 text-success">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

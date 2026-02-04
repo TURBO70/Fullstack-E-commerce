@@ -63,7 +63,9 @@
             <div>
                 <label class="block text-sm mb-1">Category</label>
                 <select class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.categoryId">
-                    <option [value]="0">Select category</option>
+                    <option value="" disabled>
+                        --- Select Category ---
+                    </option>
                     @for (cat of categories(); track cat.id) {
                     <option [value]="cat.id">{{ cat.name }}</option>
                     }

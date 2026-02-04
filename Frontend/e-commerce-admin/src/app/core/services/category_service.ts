@@ -7,25 +7,25 @@ import { Category } from '../../models/category_model';
 export class CategoryService {
   private baseUrl = 'http://localhost:3000/categories';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAll(): Observable<Category[]> {
     return this.http.get<Category[]>(this.baseUrl);
   }
 
-  getById(id: number): Observable<Category> {
+  getById(id: string): Observable<Category> {
     return this.http.get<Category>(`${this.baseUrl}/${id}`);
   }
 
-  add(category: Category): Observable<Category> {
+  add(category: Omit<Category, 'id'>): Observable<Category> {
     return this.http.post<Category>(this.baseUrl, category);
   }
 
-  update(id: number, category: Category): Observable<Category> {
+  update(id: string, category: Category): Observable<Category> {
     return this.http.put<Category>(`${this.baseUrl}/${id}`, category);
   }
 
-  delete(id: number): Observable<void> {
+  delete(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 }
