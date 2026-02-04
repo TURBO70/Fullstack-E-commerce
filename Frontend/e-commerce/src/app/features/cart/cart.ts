@@ -16,12 +16,12 @@ export class Cart {
 
     addTestProduct() {
         const testProduct: Product = {
-            id: 1,
+            id: "1",
             name: "Red Apples",
             description: "Crisp and sweet red apples",
             price: 4.99,
             image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&h=400&fit=crop",
-            categoryId: 1,
+            categoryId: "1",
             stock: 150,
             unit: "kg",
             rating: 4.8,
