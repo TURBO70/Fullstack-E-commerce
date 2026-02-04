@@ -22,7 +22,7 @@ export class ProductDetails implements OnInit {
 
   ngOnInit(): void {
     //if (this.productId) {
-      this.productservice.getById(1).subscribe({
+      this.productservice.getById("1").subscribe({
         next: (data) => {
           this.product.set(data);
         },
