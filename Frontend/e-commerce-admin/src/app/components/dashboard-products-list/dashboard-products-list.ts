@@ -41,7 +41,7 @@ export class DashboardProductsList {
     const categories = this.categories();
 
     const categoryMap = new Map(
-      categories.map(c => [Number(c.id), c.name])
+      categories.map(c => [c.id, c.name])
     );
 
     return products.map(p => ({
