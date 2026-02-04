@@ -7,7 +7,7 @@ export interface OrderItem {
 
 export interface Order {
   id?: string;
-  userId: number;
+  userId: string;
   items: OrderItem[];
   totalPrice: number;
   status: 'pending' | 'delivered' | 'shipped';
