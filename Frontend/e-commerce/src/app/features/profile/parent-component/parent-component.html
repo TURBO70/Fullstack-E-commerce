@@ -20,7 +20,7 @@
 
   <!-- Content -->
   @if (activeTab() === 'profile') {
-<app-profile-component [currentUser]="currentUser"></app-profile-component>
+<app-profile-component [currentUser]="currentUser" (profileUpdated)="fetchUserData()"></app-profile-component>
 
   }
 
