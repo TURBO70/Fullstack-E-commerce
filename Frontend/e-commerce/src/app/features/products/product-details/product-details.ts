@@ -2,6 +2,7 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../core/services/product_service';
 import { Product } from '../../../shared/models/product_model';
+import { Category } from '../../../shared/models/category_model';
 
 @Component({
   selector: 'app-product-details',
@@ -12,6 +13,7 @@ import { Product } from '../../../shared/models/product_model';
 export class ProductDetails implements OnInit {
 
   product = signal<Product | null>(null);
+  categoryName = signal<Category | null>(null);
   quantity = signal(1);
   productId=0;
   constructor(private activeroute:ActivatedRoute, private productservice:ProductService) {
@@ -19,14 +21,14 @@ export class ProductDetails implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.productId) {
-      this.productservice.getById(this.productId).subscribe({
+    //if (this.productId) {
+      this.productservice.getById(1).subscribe({
         next: (data) => {
           this.product.set(data);
         },
         error: (err) => console.error('Error fetching product:', err)
       });
-    }
+   // }
   }
 
   updateQuantity(step: number) {

@@ -1,93 +1,81 @@
-<div class="max-w-6xl mx-auto p-4 md:p-8 font-sans text-slate-900" dir="rtl">
-  
+<div class="max-w-6xl mx-auto p-4 md:p-8 font-sans text-slate-900">
+
+  <!-- Back button -->
   <button class="flex items-center text-sm font-medium text-slate-500 hover:text-black mb-8 transition-colors group">
-    <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span> Back
+    <span class="mr-2 transform group-hover:-translate-x-1 transition-transform">←</span> Back
   </button>
 
-  <!-- @if (product()) { -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
-      
-      <div class="relative rounded-[2.5rem] overflow-hidden bg-[#f8f9fa] border border-slate-100 shadow-sm">
-        <div class="absolute top-6 right-6 bg-red-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm">
-          -29%
+  <!-- Product detail container -->
+  <div class="flex flex-col md:flex-row gap-12 items-start">
+
+    <!-- Image on the left -->
+    <div class="w-full md:w-1/2 relative rounded-2xl overflow-hidden bg-[#f8f9fa] border border-slate-100 shadow-sm">
+      <img [src]="product()?.image" [alt]="product()?.name"
+           class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-in-out"/>
+    </div>
+
+    <!-- Product info on the right -->
+    <div class="flex-1 flex flex-col justify-start space-y-6">
+
+      <!-- Title and rating -->
+      <div>
+        <h1 class="text-4xl font-extrabold tracking-tight mb-2">{{ product()?.name }}</h1>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center text-amber-500 text-sm font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-100">
+            ★ 4.8 <span class="text-slate-400 font-normal ml-2">(124 reviews)</span>
+          </div>
+          <span class="px-3 py-1 bg-slate-100 text-slate-500 text-xs rounded-full font-bold uppercase tracking-wide">{{categoryName()?.name}}</span>
         </div>
-        <div class="absolute top-6 left-6 bg-[#10b981] text-white text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-lg z-10 flex items-center gap-1.5 shadow-sm">
-          <span class="text-xs">🍃</span> Organic
-        </div>
-        
-        <img [src]="product()?.image" [alt]="product()?.name" 
-             class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-in-out" />
       </div>
 
-      <div class="flex flex-col space-y-7 text-right">
-        <div>
-          <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-3 text-slate-900">
-            {{ product()?.name }}
-          </h1>
-          
-          <div class="flex items-center gap-4 justify-start">
-            <div class="flex items-center text-amber-500 text-sm font-bold bg-amber-50 px-3 py-1 rounded-full border border-amber-100">
-              <span class="ml-1">★</span> 4.8
-              <span class="text-slate-400 font-normal mr-2">(124 reviews)</span>
-            </div>
-            <span class="px-4 py-1 bg-slate-100 text-slate-500 text-[11px] rounded-full font-bold uppercase tracking-wider">
-              Fresh Fruits
-            </span>
-          </div>
-        </div>
+      <!-- Price -->
+      <div class="flex items-baseline gap-4">
+        <span class="text-3xl font-bold text-[#5f8575]">${{ product()?.price }}</span>
+        <!-- <span class="text-slate-300 line-through text-xl font-medium">$6.99</span> -->
+        <span class="text-slate-400 text-sm">/ kg</span>
+      </div>
 
-        <div class="flex items-baseline gap-4 justify-start">
-          <span class="text-5xl font-bold text-[#5f8575] tracking-tight">${{ product()?.price }}</span>
-          <span class="text-slate-300 line-through text-2xl font-medium">$6.99</span>
-          <span class="text-slate-400 text-lg">/ kg</span>
-        </div>
+      <!-- Stock -->
+      <div class="inline-flex items-center gap-2 text-[#10b981] bg-green-50 px-4 py-2 rounded-xl w-fit border border-green-100">
+        <span class="text-sm font-bold">In Stock {{ product()?.stock }} available</span>
+      </div>
 
-        <div class="inline-flex items-center gap-2 text-[#10b981] bg-green-50 px-4 py-2 rounded-xl w-fit border border-green-100">
-          <span class="text-sm font-bold">In Stock (150 available)</span>
-        </div>
+      <!-- Description -->
+      <div class="space-y-2">
+        <h3 class="text-lg font-bold border-l-4 border-[#5f8575] pl-2">Description</h3>
+        <p class="text-slate-500 text-base leading-relaxed">
+          {{ product()?.description }}
+        </p>
+      </div>
 
-        <div class="space-y-3">
-          <h3 class="text-lg font-bold text-slate-900 border-r-4 border-[#5f8575] pr-3">Description</h3>
-          <p class="text-slate-500 leading-relaxed text-lg font-medium">
-            {{ product()?.description || 'Crisp and sweet red apples, perfect for snacking or baking. Rich in fiber and antioxidants.' }}
-          </p>
+      <!-- Quantity & Add to Cart -->
+      <div class="flex items-center gap-4">
+        <div class="flex items-center border-2 border-slate-100 rounded-2xl p-1 bg-slate-50 shadow-inner">
+          <button (click)="updateQuantity(1)" class="w-10 h-10 flex items-center justify-center hover:bg-white hover:shadow-md rounded-xl transition-all text-xl font-bold text-slate-600 active:scale-90">+</button>
+          <span class="w-10 text-center font-bold text-xl text-slate-800">{{ quantity() }}</span>
+          <button (click)="updateQuantity(-1)" class="w-10 h-10 flex items-center justify-center hover:bg-white hover:shadow-md rounded-xl transition-all text-xl font-bold text-slate-600 active:scale-90">−</button>
         </div>
+        <button class="flex-1 bg-[#5f8575] hover:bg-[#4a695c] text-white h-12 rounded-2xl font-bold text-lg transition-all shadow-lg flex items-center justify-center gap-3 active:scale-[0.98]">
+          🛒 Add to Cart
+        </button>
+      </div>
 
-        <div class="flex items-center gap-5 pt-4">
-          <div class="flex items-center border-2 border-slate-100 rounded-2xl p-1 bg-slate-50 shadow-inner">
-            <button (click)="updateQuantity(1)" 
-                    class="w-12 h-12 flex items-center justify-center hover:bg-white hover:shadow-md rounded-xl transition-all text-xl font-bold text-slate-600 active:scale-90">+</button>
-            <span class="w-12 text-center font-bold text-xl text-slate-800">{{ quantity() }}</span>
-            <button (click)="updateQuantity(-1)" 
-                    class="w-12 h-12 flex items-center justify-center hover:bg-white hover:shadow-md rounded-xl transition-all text-xl font-bold text-slate-600 active:scale-90">−</button>
-          </div>
-          
-          <button class="flex-1 bg-[#5f8575] hover:bg-[#4a695c] text-white h-14 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-green-900/10 flex items-center justify-center gap-3 active:scale-[0.98]">
-            <span>🛒</span> Add to Cart
-          </button>
+      <!-- Delivery / Guarantee / Returns -->
+      <div class="grid grid-cols-3 gap-4 pt-6">
+        <div class="flex flex-col items-center p-4 rounded-2xl bg-[#f8f9fa] hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-slate-100">
+          <div class="text-2xl mb-2">🚚</div>
+          <p class="text-xs font-black text-slate-500 uppercase tracking-tighter italic text-center">Free Delivery</p>
         </div>
-
-        <div class="grid grid-cols-3 gap-4 pt-10 border-t border-slate-100">
-          <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-[#f8f9fa] hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-slate-100 group">
-            <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🚚</div>
-            <p class="text-[10px] font-black text-slate-500 uppercase tracking-tighter italic">Free Delivery</p>
-          </div>
-          <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-[#f8f9fa] hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-slate-100 group">
-            <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🛡️</div>
-            <p class="text-[10px] font-black text-slate-500 uppercase tracking-tighter italic">Quality Guaranteed</p>
-          </div>
-          <div class="text-center p-4 rounded-2xl bg-[#f8f9fa] hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-slate-100 group">
-            <div class="text-3xl mb-2 group-hover:scale-110 transition-transform text-center flex justify-center">🔄</div>
-            <p class="text-[10px] font-black text-slate-500 uppercase tracking-tighter italic text-center">Easy Returns</p>
-          </div>
+        <div class="flex flex-col items-center p-4 rounded-2xl bg-[#f8f9fa] hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-slate-100">
+          <div class="text-2xl mb-2">🛡️</div>
+          <p class="text-xs font-black text-slate-500 uppercase tracking-tighter italic text-center">Quality Guaranteed</p>
+        </div>
+        <div class="flex flex-col items-center p-4 rounded-2xl bg-[#f8f9fa] hover:bg-white hover:shadow-sm transition-all border border-transparent hover:border-slate-100">
+          <div class="text-2xl mb-2">🔄</div>
+          <p class="text-xs font-black text-slate-500 uppercase tracking-tighter italic text-center">Easy Returns</p>
         </div>
       </div>
 
     </div>
-  <!-- } @else {
-    <div class="flex flex-col items-center justify-center h-96 space-y-4">
-      <div class="w-12 h-12 border-4 border-slate-200 border-t-[#5f8575] rounded-full animate-spin"></div>
-      <p class="text-slate-400 font-medium animate-pulse">Loading Details...</p>
-    </div>
-  } -->
+  </div>
 </div>
