@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+@theme {
+  --color-navbarText: #5c706a;
+
+    /* ===================== */
+  /* Brand Colors */
+  /* ===================== */
+
+  --color-primary: #679089; /* Main sage green brand color */
+  --color-primary-foreground: #ffffff; /* Text on primary */
+
+  --color-secondary: #e5edeb; /* Subtle backgrounds */
+  --color-secondary-foreground: #304d47; /* Text on secondary */
+
+  --color-accent: #e09f2b; /* CTAs, highlights, sale badges */
+  --color-accent-foreground: #453108; /* Text on accent */
+
+  /* ===================== */
+  /* Base Layout */
+  /* ===================== */
+
+  --color-background: #f9faf9; /* Page background */
+  --color-foreground: #1d2e2a; /* Main text */
+
+  --color-muted: #f1f4f3; /* Disabled, subtle fills */
+  --color-muted-foreground: #5c6e6a; /* Secondary text */
+
+  --color-card: #ffffff; /* Card backgrounds */
+  --color-card-foreground: #1d2e2a; /* Card text */
+
+  /* ===================== */
+  /* Status Colors */
+  /* ===================== */
+
+  --color-destructive: #ef4444; /* Errors, delete actions */
+  --color-destructive-foreground: #ffffff; /* Text on destructive */
+
+  --color-success: #22c55e; /* Success states */
+  --color-success-foreground: #ffffff; /* Text on success */
+
+  --color-warning: #f59e0b; /* Warning states */
+  --color-warning-foreground: #492f04; /* Text on warning */
+
+  /* ===================== */
+  /* UI Elements */
+  /* ===================== */
+
+  --color-border: #ced9d6; /* Borders, dividers */
+  --color-input: #ced9d6; /* Input borders */
+  --color-ring: #679089; /* Focus rings */
+}
+
+
+.dark {
+  /* ===================== */
+  /* Brand Colors */
+  /* ===================== */
+
+  --color-primary: #7ca69e; /* Lighter sage for dark mode */
+  --color-primary-foreground: #131f1c; /* Dark text on primary */
+
+  --color-secondary: #2b3936; /* Dark subtle backgrounds */
+  --color-secondary-foreground: #e1e6e5; /* Light text on secondary */
+
+  --color-accent: #d99c1f; /* Muted orange */
+  --color-accent-foreground: #fef8ec; /* Light text on accent */
+
+  /* ===================== */
+  /* Base Layout */
+  /* ===================== */
+
+  --color-background: #0f1917; /* Dark page background */
+  --color-foreground: #f1f4f3; /* Light text */
+
+  --color-muted: #273331; /* Dark disabled states */
+  --color-muted-foreground: #8fa39f; /* Medium light text */
+
+  --color-card: #182421; /* Dark card backgrounds */
+  --color-card-foreground: #f1f4f3; /* Card text */
+
+  /* ===================== */
+  /* Status Colors */
+  /* ===================== */
+
+  --color-destructive: #8f2424; /* Dark red */
+  --color-success: #22a852; /* Dark green */
+  --color-warning: #d48b0a; /* Muted orange */
+
+  /* ===================== */
+  /* UI Elements */
+  /* ===================== */
+
+  --color-border: #2b3936; /* Dark borders */
+}
+
+.navbarActive {
+  background-color: var(--color-background);
+  color: black;
+}

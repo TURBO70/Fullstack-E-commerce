@@ -23,7 +23,7 @@ export class ProductDetails implements OnInit {
 
   ngOnInit(): void {
     //if (this.productId) {
-      this.productservice.getById(this.productId.toString()).subscribe({
+      this.productservice.getById(1).subscribe({
         next: (data) => {
           console.log('Fetched product:', data);
           this.product.set(data);
