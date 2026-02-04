@@ -3,13 +3,13 @@
   <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
     <div>
       <h1 class="text-3xl font-bold">Products</h1>
-      <p class="text-gray-500">{{filteredProducts.length}} products found</p>
+      <p class="text-gray-500">{{(filteredProducts()).length}} products found</p>
     </div>
   </div>
 
   <div class="flex flex-wrap items-center gap-4 mb-6">
 
-    <div class="relative flex-1 min-w-[200px] max-w-md">
+    <div class="relative flex-1 min-w-50 max-w-md">
       <input
         type="search"
         placeholder="Search products..."
@@ -46,8 +46,8 @@
     <input
       type="radio"
       name="category"
-      [checked]="selectedCategory === 0"
-      (change)="selectedCategory = 0; filterProducts2()"
+      [checked]="selectedCategory === '0'"
+      (change)="selectedCategory = '0'; filterProducts2()"
     />
     All Categories
   </label>
