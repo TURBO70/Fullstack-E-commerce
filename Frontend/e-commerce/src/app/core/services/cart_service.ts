@@ -20,6 +20,10 @@ export class CartService {
 
     shipping = computed(() => (this.subtotal() > 50 ? 0 : 10));
 
+
+
+
+
     total = computed(() => this.subtotal() + this.tax() + this.shipping());
 
     addToCart(product: Product) {
@@ -36,11 +40,11 @@ export class CartService {
         });
     }
 
-    removeFromCart(productId: number) {
+    removeFromCart(productId: string) {
         this.cartItems.update((items) => items.filter((item) => item.product.id !== productId));
     }
 
-    updateQuantity(productId: number, quantity: number) {
+    updateQuantity(productId: string, quantity: number) {
         if (quantity <= 0) {
             this.removeFromCart(productId);
             return;

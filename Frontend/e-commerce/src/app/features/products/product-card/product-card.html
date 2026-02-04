@@ -8,8 +8,6 @@
       [alt]="product.name"
       class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
     />
-
-    <!-- Organic Badge -->
     <span
       *ngIf="product.isOrganic"
       class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded flex items-center gap-1"
@@ -31,7 +29,7 @@
       </div>
       <span class="text-xs text-gray-500">({{ product.reviews }} reviews)</span>
     </div>
-
+   <div class="flex justify-between gap-7 mt-2">
     <div class="flex items-baseline gap-2 mt-2">
       <span class="text-lg font-bold text-[#679089]">${{ product.price.toFixed(2) }}</span>
       <span
@@ -43,6 +41,29 @@
       <span class="text-xs text-gray-500">/{{ product.unit }}</span>
     </div>
 
-   
+    <button
+    (click)="handleAddToCart($event)"
+            class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer bg-[#afd2cd] hover:bg-[#354c48] hover:text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-shopping-cart h-5 w-5"
+            >
+              <circle cx="8" cy="21" r="1"></circle>
+              <circle cx="19" cy="21" r="1"></circle>
+              <path
+                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+              ></path>
+            </svg>
+          </button>
+  </div>
   </div>
 </div>

@@ -1,16 +1,24 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../../../shared/models/product_model';
-import { ProductCard } from "../product-card/product-card";
-import { FormsModule } from '@angular/forms';
+import { Component, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Product } from '../../../shared/models/product_model';
+import { ProductCard } from '../product-card/product-card';
+import { CartService } from '../../../core/services/cart_service';
 
 @Component({
-   selector: 'app-products-grid',
-  imports: [ProductCard,FormsModule, CommonModule],
+  selector: 'app-products-grid',
+  standalone: true,
+  imports: [CommonModule, ProductCard],
   templateUrl: './products-grid.html',
 })
 export class ProductsGrid {
   @Input() products: Product[] = [];
-  @Output() addToCart = new EventEmitter<Product>();
-}
+  @Input() viewMode: 'grid' | 'list' = 'grid';
 
+
+  constructor(private cartService: CartService) {}
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    console.log('Added to cart:', product);
+  }
+}

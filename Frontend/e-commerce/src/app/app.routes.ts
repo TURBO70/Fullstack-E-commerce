@@ -4,6 +4,9 @@ import { Auth } from './features/auth/auth';
 import { Home } from './features/home/home';
 import { CategoriesPage } from './features/categories/categories-page/categories-page';
 import { Cart } from './features/cart/cart';
+import { ProfileComponent } from './features/profile/profile-component/profile-component';
+import { OrderComponent } from './features/profile/order_component/order_component';
+
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -11,4 +14,7 @@ export const routes: Routes = [
   { path: 'categories', component: CategoriesPage },
   { path: 'products', component: ProductsList },
   { path: 'cart', component: Cart },
+  // {path: 'user/details/:id', component: ProfileComponent},
+  // {path: 'user/orders/:id', component: OrderComponent},
+  
 ];
