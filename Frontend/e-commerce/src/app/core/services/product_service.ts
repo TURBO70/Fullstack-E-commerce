@@ -13,7 +13,7 @@ export class ProductService {
     return this.http.get<Product[]>(this.baseUrl);
   }
 
-  getById(id: number): Observable<Product> {
+  getById(id: string): Observable<Product> {
     return this.http.get<Product>(`${this.baseUrl}/${id}`);
   }
 
@@ -21,11 +21,11 @@ export class ProductService {
     return this.http.post<Product>(this.baseUrl, product);
   }
 
-  update(id: number, product: Product): Observable<Product> {
+  update(id: string , product: Product): Observable<Product> {
     return this.http.put<Product>(`${this.baseUrl}/${id}`, product);
   }
 
-  delete(id: number): Observable<void> {
+  delete(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 }

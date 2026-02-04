@@ -13,7 +13,7 @@ export class CategoryService {
     return this.http.get<Category[]>(this.baseUrl);
   }
 
-  getById(id: number): Observable<Category> {
+  getById(id: string): Observable<Category> {
     return this.http.get<Category>(`${this.baseUrl}/${id}`);
   }
 
@@ -21,11 +21,11 @@ export class CategoryService {
     return this.http.post<Category>(this.baseUrl, category);
   }
 
-  update(id: number, category: Category): Observable<Category> {
+  update(id: string, category: Category): Observable<Category> {
     return this.http.put<Category>(`${this.baseUrl}/${id}`, category);
   }
 
-  delete(id: number): Observable<void> {
+  delete(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 }
