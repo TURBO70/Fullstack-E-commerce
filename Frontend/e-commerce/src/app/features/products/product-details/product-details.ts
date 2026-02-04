@@ -13,6 +13,7 @@ import { Category } from '../../../shared/models/category_model';
 export class ProductDetails implements OnInit {
 
   product = signal<Product | null>(null);
+  // product=signal(_)
   categoryName = signal<Category | null>(null);
   quantity = signal(1);
   productId=0;
@@ -22,8 +23,9 @@ export class ProductDetails implements OnInit {
 
   ngOnInit(): void {
     //if (this.productId) {
-      this.productservice.getById(1).subscribe({
+      this.productservice.getById(this.productId.toString()).subscribe({
         next: (data) => {
+          console.log('Fetched product:', data);
           this.product.set(data);
         },
         error: (err) => console.error('Error fetching product:', err)
