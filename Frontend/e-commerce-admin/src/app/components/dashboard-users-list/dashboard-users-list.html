@@ -1,12 +1,12 @@
-<div class="mx-16 my-4 p-8 rounded-2xl border border-border">
+<div class="mx-16 my-4 p-8 rounded-2xl bg-white border border-border">
     <div class="flex justify-between items-center">
         <h1 class="text-2xl font-semibold">Users</h1>
         <button class="bg-primary text-white px-4 py-2 rounded-xl font-medium">+ Add User</button>
     </div>
-    <div class="overflow-x-auto my-4 bg-white rounded-xl shadow-sm">
+    <div class="overflow-x-auto my-4 rounded-xl shadow-sm">
         <table class="w-full border-collapse">
             <thead class="">
-                <tr class="border-b border-border text-navbarText text-sm font-extralight">
+                <tr class="border-b border-border text-muted-foreground text-sm font-extralight">
                     <th class="text-left py-4 px-4">Name</th>
                     <th class="text-left py-4 px-4">Email</th>
                     <th class="text-left py-4 px-4">Location</th>
@@ -21,7 +21,7 @@
                 @for (user of users(); track $index) {
                 <tr class="border-b border-gray-200 hover:bg-gray-50 transition">
                     <td class="py-4 px-4 font-medium text-gray-800">
-                        {{ user.userName }}
+                        {{ user.name }}
                     </td>
 
                     <td class="py-4 px-4 text-gray-600">
