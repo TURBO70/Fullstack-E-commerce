@@ -41,7 +41,7 @@ export class DashboardOrdersList {
     const users = this.users();
 
     const userMap = new Map(
-      users.map(u => [Number(u.id), u.name])
+      users.map(u => [u.id, u.name])
     );
 
     return orders.map(o => ({
