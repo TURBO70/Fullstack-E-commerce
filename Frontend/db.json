@@ -8,13 +8,14 @@
       "originalPrice": 6.99,
       "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&h=400&fit=crop",
       "categoryId": "1",
-      "stock": 150,
+      "stock": 2000,
       "unit": "kg",
       "rating": 4.8,
       "reviews": 124,
       "isOrganic": true,
       "isFeatured": true,
-      "createdAt": "2024-01-15"
+      "createdAt": "2024-01-15",
+      "categoryName": "Fresh Fruits"
     },
     {
       "id": "2",
@@ -46,21 +47,6 @@
       "isOrganic": true,
       "isFeatured": true,
       "createdAt": "2024-01-13"
-    },
-    {
-      "id": "4",
-      "name": "Tomatoes",
-      "description": "Vine-ripened tomatoes, perfect for salads, sauces, and cooking.",
-      "price": 3.99,
-      "image": "https://images.unsplash.com/photo-1546470427-227c7369d730?w=400&h=400&fit=crop",
-      "categoryId": "2",
-      "stock": 180,
-      "unit": "kg",
-      "rating": 4.7,
-      "reviews": 145,
-      "isOrganic": true,
-      "isFeatured": true,
-      "createdAt": "2024-01-15"
     },
     {
       "id": "5",
@@ -178,218 +164,137 @@
   "users": [
     {
       "id": "1",
-      "userName": "Hassan",
-      "email": "hassan@gmail.com",
-      "password": "123456",
+      "name": "Ahmed Hassan",
+      "email": "ahmed.hassan@gmail.com",
+      "password": "Ahmed_123",
       "country": "Egypt",
       "city": "Cairo",
       "role": "admin"
     },
     {
-      "id": "dcc6",
-      "userName": "hassan elgraihy",
-      "email": "hassanelgraihy2002@yahoo.com",
-      "country": "eg",
-      "city": "cairo",
-      "password": "Hassan_123",
+      "id": "a102",
+      "name": "Mohamed Ali",
+      "email": "mohamed.ali@yahoo.com",
+      "password": "Mohamed_123",
+      "country": "Egypt",
+      "city": "Giza",
       "role": "customer"
     },
     {
-      "id": "519b",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
+      "id": "b203",
+      "name": "Youssef Mahmoud",
+      "email": "youssef.mahmoud@gmail.com",
+      "password": "Youssef_123",
+      "country": "Egypt",
+      "city": "Alexandria",
+      "role": "customer"
+    },
+    {
+      "id": "c304",
+      "name": "Omar Adel",
+      "email": "omar.adel@gmail.com",
+      "password": "Omar_123",
+      "country": "Egypt",
+      "city": "Mansoura",
+      "role": "customer"
+    },
+    {
+      "id": "d405",
+      "name": "Khaled Mostafa",
+      "email": "khaled.mostafa@yahoo.com",
+      "password": "Khaled_123",
+      "country": "Egypt",
+      "city": "Tanta",
+      "role": "customer"
+    },
+    {
+      "id": "e506",
+      "name": "Mahmoud Salah",
+      "email": "mahmoud.salah@gmail.com",
+      "password": "Mahmoud_123",
+      "country": "Egypt",
+      "city": "Fayoum",
+      "role": "customer"
+    },
+    {
+      "id": "f607",
+      "name": "Hany Fathy",
+      "email": "hany.fathy@yahoo.com",
+      "password": "Hany_123",
+      "country": "Egypt",
+      "city": "Ismailia",
+      "role": "customer"
+    },
+    {
+      "id": "g708",
+      "name": "Islam Reda",
+      "email": "islam.reda@gmail.com",
+      "password": "Islam_123",
+      "country": "Egypt",
+      "city": "Zagazig",
+      "role": "customer"
+    },
+    {
+      "id": "h809",
+      "name": "Mostafa Saeed",
+      "email": "mostafa.saeed@yahoo.com",
+      "password": "Mostafa_123",
+      "country": "Egypt",
+      "city": "Asyut",
+      "role": "customer"
+    },
+    {
+      "id": "i910",
+      "name": "Ayman Nabil",
+      "email": "ayman.nabil@gmail.com",
+      "password": "Ayman_123",
+      "country": "Egypt",
+      "city": "Minya",
+      "role": "customer"
+    },
+    {
+      "id": "j011",
+      "name": "Tamer Ashraf",
+      "email": "tamer.ashraf@yahoo.com",
+      "password": "Tamer_123",
+      "country": "Egypt",
+      "city": "Benha",
+      "role": "customer"
+    },
+    {
+      "id": "k112",
+      "name": "Hossam Ezzat",
+      "email": "hossam.ezzat@gmail.com",
+      "password": "Hossam_123",
+      "country": "Egypt",
+      "city": "Suez",
+      "role": "customer"
+    },
+    {
+      "id": "l213",
+      "name": "Amr Gamal",
+      "email": "amr.gamal@yahoo.com",
+      "password": "Amr_123",
+      "country": "Egypt",
       "city": "Port Said",
-      "password": "Hassan_123",
       "role": "customer"
     },
     {
-      "id": "3af8",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
+      "id": "m314",
+      "name": "Sherif Emad",
+      "email": "sherif.emad@gmail.com",
+      "password": "Sherif_123",
+      "country": "Egypt",
+      "city": "Damietta",
       "role": "customer"
     },
     {
-      "id": "99db",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "fba8",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "6bfe",
-      "userName": "hassan elgraihyyyy",
-      "email": "hassanelgraihy2002@yahoo.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan__123",
-      "role": "customer"
-    },
-    {
-      "id": "e2e3",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "cairooo",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "ac81",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "cairooo",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "6fb8",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "cairooo",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "2e7a",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "2ed3",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_1234",
-      "role": "customer"
-    },
-    {
-      "id": "8393",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Saidd",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "28ef",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "7f6b",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "3a4b",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "501c",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "632d",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "2437",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "12e6",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "be16",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "98ef",
-      "userName": "hassan elgraihy",
-      "email": "hassanelgraihy2002@yahoo.com",
-      "country": "eg",
-      "city": "cairo",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "54a8",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "6f79",
-      "userName": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_23",
+      "id": "n415",
+      "name": "Wael Samir",
+      "email": "wael.samir@yahoo.com",
+      "password": "Wael_123",
+      "country": "Egypt",
+      "city": "Luxor",
       "role": "customer"
     }
   ],

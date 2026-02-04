@@ -1,0 +1,122 @@
+@if (open && product) {
+
+<!-- Backdrop -->
+<div class="fixed inset-0 bg-black/40 z-40" (click)="onClose()">
+</div>
+
+<!-- Modal container (NOT full screen) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+
+    <!-- Modal -->
+    <div class="bg-white w-full max-w-lg rounded-2xl shadow-xl
+             max-h-[90vh] flex flex-col pointer-events-auto" (click)="$event.stopPropagation()">
+
+        <!-- Header (fixed) -->
+        <div class="flex justify-between items-center p-6 border-b">
+            <h2 class="text-xl font-semibold">Add Product</h2>
+
+            <button class="text-muted-foreground hover:text-foreground hover:cursor-pointer text-lg font-bold"
+                (click)="onClose()">
+                ✕
+            </button>
+        </div>
+
+        <!-- Body (scrollable) -->
+        <div class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- Name -->
+            <div>
+                <label class="block text-sm mb-1">Name</label>
+                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.name" />
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm mb-1">Description</label>
+                <textarea rows="3" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.description">
+        </textarea>
+            </div>
+
+            <!-- Price -->
+            <div>
+                <label class="block text-sm mb-1">Price</label>
+                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.price" />
+            </div>
+
+            <!-- Original Price -->
+            <div>
+                <label class="block text-sm mb-1">Original Price</label>
+                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.originalPrice" />
+            </div>
+
+            <!-- Stock -->
+            <div>
+                <label class="block text-sm mb-1">Stock</label>
+                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.stock" />
+            </div>
+
+            <!-- Category -->
+            <div>
+                <label class="block text-sm mb-1">Category</label>
+                <select class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.categoryId">
+                    <option [value]="0">Select category</option>
+                    @for (cat of categories(); track cat.id) {
+                    <option [value]="cat.id">{{ cat.name }}</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Unit -->
+            <div>
+                <label class="block text-sm mb-1">Unit</label>
+                <select class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.unit">
+                    <option value="kg">Kg</option>
+                    <option value="g">Gram</option>
+                    <option value="pcs">Piece</option>
+                    <option value="ltr">Liter</option>
+                </select>
+            </div>
+
+            <!-- Image -->
+            <div>
+                <label class="block text-sm mb-1">Image URL</label>
+                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.image" />
+
+                @if (product.image) {
+                <img [src]="product.image" class="mt-2 h-24 w-24 rounded-lg object-cover border" />
+                }
+            </div>
+
+            <!-- Flags -->
+            <div class="flex gap-4">
+                <label class="flex items-center gap-2 text-sm">
+                    <input type="checkbox" [(ngModel)]="product.isOrganic" />
+                    Organic
+                </label>
+
+                <label class="flex items-center gap-2 text-sm">
+                    <input type="checkbox" [(ngModel)]="product.isFeatured" />
+                    Featured
+                </label>
+            </div>
+
+        </div>
+
+        <!-- Footer (fixed) -->
+        <div class="flex justify-end gap-3 p-6">
+            <button class="px-4 py-2 rounded-md border border-border" (click)="onClose()">
+                Cancel
+            </button>
+
+            <button class="px-4 py-2 rounded-md bg-primary text-primary-foreground" (click)="onSave()">
+                Save
+            </button>
+        </div>
+    </div>
+</div>
+}
