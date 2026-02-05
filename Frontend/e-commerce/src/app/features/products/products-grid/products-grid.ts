@@ -1,8 +1,9 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../../shared/models/product_model';
 import { ProductCard } from '../product-card/product-card';
 import { CartService } from '../../../core/services/cart_service';
+import { ProductService } from '../../../core/services/product_service';
 
 @Component({
   selector: 'app-products-grid',
@@ -10,15 +11,31 @@ import { CartService } from '../../../core/services/cart_service';
   imports: [CommonModule, ProductCard],
   templateUrl: './products-grid.html',
 })
-export class ProductsGrid {
-  @Input() products: Product[] = [];
-  @Input() viewMode: 'grid' | 'list' = 'grid';
+export class ProductsGrid implements OnInit, OnChanges {
+  @Input() products?: Product[];
 
+  filteredProducts=signal([] as Product[] );
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService,
+    private productService: ProductService
+  ) {}
+
+  ngOnInit() {
+    if (!this.products) {
+      this.productService.getAll().subscribe(data => {
+        this.filteredProducts.set(data.filter(p => p.isFeatured)); 
+      });
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['products'] && this.products) {
+      this.filteredProducts.set([...this.products]);
+    }
+  }
 
   addToCart(product: Product) {
     this.cartService.addToCart(product);
-    console.log('Added to cart:', product);
   }
 }

@@ -12,7 +12,7 @@
       "rating": 4.6,
       "reviews": 89,
       "isOrganic": false,
-      "isFeatured": true,
+      "isFeatured": false,
       "createdAt": "2024-01-14",
       "categoryName": "Unknown"
     },
@@ -76,7 +76,7 @@
       "rating": 4.9,
       "reviews": 267,
       "isOrganic": true,
-      "isFeatured": true,
+      "isFeatured": false,
       "createdAt": "2024-01-15"
     }
   ],
