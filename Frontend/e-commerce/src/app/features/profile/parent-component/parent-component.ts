@@ -21,13 +21,20 @@ export class ParentComponent implements OnInit {
   constructor(private userService: UserService, private orderService: OrderService) {}
 
   ngOnInit() {
-    this.userService.getUserById('1').subscribe(user => {
+    this.fetchUserData();
+    this.userService.getUserById('2').subscribe(user => {
       this.currentUser.set(user);
       console.log('Parent got user:', user);
     });
-    this.orderService.getOrdersByUserId('1').subscribe(orders => {
+    this.orderService.getOrdersByUserId('2').subscribe(orders => {
       this.userOrders.set(orders);
       console.log('Parent got orders:', orders);
+    });
+  }
+  fetchUserData() {
+    this.userService.getUserById('1').subscribe(user => {
+      this.currentUser.set(user);
+      console.log('Data Refreshed!');
     });
   }
 }

@@ -7,6 +7,10 @@ import { user } from '../../shared/models/user_model';
 export class UserService {
   constructor(private http: HttpClient) {}
   private BaseUrl = 'http://localhost:3000/users';
+  
+  getAllUsers() {
+    return this.http.get<user[]>(this.BaseUrl);
+  }
 
   getUserById(id: string) {
     return this.http.get<user>(`${this.BaseUrl}/${id}`);

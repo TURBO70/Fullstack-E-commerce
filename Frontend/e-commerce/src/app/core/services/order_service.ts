@@ -9,7 +9,10 @@ export class OrderService {
 
   private BaseUrl = 'http://localhost:3000/orders';
   constructor(private http:HttpClient) {}
-
+  
+  getAllOrders() {
+    return this.http.get<Order[]>(this.BaseUrl);
+  }
   getOrdersByUserId(userId: string) {
     return this.http.get<Order[]>(`${this.BaseUrl}?userId=${userId}`);
   }

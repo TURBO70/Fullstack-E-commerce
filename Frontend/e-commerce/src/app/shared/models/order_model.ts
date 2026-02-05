@@ -6,8 +6,8 @@ export interface OrderItem {
 }
 
 export interface Order {
-  // id?: string;
-  userId: number;
+  id?: string;
+  userId: string;
   items: OrderItem[];
   totalPrice: number;
   status: 'pending' | 'confirmed' | 'shipped';

@@ -30,7 +30,9 @@
 
         <!-- Nav Links -->
         <nav class="md:flex items-center gap-5 hidden">
-          <a routerLink="/products" class="text-sm font-semibold text-gray-800 transition-colors duration-150"
+          <a
+            routerLink="/products"
+            class="text-sm font-semibold text-gray-800 transition-colors duration-150"
             >Products</a
           >
           <a
@@ -47,6 +49,7 @@
         <div class="flex items-center gap-2">
           <!-- Cart -->
           <button
+            routerLink="/cart"
             class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
           >
             <svg
@@ -137,13 +140,13 @@
       (click)="closeMenu()"
     >
       <a
-        href="#"
+        routerLink="/products"
         class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150 block px-2 py-2 rounded hover:bg-gray-100"
       >
         Products
       </a>
       <a
-        href="#"
+        routerLink="/categories"
         class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150 block px-2 py-2 rounded hover:bg-gray-100"
       >
         Categories
@@ -163,8 +166,9 @@
       <div class="py-2">
         <!-- My Profile -->
         <a
-          href="#"
-          class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-myOrange rounded-lg transition-colors duration-150"
+          (click)="closeMenu()"
+          routerLink="/user-profile"
+          class="flex items-center cursor-pointer gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-myOrange rounded-lg transition-colors duration-150"
         >
           <svg
             width="16"

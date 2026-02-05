@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Category } from '../../../shared/models/category_model';
 import { CategoryService } from '../../../core/services/category_service';
-import { ProductCard } from '../product-card/product-card';
+
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
-  imports: [ProductsGrid, FormsModule, CommonModule, ProductCard],
+  imports: [ProductsGrid, FormsModule, CommonModule],
 
   templateUrl: './products-list.html',
 })
@@ -21,7 +22,7 @@ export class ProductsList {
   categories: Category[] = [];
 
   searchQuery: string = '';
-  selectedCategory: number = 0;
+  selectedCategory: string = '0';
   showOrganic: boolean = false;
   priceRange: [number, number] = [0, 50];
   sortBy: string = 'featured';
@@ -31,16 +32,29 @@ export class ProductsList {
   constructor(
     private productService: ProductService,
     private categoryService: CategoryService,
+
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit() {
+    this.categoryService.getAll().subscribe((cats: Category[]) => {
+      this.categories = cats;
+    });
+
     this.productService.getAll().subscribe((data: Product[]) => {
       this.products.set(data);
       this.filteredProducts.set(data);
-    });
+      this.route.queryParams.subscribe((params) => {
+        const catId = params['categoryId'];
 
-    this.categoryService.getAll().subscribe((cats: Category[]) => {
-      this.categories = cats;
+        if (catId) {
+          this.selectedCategory = String(catId);
+        } else {
+          this.selectedCategory = '0';
+        }
+
+        this.filterProducts2();
+      });
     });
   }
 
@@ -54,10 +68,8 @@ export class ProductsList {
       );
     }
 
-    if (this.selectedCategory && this.selectedCategory !== 0) {
-      console.log(44);
-
-      result = result.filter((p) => p.categoryId == this.selectedCategory);
+    if (this.selectedCategory && this.selectedCategory !== '0') {
+      result = result.filter((p) => p.categoryId === this.selectedCategory);
     }
 
     if (this.showOrganic) {
@@ -89,7 +101,7 @@ export class ProductsList {
 
   clearFilters() {
     this.searchQuery = '';
-    this.selectedCategory = 0;
+    this.selectedCategory = '0';
     this.showOrganic = false;
     this.priceRange = [0, 50];
     this.sortBy = 'featured';
@@ -97,7 +109,8 @@ export class ProductsList {
   }
 
   activeFiltersCount(): number {
-    return [this.searchQuery, this.selectedCategory !== 0, this.showOrganic].filter(Boolean).length;
+    return [this.searchQuery, this.selectedCategory !== '0', this.showOrganic].filter(Boolean)
+      .length;
   }
 
   setViewMode(mode: 'grid' | 'list') {

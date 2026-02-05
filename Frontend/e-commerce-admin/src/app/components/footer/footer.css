@@ -1,0 +1,11 @@
+.media:hover svg {
+  stroke: #e89c30;
+  transition:
+    fill 0.3s ease,
+    stroke 0.3s ease;
+}
+li a:hover {
+  color: white;
+  opacity: 1;
+  font-weight: 500;
+}

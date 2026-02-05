@@ -1,13 +1,14 @@
-<div class="container mx-auto px-4 py-8">
+<div class="container mx-auto px-6 py-8">
   <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
     <div>
       <h1 class="text-3xl font-bold">Products</h1>
+
       <p class="text-gray-500">{{ filteredProducts().length }} products found</p>
     </div>
   </div>
 
   <div class="flex flex-wrap items-center gap-4 mb-6">
-    <div class="relative flex-1 min-w-[200px] max-w-md">
+    <div class="relative flex-1 min-w-50 max-w-md">
       <input
         type="search"
         placeholder="Search products..."
@@ -35,17 +36,33 @@
   <div class="flex gap-8">
     <aside class="hidden md:block w-64 shrink-0">
       <div class="sticky top-24 bg-white p-6 rounded-lg border">
-        <h2 class="font-semibold mb-4">Filters</h2>
+        <div class="flex gap-1.5 items-center mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-filter h-4 w-4"
+          >
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+          <h2 class="font-semibold">Filters</h2>
+        </div>
 
         <div class="mb-4">
           <h3 class="font-semibold mb-2">Categories</h3>
 
-          <label class="flex items-center gap-2 cursor-pointer">
+          <label class="flex items-center gap-2 cursor-pointer accent-[#679089]">
             <input
               type="radio"
               name="category"
-              [checked]="selectedCategory === 0"
-              (change)="selectedCategory = 0; filterProducts2()"
+              [checked]="selectedCategory === '0'"
+              (change)="selectedCategory = '0'; filterProducts2()"
             />
             All Categories
           </label>
