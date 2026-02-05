@@ -17,6 +17,7 @@ export const routes: Routes = [
   { path: 'auth', component: Auth },
   { path: 'categories', component: CategoriesPage },
   { path: 'products', component: ProductsList },
+
   { path: 'cart', component: Cart },
   {path: 'user-profile', component: ParentComponent},
   {path: 'product/details/:id', component: ProductDetailsComponent},

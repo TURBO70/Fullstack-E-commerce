@@ -53,12 +53,12 @@
       <img
         src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&amp;h=600&amp;fit=crop"
         alt="Fresh fruits and vegetables"
-        class="rounded-2xl lg:h-[450px] w-full h-[300px] md:h-[400px] lg:w-auto"
+        class="rounded-2xl lg:h-[450px] w-full h-[300px] md:h-[400px] lg:w-auto shadow-xl"
       />
     </div>
   </div>
   <!--  services -->
-  <div class="px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 my-12">
+  <div class="px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10 mt-5">
     <!-- {1} -->
     <div class="gap-1.5 flex flex-col items-center justify-center">
       <div class="rounded-full p-3 bg-fourth w-fit">
@@ -85,7 +85,7 @@
       </div>
       <div class="mt-1 text-center">
         <p class="text-sm font-bold">Free Delivery</p>
-        <p class="text-secondary text-sm">On orders over $50</p>
+        <p class="text-shadow-muted-foreground text-xs">On orders over $50</p>
       </div>
     </div>
     <!-- {2} -->
@@ -109,7 +109,7 @@
       </div>
       <div class="mt-1 text-center">
         <p class="text-sm font-bold">Fresh Daily</p>
-        <p class="text-secondary text-sm">Farm to door freshness</p>
+        <p class="text-shadow-muted-foreground text-xs">Farm to door freshness</p>
       </div>
     </div>
     <!-- {3} -->
@@ -134,7 +134,7 @@
       </div>
       <div class="mt-1 text-center">
         <p class="text-sm font-bold">Secure Payment</p>
-        <p class="text-secondary text-sm">100% secure checkout</p>
+        <p class="text-shadow-muted-foreground text-xs">100% secure checkout</p>
       </div>
     </div>
     <!-- {4} -->
@@ -160,7 +160,7 @@
       </div>
       <div class="mt-1 text-center">
         <p class="text-sm font-bold">Organic Options</p>
-        <p class="text-secondary text-sm">Certified organic products</p>
+        <p class="text-shadow-muted-foreground text-xs">Certified organic products</p>
       </div>
     </div>
   </div>
@@ -173,7 +173,9 @@
       <div class="flex flex-row items-center justify-between mb-8 gap-3">
         <div>
           <h2 class="text-3xl font-bold text-gray-900 mb-1">Shop by Category</h2>
-          <p class="text-md text-secondary">Browse our wide selection of fresh products</p>
+          <p class="text-md text-secondary-foreground">
+            Browse our wide selection of fresh products
+          </p>
         </div>
         <a
           routerLink="/categories"
@@ -202,13 +204,19 @@
           <app-category-card
             [src]="item.image"
             [name]="item.name"
+            [id]="item.id"
             [productCounts]="item.productCount"
           ></app-category-card>
         }
       </div>
     </div>
   </div>
+  <div class="px-6 flex flex-col">
+    <h2 class="text-3xl font-bold text-gray-900 mb-1">Featured Products</h2>
+    <p class="text-md text-secondary-foreground mb-8">Handpicked fresh products just for you</p>
 
+    <app-products-grid [isHome]="true"></app-products-grid>
+  </div>
   <!-- container -->
   <div class="w-[90%] md:w-[80%] mx-auto mt-13 mb-13">
     <div

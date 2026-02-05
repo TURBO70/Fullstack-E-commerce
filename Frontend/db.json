@@ -76,7 +76,7 @@
       "rating": 4.9,
       "reviews": 267,
       "isOrganic": true,
-      "isFeatured": true,
+      "isFeatured": false,
       "createdAt": "2024-01-15"
     }
   ],
@@ -148,13 +148,10 @@
   ],
   "users": [
     {
-      "id": "1",
-      "name": "Ahmed Hassan",
+      "name": "Ahmed Mohamed",
       "email": "ahmed.hassan@gmail.com",
-      "password": "Ahmed_123",
-      "country": "Egypt",
       "city": "Cairo",
-      "role": "admin"
+      "id": "1"
     },
     {
       "id": "a102",
@@ -280,6 +277,60 @@
       "password": "Wael_123",
       "country": "Egypt",
       "city": "Luxor",
+      "role": "customer"
+    },
+    {
+      "id": "ca0f",
+      "name": "adds fdsfs",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "cd2d",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "1aa6",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "3c18",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "7316",
+      "name": "hassan",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "ae16",
+      "name": "hassan mohamed elgraihy",
+      "email": "hassanelgraihy2002@gmail.com",
+      "country": "ae",
+      "city": "Port Said",
+      "password": "Hassan_1",
       "role": "customer"
     }
   ],

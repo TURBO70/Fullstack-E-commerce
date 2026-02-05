@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from "@angular/router";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,12 +10,19 @@ import { RouterLink } from "@angular/router";
 })
 export class Header {
   isMenuOpen = false;
+  isOpenProfile = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.isOpenProfile = false;
+  }
+  toggleProfile() {
+    this.isOpenProfile = !this.isOpenProfile;
+    this.isMenuOpen = false;
   }
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.isOpenProfile = false;
   }
 }

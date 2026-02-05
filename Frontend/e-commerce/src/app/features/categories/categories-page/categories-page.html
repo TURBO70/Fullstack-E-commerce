@@ -4,7 +4,7 @@
     <div class="flex flex-row items-center justify-between mb-8 gap-3">
       <div>
         <h2 class="text-3xl font-bold text-gray-900 mb-1">Categories</h2>
-        <p class="text-md text-secondary">Browse our wide selection of fresh products</p>
+        <p class="text-md text-secondary-foreground">Browse our wide selection of fresh products</p>
       </div>
     </div>
 
@@ -14,6 +14,7 @@
         <app-category-card
           [src]="item.image"
           [name]="item.name"
+          [id]="item.id"
           [productCounts]="item.productCount"
         ></app-category-card>
       }
