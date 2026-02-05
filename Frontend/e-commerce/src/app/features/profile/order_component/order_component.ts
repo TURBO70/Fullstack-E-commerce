@@ -2,22 +2,34 @@ import { Component, Input, OnInit, Signal, signal } from '@angular/core';
 // import { createNewOrder } from '../../../core/utils/orders.helpers';
 import { OrderService } from '../../../core/services/order_service';
 import { Order } from '../../../shared/models/order_model';
+import { Product } from '../../../shared/models/product_model';
+import { ProductService } from '../../../core/services/product_service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-order-component',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './order_component.html',
   styleUrl: './order_component.css',
 })
 export class OrderComponent{
-  // constructor(private OrderService: OrderService) {}
+  constructor(private productService: ProductService) {}
   // activeTab = signal<'profile' | 'orders'>('orders');
   // userOrders = signal<Order[]>([]);
 
   @Input() userOrders!: Signal<Order[]>;
+  productImg = signal<Product | null>(null);
 
-  // ngOnInit() {
+  ngOnInit() {
+    this.productService.getById("1").subscribe({
+      next: (productData)=>{
+        this.productImg.set(productData)
+        },
+        error: (err) => console.error('Error fetching product:', err),
+      })
+    }
+
   //     this.OrderService.getOrdersByUserId("1").subscribe({
   //     next: (data) => {
   //       // 2. Use .set() to update the signal value
@@ -26,7 +38,7 @@ export class OrderComponent{
   //     },
   //     error: (err) => console.error('Service Error:', err)
   //   });
-  // }
+}
     
   //   setTab(tab: 'profile' | 'orders') {
   //   this.activeTab.set(tab);
@@ -47,6 +59,6 @@ export class OrderComponent{
     //   next: (order) => console.log('Order created successfully:', order),
     //   error: (err) => console.error('Error creating order:', err),
     // });
-}
+
 
 
