@@ -1,5 +1,4 @@
-export interface Product {
-  id: number;
+export interface ProductForm {
   name: string;
   description: string;
   price: number;
@@ -8,9 +7,6 @@ export interface Product {
   categoryId: string;
   stock: number;
   unit: string;
-  rating: number;
-  reviews: number;
   isOrganic: boolean;
   isFeatured: boolean;
-  createdAt: string;
 }

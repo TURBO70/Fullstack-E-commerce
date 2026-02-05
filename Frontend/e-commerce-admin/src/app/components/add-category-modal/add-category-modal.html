@@ -1,0 +1,79 @@
+@if (open && category) {
+
+<!-- Backdrop -->
+<div class="fixed inset-0 bg-black/40 z-40" (click)="onClose()">
+</div>
+
+<!-- Modal container (NOT full screen) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+
+    <!-- Modal -->
+    <div class="bg-white w-full max-w-lg rounded-2xl shadow-xl
+             max-h-[90vh] flex flex-col pointer-events-auto" (click)="$event.stopPropagation()">
+
+        <!-- Header (fixed) -->
+        <div class="flex justify-between items-center p-6 border-b">
+            <h2 class="text-xl font-semibold">Add Category</h2>
+
+            <button class="text-muted-foreground hover:text-foreground hover:cursor-pointer text-lg font-bold"
+                (click)="onClose()">
+                ✕
+            </button>
+        </div>
+
+        <!-- Body (scrollable) -->
+        <div class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- Name -->
+            <div>
+                <label class="block text-sm mb-1">Name</label>
+                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="category.name" />
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm mb-1">Description</label>
+                <textarea rows="3" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="category.description">
+        </textarea>
+            </div>
+
+            <!-- Slug -->
+            <div>
+                <label class="block text-sm mb-1">Slug</label>
+                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="category.slug" />
+            </div>
+
+            <!-- Product Count -->
+            <div>
+                <label class="block text-sm mb-1">Product Count</label>
+                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="category.productCount" />
+            </div>
+
+            <!-- Image -->
+            <div>
+                <label class="block text-sm mb-1">Image URL</label>
+                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="category.image" />
+
+                @if (category.image) {
+                <img [src]="category.image" class="mt-2 h-24 w-24 rounded-lg object-cover border" />
+                }
+            </div>
+        </div>
+
+        <!-- Footer (fixed) -->
+        <div class="flex justify-end gap-3 p-6">
+            <button class="px-4 py-2 rounded-md border border-border" (click)="onClose()">
+                Cancel
+            </button>
+
+            <button class="px-4 py-2 rounded-md bg-primary text-primary-foreground" (click)="onSave()">
+                Save
+            </button>
+        </div>
+    </div>
+</div>
+}

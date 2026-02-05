@@ -1,22 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Red Apples",
-      "description": "Crisp and sweet red apples, perfect for snacking or baking. Rich in fiber and antioxidants.",
-      "price": 4.99,
-      "originalPrice": 6.99,
-      "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&h=400&fit=crop",
-      "categoryId": "1",
-      "stock": 150,
-      "unit": "kg",
-      "rating": 4.8,
-      "reviews": 124,
-      "isOrganic": true,
-      "isFeatured": true,
-      "createdAt": "2024-01-15"
-    },
-    {
       "id": "2",
       "name": "Bananas",
       "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
