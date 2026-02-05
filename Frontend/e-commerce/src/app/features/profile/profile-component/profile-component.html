@@ -162,71 +162,92 @@
     </button>
   </div>-->
 
-<div class="p-6 pt-0">
-    <form [formGroup]="userForm" (ngSubmit)="save()" class="space-y-4 max-w-md">
-      <div class="p-6 pt-0">
-          <div class="space-y-2">
-            <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              for=":rhj:-form-item">Full Name
-            </label>
-            <input
-              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-              name="fullName" id=":rhj:-form-item" aria-describedby=":rhj:-form-item-description" aria-invalid="false"
-              formControlName="name">
-          </div>
-          <div class="space-y-2"><label
-              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              for=":rhk:-form-item">Email</label><input
-              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-              name="email" id=":rhk:-form-item" aria-describedby=":rhk:-form-item-description" aria-invalid="false"
-              formControlName="email">
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="space-y-2"><label
-                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for=":rhl:-form-item">Country</label><button type="button" role="combobox" aria-controls="radix-:rhm:"
-                aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed"
-                class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;&gt;span]:line-clamp-1"
-                id=":rhl:-form-item" aria-describedby=":rhl:-form-item-description" aria-invalid="false"><span
-                  style="pointer-events: none;">Lebanon</span><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                  height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 opacity-50"
-                  aria-hidden="true">
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg></button><select aria-hidden="true" tabindex="-1"
-                style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; overflow-wrap: normal;">
-                <option value="Egypt">Egypt</option>
-                <option value="UAE">UAE</option>
-                <option value="Saudi Arabia">Saudi Arabia</option>
-                <option value="Jordan">Jordan</option>
-                <option value="Lebanon" selected="">Lebanon</option>
-                <option value="Kuwait">Kuwait</option>
-                <option value="Qatar">Qatar</option>
-                <option value="Bahrain">Bahrain</option>
-                <option value="Oman">Oman</option>
-              </select></div>
-            <div class="space-y-2"><label
-                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                for=":rhn:-form-item">City</label><input
-                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                name="city" id=":rhn:-form-item" aria-describedby=":rhn:-form-item-description" aria-invalid="false"
-                value="Ismailia"></div>
-          </div>
+  <div class="p-6 pt-0">
+  <form [formGroup]="userForm" (ngSubmit)="save()" class="space-y-4 max-w-md">
+    <div class="p-6 pt-0">
+      <!-- Full Name Field -->
+      <div class="space-y-2">
+        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for=":rhj:-form-item">Full Name
+        </label>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+          [class.border-destructive]="isFieldInvalid('name')"
+          name="fullName" id=":rhj:-form-item" aria-describedby=":rhj:-form-item-description" aria-invalid="false"
+          formControlName="name">
+        <span *ngIf="isFieldInvalid('name')" class="text-sm text-destructive">
+          {{ getErrorMessage('name') }}
+        </span>
+      </div>
 
-          <button
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2"
-            type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-save h-4 w-4">
-              <path
-                d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z">
-              </path>
-              <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path>
-              <path d="M7 3v4a1 1 0 0 0 1 1h7"></path>
-            </svg>Save Changes
-          </button>
+      <!-- Email Field -->
+      <div class="space-y-2">
+        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for=":rhk:-form-item">Email</label>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+          [class.border-destructive]="isFieldInvalid('email')"
+          name="email" id=":rhk:-form-item" aria-describedby=":rhk:-form-item-description" aria-invalid="false"
+          formControlName="email">
+        <span *ngIf="isFieldInvalid('email')" class="text-sm text-destructive">
+          {{ getErrorMessage('email') }}
+        </span>
       </div>
-        </form>
+
+      <div class="grid grid-cols-2 gap-4">
+        <!-- Country Field -->
+        <div class="space-y-2">
+          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+            Country
+          </label>
+          <select formControlName="country" (change)="onCountryChange()" 
+            class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2224%22%20height%3d%2224%22%20viewBox%3d%220%200%2024%2024%22%20fill%3d%22none%22%20stroke%3d%22currentColor%22%20stroke-width%3d%222%22%20stroke-linecap%3d%22round%22%20stroke-linejoin%3d%22round%22%3e%3cpath%20d%3d%22m6%209%206%206%206-6%22%2f%3e%3c%2fsvg%3e')] bg-[length:1rem] bg-[right_0.75rem_center] bg-no-repeat pr-10"
+            [class.border-destructive]="isFieldInvalid('country')">
+            <option value="">Select country</option>
+            <option *ngFor="let country of countries" [value]="country.name">
+              {{ country.name }}
+            </option>
+          </select>
+          <span *ngIf="isFieldInvalid('country')" class="text-sm text-destructive">
+            {{ getErrorMessage('country') }}
+          </span>
+        </div>
+
+        <!-- City Field -->
+        <div class="space-y-2">
+          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+            City
+          </label>
+          <select formControlName="city" [disabled]="cities.length === 0" 
+            class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2224%22%20height%3d%2224%22%20viewBox%3d%220%200%2024%2024%22%20fill%3d%22none%22%20stroke%3d%22currentColor%22%20stroke-width%3d%222%22%20stroke-linecap%3d%22round%22%20stroke-linejoin%3d%22round%22%3e%3cpath%20d%3d%22m6%209%206%206%206-6%22%2f%3e%3c%2fsvg%3e')] bg-[length:1rem] bg-[right_0.75rem_center] bg-no-repeat pr-10"
+            [class.border-destructive]="isFieldInvalid('city')">
+            <option value="">Select city</option>
+            <option *ngFor="let city of cities" [value]="city">
+              {{ city }}
+            </option>
+          </select>
+          <span *ngIf="isFieldInvalid('city')" class="text-sm text-destructive">
+            {{ getErrorMessage('city') }}
+          </span>
+        </div>
       </div>
-    }
+
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2 mt-3"
+        type="submit"
+        [disabled]="userForm.invalid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-save h-4 w-4">
+          <path
+            d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z">
+          </path>
+          <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path>
+          <path d="M7 3v4a1 1 0 0 0 1 1h7"></path>
+        </svg>Save Changes
+      </button>
+    </div>
+  </form>
+</div>
+  }
 </div>
