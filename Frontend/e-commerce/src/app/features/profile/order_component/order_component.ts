@@ -22,7 +22,7 @@ export class OrderComponent{
   productImg = signal<Product | null>(null);
 
   ngOnInit() {
-    this.productService.getById("1").subscribe({
+    this.productService.getById("2").subscribe({
       next: (productData)=>{
         this.productImg.set(productData)
         },
