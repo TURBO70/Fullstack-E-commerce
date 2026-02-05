@@ -1,7 +1,13 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div
+  [ngClass]="
+    viewMode === 'grid'
+      ? 'grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6'
+      : 'space-y-4'
+  "
+>
   <app-product-card
-    *ngFor="let product of products" 
-    [product]="product" 
-    (addToCart)="addToCart.emit($event)">
-  </app-product-card>
+    *ngFor="let product of products"
+    [product]="product"
+    (addToCart)="addToCart($event)"
+  ></app-product-card>
 </div>

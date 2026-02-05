@@ -1,51 +1,35 @@
 <div class="container mx-auto px-4 py-8">
-
   <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
     <div>
       <h1 class="text-3xl font-bold">Products</h1>
-      <p class="text-gray-500">{{filteredProducts.length}} products found</p>
+      <p class="text-gray-500">{{ filteredProducts().length }} products found</p>
     </div>
   </div>
 
   <div class="flex flex-wrap items-center gap-4 mb-6">
-
     <div class="relative flex-1 min-w-[200px] max-w-md">
       <input
         type="search"
         placeholder="Search products..."
         [(ngModel)]="searchQuery"
-        (ngModelChange)="filterProducts()"
+        (ngModelChange)="filterProducts2()"
         class="pl-10 border border-gray-300 rounded-xl w-full py-2"
       />
       <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></span>
       <button
         *ngIf="searchQuery"
-        (click)="searchQuery=''; filterProducts()"
+        (click)="searchQuery = ''; filterProducts2()"
         class="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7"
-      >❌</button>
+      ></button>
     </div>
 
-    <!-- Sort -->
-    <select [(ngModel)]="sortBy" (change)="filterProducts()" class="border rounded px-2 py-1">
+    <select [(ngModel)]="sortBy" (change)="filterProducts2()" class="border rounded px-2 py-1">
       <option value="featured">Featured</option>
       <option value="newest">Newest</option>
       <option value="price-low">Price: Low to High</option>
       <option value="price-high">Price: High to Low</option>
       <option value="rating">Highest Rated</option>
     </select>
-
-    <div class="hidden md:flex items-center border rounded-lg">
-      <button
-        
-        [class.bg-blue-500]="viewMode==='grid'"
-        
-      ></button>
-      <button
-        
-        [class.bg-blue-500]="viewMode==='list'"
-        
-      ></button>
-    </div>
   </div>
 
   <div class="flex gap-8">
@@ -55,52 +39,59 @@
 
         <div class="mb-4">
           <h3 class="font-semibold mb-2">Categories</h3>
+
           <label class="flex items-center gap-2 cursor-pointer">
-            <input type="checkbox" [checked]="selectedCategory==='all'" (change)="selectedCategory='all'; filterProducts()" />
+            <input
+              type="radio"
+              name="category"
+              [checked]="selectedCategory === 0"
+              (change)="selectedCategory = 0; filterProducts2()"
+            />
             All Categories
           </label>
-          <label
-            *ngFor="let c of categories"
-            class="flex items-center gap-2 cursor-pointer"
-          >
+
+          <label *ngFor="let c of categories" class="flex items-center gap-2 cursor-pointer">
             <input
-              type="checkbox"
-              [checked]="selectedCategory===c.slug"
-              (change)="selectedCategory=c.slug; filterProducts()"
+              type="radio"
+              name="category"
+              [checked]="selectedCategory === c.id"
+              (change)="selectedCategory = c.id; filterProducts2()"
+              class="accent-[#679089]"
             />
-            {{c.name}}
+            {{ c.name }}
           </label>
         </div>
-
         <div class="mb-4">
           <h3 class="font-semibold mb-2">Dietary</h3>
           <label class="flex items-center gap-2 cursor-pointer">
-            <input type="checkbox" [(ngModel)]="showOrganic" (ngModelChange)="filterProducts()" />
+            <input
+              type="checkbox"
+              [(ngModel)]="showOrganic"
+              (ngModelChange)="filterProducts2()"
+              class="accent-[#679089]"
+            />
             Organic Only
           </label>
         </div>
 
-        <button *ngIf="activeFiltersCount() > 0" (click)="clearFilters()" class="border px-2 py-1 w-full">
+        <button
+          *ngIf="activeFiltersCount() > 0"
+          (click)="clearFilters()"
+          class="border px-2 py-1 w-full"
+        >
           Clear All Filters
         </button>
       </div>
     </aside>
 
     <div class="flex-1">
-      <div *ngIf="filteredProducts.length===0" class="text-center py-16">
+      <div *ngIf="filteredProducts().length === 0" class="text-center py-16">
         <p class="text-gray-500 text-lg">No products found</p>
         <p class="text-gray-400 mt-2 text-sm">Try adjusting your search or filter criteria</p>
         <button (click)="clearFilters()" class="border px-3 py-1 mt-4">Clear Filters</button>
       </div>
 
-      <div
-        [ngClass]="viewMode==='grid' ? 'grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6' : 'space-y-4'"
-      >
-        <app-product-card
-          *ngFor="let product of filteredProducts"
-          [product]="product"
-        ></app-product-card>
-      </div>
+      <app-products-grid [products]="filteredProducts()"></app-products-grid>
     </div>
   </div>
 </div>
