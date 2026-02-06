@@ -113,6 +113,7 @@ export class CartService {
         }
     }
 
+
     async clearCart() {
         try {
             const carts = await firstValueFrom(this.http.get<Cart[]>(`${this.baseUrl}?userId=${this.userId}`));
