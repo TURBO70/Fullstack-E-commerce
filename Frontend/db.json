@@ -408,8 +408,98 @@
       "userId": 1,
       "items": [
         {
-          "productId": 1,
-          "quantity": 1
+          "product": {
+            "id": "2",
+            "name": "Bananas",
+            "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
+            "price": 2.49,
+            "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=400&fit=crop",
+            "categoryId": "3",
+            "stock": 202,
+            "unit": "bunch",
+            "rating": 4.6,
+            "reviews": 89,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-01-14",
+            "categoryName": "Unknown"
+          },
+          "quantity": 18
+        },
+        {
+          "product": {
+            "id": "3",
+            "name": "Fresh Oranges",
+            "description": "Juicy navel oranges bursting with vitamin C. Perfect for juicing or eating fresh.",
+            "price": 5.99,
+            "originalPrice": 7.49,
+            "image": "https://images.unsplash.com/photo-1547514701-42782101795e?w=400&h=400&fit=crop",
+            "categoryId": "6",
+            "stock": 120,
+            "unit": "kg",
+            "rating": 4.7,
+            "reviews": 156,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-01-13",
+            "categoryName": "Dried Fruits"
+          },
+          "quantity": 4
+        },
+        {
+          "product": {
+            "id": "5",
+            "name": "Fresh Basil",
+            "description": "Aromatic fresh basil leaves, perfect for Italian dishes and pesto.",
+            "price": 2.99,
+            "image": "https://images.unsplash.com/photo-1618375569909-3c8616cf7733?w=400&h=400&fit=crop",
+            "categoryId": "3",
+            "stock": 100,
+            "unit": "bunch",
+            "rating": 4.8,
+            "reviews": 89,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-01-15"
+          },
+          "quantity": 3
+        },
+        {
+          "product": {
+            "id": "6",
+            "name": "Medjool Dates",
+            "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
+            "price": 12.99,
+            "image": "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?w=400&h=400&fit=crop",
+            "categoryId": "4",
+            "stock": 60,
+            "unit": "500g",
+            "rating": 4.9,
+            "reviews": 234,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-01-15"
+          },
+          "quantity": 5
+        },
+        {
+          "product": {
+            "id": "7",
+            "name": "Raw Almonds",
+            "description": "Premium raw almonds, perfect for snacking and baking.",
+            "price": 14.99,
+            "originalPrice": 17.99,
+            "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400&h=400&fit=crop",
+            "categoryId": "6",
+            "stock": 80,
+            "unit": "500g",
+            "rating": 4.9,
+            "reviews": 267,
+            "isOrganic": true,
+            "isFeatured": false,
+            "createdAt": "2024-01-15"
+          },
+          "quantity": 5
         }
       ]
     }
