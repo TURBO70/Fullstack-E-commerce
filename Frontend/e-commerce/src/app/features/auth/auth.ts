@@ -11,6 +11,7 @@ import { Login } from './components/login/login';
 })
 export class Auth {
   constructor() {}
+  
   reset($event: any) {
     if ($event === true) {
       console.log('here');

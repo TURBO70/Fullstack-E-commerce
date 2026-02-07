@@ -9,17 +9,12 @@ import { OrderComponent } from './features/profile/order_component/order_compone
 import { ProductDetailsComponent } from './features/products/product-details/product-details';
 import { ParentComponent } from './features/profile/parent-component/parent-component';
 
-
-  
-
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'auth', component: Auth },
+  { path: '', component: Auth, pathMatch: 'full' },
+  { path: 'home', component: Home },
   { path: 'categories', component: CategoriesPage },
   { path: 'products', component: ProductsList },
-
   { path: 'cart', component: Cart },
-  {path: 'user-profile', component: ParentComponent},
-  {path: 'product/details/:id', component: ProductDetailsComponent},
-  
+  { path: 'user-profile', component: ParentComponent },
+  { path: 'product/details/:id', component: ProductDetailsComponent },
 ];
