@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "2",
-      "name": "Bananas",
+      "name": "Banana",
       "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
       "price": 2.49,
       "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=400&fit=crop",
@@ -14,7 +14,7 @@
       "isOrganic": false,
       "isFeatured": true,
       "createdAt": "2024-01-14",
-      "categoryName": "Unknown"
+      "categoryName": "Herbs & Green"
     },
     {
       "id": "3",
@@ -71,13 +71,14 @@
       "originalPrice": 17.99,
       "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400&h=400&fit=crop",
       "categoryId": "6",
-      "stock": 80,
+      "stock": 115,
       "unit": "500g",
       "rating": 4.9,
       "reviews": 267,
       "isOrganic": true,
       "isFeatured": false,
-      "createdAt": "2024-01-15"
+      "createdAt": "2024-01-15",
+      "categoryName": "Nuts"
     }
   ],
   "categories": [
@@ -280,42 +281,6 @@
       "role": "customer"
     },
     {
-      "id": "ca0f",
-      "name": "adds fdsfs",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "cd2d",
-      "name": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "1aa6",
-      "name": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
-      "id": "3c18",
-      "name": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
-    },
-    {
       "id": "7316",
       "name": "hassan",
       "email": "hassanelgraihy2002@gmail.com",
@@ -325,12 +290,12 @@
       "role": "customer"
     },
     {
-      "id": "ae16",
-      "name": "hassan mohamed elgraihy",
-      "email": "hassanelgraihy2002@gmail.com",
-      "country": "ae",
+      "id": "82e0",
+      "name": "Hassan Elgraihy",
+      "email": "hassan@gmail.com",
+      "country": "eg",
       "city": "Port Said",
-      "password": "Hassan_1",
+      "password": "Hassan_123",
       "role": "customer"
     }
   ],
