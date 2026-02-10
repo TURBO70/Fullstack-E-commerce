@@ -8,13 +8,20 @@ import { ProfileComponent } from './features/profile/profile-component/profile-c
 import { OrderComponent } from './features/profile/order_component/order_component';
 import { ProductDetailsComponent } from './features/products/product-details/product-details';
 import { ParentComponent } from './features/profile/parent-component/parent-component';
+import { authGuard } from './guards/auth-guard/auth-guard-guard';
 
 export const routes: Routes = [
   { path: '', component: Auth, pathMatch: 'full' },
-  { path: 'home', component: Home },
-  { path: 'categories', component: CategoriesPage },
-  { path: 'products', component: ProductsList },
-  { path: 'cart', component: Cart },
-  { path: 'user-profile', component: ParentComponent },
-  { path: 'product/details/:id', component: ProductDetailsComponent },
+  {
+    path: '',
+    canActivateChild: [authGuard],
+    children: [
+      { path: 'home', component: Home },
+      { path: 'categories', component: CategoriesPage },
+      { path: 'products', component: ProductsList },
+      { path: 'cart', component: Cart },
+      { path: 'user-profile', component: ParentComponent },
+      { path: 'product/details/:id', component: ProductDetailsComponent },
+    ],
+  },
 ];

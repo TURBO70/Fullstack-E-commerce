@@ -48,12 +48,14 @@ export class Login {
       this.user.getAllUsers().subscribe({
         next: (res) => {
           const found = res.find((u) => u.email === _user.email && u.password === _user.password)!;
-          
+
           if (found) {
             this.isLoading.set(false);
-            this.route.navigate(['/home']);
+            this.route.navigate(['/home'], {
+              replaceUrl: true,
+            });
           } else {
-          this.isFound.set(true);
+            this.isFound.set(true);
 
             this.isLoading.set(false);
           }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Route, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +9,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
+  constructor(private route: Router) {}
   isMenuOpen = false;
   isOpenProfile = false;
 
@@ -24,5 +25,10 @@ export class Header {
   closeMenu() {
     this.isMenuOpen = false;
     this.isOpenProfile = false;
+  }
+  logout() {
+    this.route.navigate([''], {
+      replaceUrl: true,
+    });
   }
 }
