@@ -106,14 +106,24 @@ export class SignUp {
         password: this.signUpForm.get('password')?.value!,
         role: 'customer',
       };
-      this.user.addUser(_user).subscribe({
+      this.user.getAllUsers().subscribe({
         next: (res) => {
-          console.log(res);
-          this.isSigned.set(false);
-          this.isSignedEvent.emit(true);
-        },
-        error: (err) => {
-          //console.log(err);
+          if (res.find((u) => u.email === _user.email)) {
+            this.isSigned.set(false);
+
+            alert('User already exists');
+          } else {
+            this.user.addUser(_user).subscribe({
+              next: (res) => {
+                console.log(res);
+                this.isSigned.set(false);
+                this.isSignedEvent.emit(true);
+              },
+              error: (err) => {
+                //console.log(err);
+              },
+            });
+          }
         },
       });
     }
