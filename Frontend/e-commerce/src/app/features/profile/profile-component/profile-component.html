@@ -1,60 +1,38 @@
 <div class="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
-  <div class="space-y-1.5 p-1 flex flex-row items-center justify-between">
-    <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2"><svg
-        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-5 w-5">
+  <div class="space-y-1.5 p-1 flex items-center justify-between">
+    <h3 class="text-2xl font-semibold flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-user h-5 w-5">
         <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
         <circle cx="12" cy="7" r="4"></circle>
-      </svg>Profile Information</h3>
+      </svg>
+      Profile Information
+    </h3>
+    <button (click)="toggleEdit()" class="flex items-center justify-center text-sm font-medium transition-colors
+         border border-input bg-background hover:bg-accent hover:text-accent-foreground
+         h-9 rounded-md px-3 gap-2 cursor-pointer">
 
-    @if (!isEditing()) {
-    <button (click)="toggleEdit()"
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2"><svg
-        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen h-4 w-4">
-        <path
-          d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
-        </path>
-      </svg>Edit</button>
-    <!-- <button (click)="toggleEdit()"
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-slate-100 h-9 rounded-md px-3 gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="lucide lucide-pen h-4 w-4">
-        <path
-          d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
-        </path>
-      </svg> Edit
-    </button> -->
-    } @else {
-    <button (click)="toggleEdit()"
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="lucide lucide-x h-4 w-4">
+      @if (isEditing()) {
+      <!-- Cancel icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M18 6 6 18"></path>
         <path d="m6 6 12 12"></path>
       </svg>
       Cancel
-    </button>
-    }
-  </div>
-
-  <!-- <div class="space-y-1.5 p-6 flex flex-row items-center justify-between">
-    <h3 class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2"><svg
-        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-5 w-5">
-        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-        <circle cx="12" cy="7" r="4"></circle>
-      </svg>Profile Information</h3><button
-      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 gap-2"><svg
-        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen h-4 w-4">
+      } @else {
+      <!-- Edit icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path
           d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
         </path>
-      </svg>Edit</button>
-  </div> -->
+      </svg>
+      Edit
+      }
+    </button>
+  </div>
 
   @if (!isEditing()) {
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -69,14 +47,17 @@
     </div>
     <div>
       <p class="text-sm text-muted-foreground">Location</p>
-      <p class="font-medium flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+      <p class="font-medium flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-muted-foreground">
           <path
             d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
           </path>
           <circle cx="12" cy="10" r="3"></circle>
-        </svg>{{ currentUser()?.country}} , {{ currentUser()?.city }}</p>
+        </svg>
+        {{ currentUser()?.country}} , {{ currentUser()?.city }}
+      </p>
     </div>
     <div>
       <p class="text-sm text-muted-foreground">Role</p>
@@ -85,169 +66,90 @@
         {{ currentUser()?.role || 'Customer' }}</div>
     </div>
   </div>
-  <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-    <div class="space-y-1">
-      <p class="text-xs font-medium text-muted-foreground opacity-70">Full Name</p>
-      <p class="text-sm font-medium">{{ currentUser()?.name }}</p>
-    </div>
-
-    <div class="space-y-1">
-      <p class="text-xs font-medium text-muted-foreground opacity-70">Email Address</p>
-      <p class="text-sm font-medium">{{ currentUser()?.email }}</p>
-    </div>
-
-    <div class="space-y-1">
-      <p class="text-xs font-medium text-muted-foreground opacity-70">City</p>
-      <p class="text-sm font-medium">📍 {{ currentUser()?.city }}</p>
-    </div>
-
-    <div class="space-y-2">
-      <p class="text-xs font-medium text-muted-foreground opacity-70">Role</p>
-      <span
-        class="inline-flex px-2.5 py-0.5 bg-slate-100 text-slate-900 rounded-md text-[12px] font-medium border border-slate-200">
-        {{ currentUser()?.role || 'Customer' }}
-      </span>
-    </div>
-  </div> -->
   }
 
   @if (isEditing()) {
-  <!-- <form [formGroup]="userForm" (ngSubmit)="save()" class="space-y-6"> -->
-  <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="space-y-2">
-        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Full
-          Name</label>
-        <input formControlName="name"
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
-      </div>
-
-      <div class="space-y-2">
-        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email
-          Address</label>
-        <input formControlName="email"
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
-      </div>
-
-      <div class="space-y-2">
-        <label
-          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">City</label>
-        <input formControlName="city"
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
-      </div>
-    </div>  -->
-  <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="space-y-2">
-      <label
-        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Full Name
-      </label>
-      <input formControlName="name"
-        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ng-untouched ng-pristine ng-valid">
-    </div>
-    <div class="space-y-2"><label
-        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email
-        Address</label><input formControlName="email"
-        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ng-untouched ng-pristine ng-valid">
-    </div>
-    <div class="space-y-2"><label
-        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">City</label><input
-        formControlName="city"
-        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ng-untouched ng-pristine ng-valid">
-    </div>
-  </div>
-
-  <div class="pt-4 border-t border-slate-100">
-    <button type="submit"
-      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-slate-900 text-white hover:bg-slate-800 h-10 px-6 py-2 gap-2">
-      💾 Save Changes
-    </button>
-  </div>-->
-
   <div class="p-6 pt-0">
-  <form [formGroup]="userForm" (ngSubmit)="save()" class="space-y-4 max-w-md">
-    <div class="p-6 pt-0">
-      <!-- Full Name Field -->
-      <div class="space-y-2">
-        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          for=":rhj:-form-item">Full Name
-        </label>
-        <input
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-          [class.border-destructive]="isFieldInvalid('name')"
-          name="fullName" id=":rhj:-form-item" aria-describedby=":rhj:-form-item-description" aria-invalid="false"
-          formControlName="name">
-        <span *ngIf="isFieldInvalid('name')" class="text-sm text-destructive">
-          {{ getErrorMessage('name') }}
-        </span>
-      </div>
-
-      <!-- Email Field -->
-      <div class="space-y-2">
-        <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          for=":rhk:-form-item">Email</label>
-        <input
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-          [class.border-destructive]="isFieldInvalid('email')"
-          name="email" id=":rhk:-form-item" aria-describedby=":rhk:-form-item-description" aria-invalid="false"
-          formControlName="email">
-        <span *ngIf="isFieldInvalid('email')" class="text-sm text-destructive">
-          {{ getErrorMessage('email') }}
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-4">
-        <!-- Country Field -->
+    <form [formGroup]="userForm" (ngSubmit)="save()" class="space-y-4 max-w-md">
+      <div class="p-6 pt-0">
+        <!-- Full Name Field -->
         <div class="space-y-2">
-          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-            Country
+          <label class="text-sm font-medium">
+            Full Name
           </label>
-          <select formControlName="country" (change)="onCountryChange()" 
-            class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2224%22%20height%3d%2224%22%20viewBox%3d%220%200%2024%2024%22%20fill%3d%22none%22%20stroke%3d%22currentColor%22%20stroke-width%3d%222%22%20stroke-linecap%3d%22round%22%20stroke-linejoin%3d%22round%22%3e%3cpath%20d%3d%22m6%209%206%206%206-6%22%2f%3e%3c%2fsvg%3e')] bg-[length:1rem] bg-[right_0.75rem_center] bg-no-repeat pr-10"
-            [class.border-destructive]="isFieldInvalid('country')">
-            <option value="">Select country</option>
-            <option *ngFor="let country of countries" [value]="country.name">
-              {{ country.name }}
-            </option>
-          </select>
-          <span *ngIf="isFieldInvalid('country')" class="text-sm text-destructive">
-            {{ getErrorMessage('country') }}
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:text-sm"
+            [class.border-destructive]="isFieldInvalid('name')" name="fullName" formControlName="name">
+          <span *ngIf="isFieldInvalid('name')" class="text-sm text-destructive">
+            {{ getErrorMessage('name') }}
           </span>
         </div>
 
-        <!-- City Field -->
+        <!-- Email Field -->
         <div class="space-y-2">
-          <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-            City
-          </label>
-          <select formControlName="city" [disabled]="cities.length === 0" 
-            class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2224%22%20height%3d%2224%22%20viewBox%3d%220%200%2024%2024%22%20fill%3d%22none%22%20stroke%3d%22currentColor%22%20stroke-width%3d%222%22%20stroke-linecap%3d%22round%22%20stroke-linejoin%3d%22round%22%3e%3cpath%20d%3d%22m6%209%206%206%206-6%22%2f%3e%3c%2fsvg%3e')] bg-[length:1rem] bg-[right_0.75rem_center] bg-no-repeat pr-10"
-            [class.border-destructive]="isFieldInvalid('city')">
-            <option value="">Select city</option>
-            <option *ngFor="let city of cities" [value]="city">
-              {{ city }}
-            </option>
-          </select>
-          <span *ngIf="isFieldInvalid('city')" class="text-sm text-destructive">
-            {{ getErrorMessage('city') }}
+          <label class="text-sm font-medium">Email</label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:text-sm"
+            [class.border-destructive]="isFieldInvalid('email')" name="email" id=":rhk:-form-item" formControlName="email">
+          <span *ngIf="isFieldInvalid('email')" class="text-sm text-destructive">
+            {{ getErrorMessage('email') }}
           </span>
         </div>
-      </div>
 
-      <button
-        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2 mt-3"
-        type="submit"
-        [disabled]="userForm.invalid">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-save h-4 w-4">
-          <path
-            d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z">
-          </path>
-          <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path>
-          <path d="M7 3v4a1 1 0 0 0 1 1h7"></path>
-        </svg>Save Changes
-      </button>
-    </div>
-  </form>
-</div>
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Country Field -->
+          <div class="space-y-2">
+            <label class="text-sm font-medium">
+              Country
+            </label>
+            <select formControlName="country" (change)="onCountryChange()"
+              class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2  appearance-none cursor-pointer bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2224%22%20height%3d%2224%22%20viewBox%3d%220%200%2024%2024%22%20fill%3d%22none%22%20stroke%3d%22currentColor%22%20stroke-width%3d%222%22%20stroke-linecap%3d%22round%22%20stroke-linejoin%3d%22round%22%3e%3cpath%20d%3d%22m6%209%206%206%206-6%22%2f%3e%3c%2fsvg%3e')] bg-[length:1rem] bg-[right_0.75rem_center] bg-no-repeat pr-10"
+              [class.border-destructive]="isFieldInvalid('country')">
+              <option value="">Select country</option>
+              <option *ngFor="let country of countries" [value]="country.name">
+                {{ country.name }}
+              </option>
+            </select>
+            <span *ngIf="isFieldInvalid('country')" class="text-sm text-destructive">
+              {{ getErrorMessage('country') }}
+            </span>
+          </div>
+
+          <!-- City Field -->
+          <div class="space-y-2">
+            <label class="text-sm font-medium">
+              City
+            </label>
+            <select formControlName="city" [disabled]="cities.length === 0"
+              class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2224%22%20height%3d%2224%22%20viewBox%3d%220%200%2024%2024%22%20fill%3d%22none%22%20stroke%3d%22currentColor%22%20stroke-width%3d%222%22%20stroke-linecap%3d%22round%22%20stroke-linejoin%3d%22round%22%3e%3cpath%20d%3d%22m6%209%206%206%206-6%22%2f%3e%3c%2fsvg%3e')] bg-[length:1rem] bg-[right_0.75rem_center] bg-no-repeat pr-10"
+              [class.border-destructive]="isFieldInvalid('city')">
+              <option value="">Select city</option>
+              <option *ngFor="let city of cities" [value]="city">
+                {{ city }}
+              </option>
+            </select>
+            <span *ngIf="isFieldInvalid('city')" class="text-sm text-destructive">
+              {{ getErrorMessage('city') }}
+            </span>
+          </div>
+        </div>
+
+        <button
+          class="flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2 mt-3 cursor-pointer"
+          type="submit" [disabled]="userForm.invalid">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-save h-4 w-4">and dis
+            <path
+              d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z">
+            </path>
+            <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path>
+            <path d="M7 3v4a1 1 0 0 0 1 1h7"></path>
+          </svg>
+          Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
   }
 </div>

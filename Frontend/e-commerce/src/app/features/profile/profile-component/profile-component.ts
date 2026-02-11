@@ -40,30 +40,10 @@ countries = [
     name: 'Qatar',
     cities: ['Doha', 'Al Wakrah', 'Al Rayyan', 'Umm Salal', 'Al Khor', 'Dukhan']
   },
-  // {
-  //   name: 'Bahrain',
-  //   cities: ['Manama', 'Riffa', 'Muharraq', 'Hamad Town', 'Isa Town', 'Sitra']
-  // },
-  // {
-  //   name: 'Oman',
-  //   cities: ['Muscat', 'Salalah', 'Sohar', 'Nizwa', 'Sur', 'Ibri', 'Barka']
-  // },
-  // {
-  //   name: 'Jordan',
-  //   cities: ['Amman', 'Zarqa', 'Irbid', 'Aqaba', 'Petra', 'Madaba', 'Jerash']
-  // },
   {
     name: 'Lebanon',
     cities: ['Beirut', 'Tripoli', 'Sidon', 'Tyre', 'Byblos', 'Zahle', 'Baalbek']
   },
-  // {
-  //   name: 'Iraq',
-  //   cities: ['Baghdad', 'Basra', 'Mosul', 'Erbil', 'Najaf', 'Karbala', 'Sulaymaniyah']
-  // },
-  // {
-  //   name: 'Syria',
-  //   cities: ['Damascus', 'Aleppo', 'Homs', 'Latakia', 'Hama', 'Tartus']
-  // },
   {
     name: 'Morocco',
     cities: ['Casablanca', 'Rabat', 'Marrakech', 'Fes', 'Tangier', 'Agadir', 'Meknes']
@@ -76,10 +56,6 @@ countries = [
     name: 'Tunisia',
     cities: ['Tunis', 'Sfax', 'Sousse', 'Kairouan', 'Bizerte', 'Gabes', 'Monastir']
   },
-  // {
-  //   name: 'USA',
-  //   cities: ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio']
-  // }
 ];
 
   cities:string[] = [];
@@ -103,10 +79,10 @@ countries = [
         Validators.pattern(/^[a-zA-Z\s]+$/) // Only letters and spaces
       ]
     ],
-    email: [      '', 
+    email: ['', 
       [
         Validators.required, 
-        Validators.email,
+        // Validators.email,
         Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
       ]
     ],
@@ -122,9 +98,9 @@ countries = [
     return `${this.getFieldLabel(fieldName)} is required`;
   }
   
-  if (control?.hasError('email')) {
-    return 'Please enter a valid email address';
-  }
+  // if (control?.hasError('email')) {
+  //   return 'Please enter a valid email address';
+  // }
   
   if (control?.hasError('minlength')) {
     const minLength = control.errors?.['minlength'].requiredLength;
@@ -137,9 +113,8 @@ countries = [
   }
   
   if (control?.hasError('pattern')) {
-    if (fieldName === 'name') {
+    if(fieldName === 'name')
       return 'Name can only contain letters and spaces';
-    }
     if (fieldName === 'email') {
       return 'Please enter a valid email address';
     }
@@ -160,7 +135,9 @@ getFieldLabel(fieldName: string): string {
 
 isFieldInvalid(fieldName: string): boolean {
   const control = this.userForm.get(fieldName);
-  return !!(control && control.invalid && (control.dirty || control.touched));
+  if(!control)
+    return false;
+  return control.invalid && (control.dirty || control.touched);
 }
 
     toggleEdit() {
@@ -187,29 +164,12 @@ isFieldInvalid(fieldName: string): boolean {
 
      this.cities = countryObj ? countryObj.cities : [];
 
+    // this. cities = this.countries.find(
+    //   c=>c.name === selectedCountry
+    // )?.cities || []
+
     // reset city when country changes
     this.userForm.get('city')?.setValue('');
   }
-
-  // 1. Initialize as a signal
-  // currentUser = signal<user | undefined>(undefined);
-  // activeTab = signal<'profile' | 'orders'>('profile');
-
-  // constructor(private userService: UserService) { }
-
-  // ngOnInit() {
-  //   this.userService.getUserById("1").subscribe({
-  //     next: (data) => {
-  //       // 2. Use .set() to update the signal value
-  //       this.currentUser.set(data);
-  //       console.log('Signal updated with:', data);
-  //     },
-  //     error: (err) => console.error('Service Error:', err)
-  //   });
-  // }
-
-  // setTab(tab: 'profile' | 'orders') {
-  //   this.activeTab.set(tab);
-  // }
 }
 
