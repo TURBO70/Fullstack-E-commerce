@@ -48,29 +48,38 @@
         <!-- Icons -->
         <div class="flex items-center gap-2">
           <!-- Cart -->
-          <button
-            routerLink="/cart"
-            class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-shopping-cart h-5 w-5"
+
+          <div class="relative">
+            @if(cartService.cartItems().length>0){
+            <div
+              class="absolute bottom-7 -right-1 rounded-full w-5.5 h-5.5 text-center bg-primary text-white flex justify-center items-center"
             >
-              <circle cx="8" cy="21" r="1"></circle>
-              <circle cx="19" cy="21" r="1"></circle>
-              <path
-                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
-              ></path>
-            </svg>
-          </button>
+              {{cartService.cartItems().length}}
+            </div>}
+            <button
+              routerLink="/cart"
+              class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-shopping-cart h-5 w-5"
+              >
+                <circle cx="8" cy="21" r="1"></circle>
+                <circle cx="19" cy="21" r="1"></circle>
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                ></path>
+              </svg>
+            </button>
+          </div>
           <!-- User -->
           <button
             (click)="toggleProfile()"

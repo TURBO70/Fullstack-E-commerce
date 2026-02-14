@@ -662,6 +662,15 @@
       "city": "Cairo",
       "password": "Yes12345-",
       "role": "customer"
+    },
+    {
+      "name": "hassan mohamed",
+      "email": "hassanelgraihy2002@gmail.com",
+      "city": "Ajman",
+      "country": "UAE",
+      "id": "48f4",
+      "password": "Hassan_123",
+      "role": "customer"
     }
   ],
   "orders": [
