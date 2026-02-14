@@ -1,7 +1,27 @@
 {
   "products": [
     {
+<<<<<<< HEAD
       "id": "2",
+=======
+      "id": "101",
+      "name": "Red Apple",
+      "description": "Crisp and juicy red apples, full of natural sweetness and vitamins.",
+      "price": 3.49,
+      "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=400&h=400&fit=crop",
+      "categoryId": "1",
+      "stock": 150,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 120,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "102",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "name": "Banana",
       "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
       "price": 2.49,
@@ -12,7 +32,7 @@
       "rating": 4.6,
       "reviews": 89,
       "isOrganic": false,
-      "isFeatured": true,
+      "isFeatured": false,
       "createdAt": "2024-01-14",
       "categoryName": "Herbs & Green"
     },
@@ -21,50 +41,313 @@
       "name": "Fresh Oranges",
       "description": "Juicy navel oranges bursting with vitamin C. Perfect for juicing or eating fresh.",
       "price": 5.99,
+<<<<<<< HEAD
       "originalPrice": 7.49,
       "image": "https://images.unsplash.com/photo-1547514701-42782101795e?w=400&h=400&fit=crop",
       "categoryId": "6",
       "stock": 120,
       "unit": "kg",
+=======
+      "image": "https://diyhomedesignideas.com/photos/800-webp/e2fo8m6o1bxd5lpsfn0q.webp",
+      "categoryId": "1",
+      "stock": 90,
+      "unit": "kg",
+      "rating": 4.8,
+      "reviews": 95,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "104",
+      "name": "Green Grapes",
+      "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
+      "price": 4.99,
+      "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
+      "categoryId": "1",
+      "stock": 120,
+      "unit": "kg",
+      "rating": 4.5,
+      "reviews": 76,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "105",
+      "name": "Pineapple",
+      "description": "Tropical pineapple, sweet, juicy and rich in vitamin C.",
+      "price": 6.49,
+      "image": "https://tse4.mm.bing.net/th/id/OIP.8Oc8ua0K7P84PpoJCP4JkQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "1",
+      "stock": 50,
+      "unit": "piece",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "rating": 4.7,
       "reviews": 156,
       "isOrganic": true,
+<<<<<<< HEAD
       "isFeatured": true,
       "createdAt": "2024-01-13",
       "categoryName": "Dried Fruits"
     },
     {
       "id": "5",
+=======
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Fresh Fruits"
+    },
+
+    {
+      "id": "201",
+      "name": "Carrots",
+      "description": "Fresh farm-grown carrots, crunchy and full of beta-carotene for healthy eyes.",
+      "price": 1.99,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.EOafQATWNirsC4jeS2vPHgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 180,
+      "unit": "kg",
+      "rating": 4.5,
+      "reviews": 75,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-02",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "202",
+      "name": "Broccoli",
+      "description": "Fresh green broccoli, perfect for steaming, stir-fry, or salads.",
+      "price": 3.29,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.NN02CpCK__5Di9H_CJS_PgHaFj?w=1200&h=900&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 100,
+      "unit": "kg",
+      "rating": 4.6,
+      "reviews": 88,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "203",
+      "name": "Tomatoes",
+      "description": "Ripe and juicy tomatoes, perfect for salads, sauces, and cooking.",
+      "price": 2.79,
+      "image": "https://th.bing.com/th/id/R.5c476c3ea45bcf53cabd9d13aaae0b1f?rik=VNyQZ4Mhh%2bP8bg&riu=http%3a%2f%2fwww.primallyinspired.com%2fwp-content%2fuploads%2f2013%2f07%2ftomatoes.jpg&ehk=rGYZXIgLoY8HrJ1%2bPlt4DNyTW9CTf%2ftNIJ7LC0TFBFY%3d&risl=&pid=ImgRaw&r=0",
+      "categoryId": "2",
+      "stock": 140,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 110,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "204",
+      "name": "Cucumbers",
+      "description": "Fresh and crunchy cucumbers, perfect for salads and snacking.",
+      "price": 1.89,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.S0XqwAyhE10j_4S4wAiMdAHaHa?w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 130,
+      "unit": "kg",
+      "rating": 4.4,
+      "reviews": 64,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "205",
+      "name": "Bell Peppers",
+      "description": "Colorful bell peppers, sweet, crunchy, and full of vitamin C.",
+      "price": 3.99,
+      "image": "https://png.pngtree.com/thumb_back/fw800/background/20221014/pngtree-bell-peppers-stem-yellow-bell-pepper-photo-image_7085716.jpg",
+      "categoryId": "2",
+      "stock": 80,
+      "unit": "kg",
+      "rating": 4.8,
+      "reviews": 90,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-05",
+      "categoryName": "Vegetables"
+    },
+
+    {
+      "id": "301",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "name": "Fresh Basil",
       "description": "Aromatic fresh basil leaves, perfect for Italian dishes and pesto.",
       "price": 2.99,
-      "image": "https://images.unsplash.com/photo-1618375569909-3c8616cf7733?w=400&h=400&fit=crop",
+      "image": "https://static.africaimages.com/photos/g/z/gzo9ijcch7FQo12xKmE3bquIX/gzo9ijcch7FQo12xKmE3bquIX_normal.jpg",
       "categoryId": "3",
       "stock": 100,
       "unit": "bunch",
       "rating": 4.8,
       "reviews": 89,
       "isOrganic": true,
+<<<<<<< HEAD
       "isFeatured": true,
       "createdAt": "2024-01-15"
     },
     {
       "id": "6",
+=======
+      "isFeatured": false,
+      "createdAt": "2024-01-15",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "302",
+      "name": "Spinach",
+      "description": "Fresh leafy spinach, perfect for salads, soups, and smoothies.",
+      "price": 2.29,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.LOtuDfEdBmvLw1fu6O5qKwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "3",
+      "stock": 120,
+      "unit": "bunch",
+      "rating": 4.8,
+      "reviews": 98,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "303",
+      "name": "Parsley",
+      "description": "Fresh parsley, perfect for garnishing and adding flavor to any dish.",
+      "price": 1.99,
+      "image": "https://www.goodtastingmeals.com/wp-content/uploads/2021/10/what-does-parsley-taste-like.jpg",
+      "categoryId": "3",
+      "stock": 90,
+      "unit": "bunch",
+      "rating": 4.7,
+      "reviews": 70,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "304",
+      "name": "Cilantro",
+      "description": "Fresh cilantro, great for salads, salsas, and soups.",
+      "price": 2.19,
+      "image": "https://cdn11.bigcommerce.com/s-jmzfi5zcr2/products/1009/images/16162/Santo_Cilantro_Plant_Leaves__77445.1644445129.500.750.jpg?c=2",
+      "categoryId": "3",
+      "stock": 85,
+      "unit": "bunch",
+      "rating": 4.6,
+      "reviews": 65,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-05",
+      "categoryName": "Herbs & Green"
+    }
+,
+    {
+      "id": "401",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "name": "Medjool Dates",
       "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
       "price": 12.99,
-      "image": "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?w=400&h=400&fit=crop",
+      "image": "https://th.bing.com/th/id/R.cb34397905d881db71e5efda819bd95a?rik=XraiGTjqYttXxg&riu=http%3a%2f%2fshop.goodhillfarms.com%2fcdn%2fshop%2ffiles%2fmedjool-dates-good-hill-farms-52898976530802.jpg%3fv%3d1742750784&ehk=qwmBPAexReYtZGyjmT0a5ZlwvRlaySAlyZJkpN0rlKw%3d&risl=&pid=ImgRaw&r=0",
       "categoryId": "4",
       "stock": 60,
       "unit": "500g",
       "rating": 4.9,
       "reviews": 234,
       "isOrganic": true,
+<<<<<<< HEAD
       "isFeatured": true,
       "createdAt": "2024-01-15"
     },
     {
       "id": "7",
+=======
+      "isFeatured": false,
+      "createdAt": "2024-01-15",
+      "categoryName": "Dried Fruits"
+    },
+    {
+      "id": "402",
+      "name": "Dried Figs",
+      "description": "Soft and sweet dried figs, great for snacking and baking.",
+      "price": 10.49,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.hT1lbtyS9Pr-RYYnuOpC7wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "4",
+      "stock": 80,
+      "unit": "500g",
+      "rating": 4.7,
+      "reviews": 145,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Dried Fruits"
+    },
+    {
+      "id": "403",
+      "name": "Raisins",
+      "description": "Sweet dried raisins, perfect for cereals, baking, or snacking.",
+      "price": 6.99,
+      "image": "https://th.bing.com/th/id/R.0e12c5914bc7ddf8d9ca1f9eff463f91?rik=%2bqZYk%2fisddFX4w&pid=ImgRaw&r=0",
+      "categoryId": "4",
+      "stock": 120,
+      "unit": "500g",
+      "rating": 4.6,
+      "reviews": 90,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Dried Fruits"
+    },
+
+    {
+      "id": "501",
+      "name": "Sun-Dried Tomatoes",
+      "description": "Intense flavor sun-dried tomatoes, perfect for pasta and sauces.",
+      "price": 8.99,
+      "image": "https://veganwithgusto.com/wp-content/uploads/2022/08/sun-dried-tomatoes-in-bowl.jpg",
+      "categoryId": "5",
+      "stock": 50,
+      "unit": "250g",
+      "rating": 4.5,
+      "reviews": 70,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-03",
+      "categoryName": "Dried Vegetables"
+    },
+    {
+      "id": "502",
+      "name": "Dried Bell Peppers",
+      "description": "Crunchy dried bell peppers, great for soups, stews, and sauces.",
+      "price": 7.49,
+      "image": "https://m.media-amazon.com/images/I/71lcWW2OoIL._SL1014_.jpg",
+      "categoryId": "5",
+      "stock": 40,
+      "unit": "250g",
+      "rating": 4.4,
+      "reviews": 50,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Dried Vegetables"
+    },
+
+    {
+      "id": "601",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "name": "Raw Almonds",
       "description": "Premium raw almonds, perfect for snacking and baking.",
       "price": 14.99,
@@ -79,38 +362,159 @@
       "isFeatured": false,
       "createdAt": "2024-01-15",
       "categoryName": "Nuts"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "id": "602",
+      "name": "Cashews",
+      "description": "Delicious cashews, perfect for snacking or cooking.",
+      "price": 16.49,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.99BTuSASnXhpplED3C09iwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "6",
+      "stock": 100,
+      "unit": "500g",
+      "rating": 4.8,
+      "reviews": 200,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Nuts"
+    },
+    {
+      "id": "603",
+      "name": "Walnuts",
+      "description": "Fresh and crunchy walnuts, ideal for baking and healthy snacks.",
+      "price": 18.99,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.xHBI6PUlSitRSmQk1mobzgHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "6",
+      "stock": 80,
+      "unit": "500g",
+      "rating": 4.7,
+      "reviews": 150,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Nuts"
+    },
+
+    {
+      "id": "701",
+      "name": "Vegetable Stir-Fry Mix",
+      "description": "Pre-cut vegetables ready for a quick and healthy stir-fry meal.",
+      "price": 5.99,
+      "image": "https://tse4.mm.bing.net/th/id/OIP._dpP6W5MUeTHtp6wXaabYAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "7",
+      "stock": 60,
+      "unit": "pack",
+      "rating": 4.6,
+      "reviews": 55,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-05",
+      "categoryName": "Ready to Cook"
+    },
+    {
+      "id": "702",
+      "name": "Chicken Curry Kit",
+      "description": "All ingredients pre-measured and ready for a quick chicken curry.",
+      "price": 9.99,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.kEWDhQr7To2BE6NZtYyQEgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "7",
+      "stock": 40,
+      "unit": "kit",
+      "rating": 4.7,
+      "reviews": 60,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-06",
+      "categoryName": "Ready to Cook"
+    },
+
+    {
+      "id": "801",
+      "name": "Pre-Cut Mixed Veggies",
+      "description": "A mix of pre-cut and washed vegetables ready to use instantly.",
+      "price": 4.99,
+      "image": "https://img.freepik.com/premium-photo/variety-chopped-vegetables-ready-stew-created-with-generative-ai_419341-56888.jpg",
+      "categoryId": "8",
+      "stock": 80,
+      "unit": "pack",
+      "rating": 4.3,
+      "reviews": 45,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-05",
+      "categoryName": "Ready-to-use Vegetables"
+    },
+    {
+      "id": "802",
+      "name": "Pre-Cut Carrots",
+      "description": "Freshly washed and cut carrots, ready to add to any dish.",
+      "price": 3.49,
+      "image": "https://img.freepik.com/premium-photo/background-features-sliced-carrots_961875-393364.jpg",
+      "categoryId": "8",
+      "stock": 60,
+      "unit": "pack",
+      "rating": 4.5,
+      "reviews": 40,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-06",
+      "categoryName": "Ready-to-use Vegetables"
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
     }
   ],
   "categories": [
     {
       "id": "3",
       "name": "Herbs & Green",
+<<<<<<< HEAD
       "description": "Aromatic herbs and leafy",
       "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&h=300&fit=crop",
+=======
+      "description": "Fresh aromatic herbs and leafy greens for everyday cooking.",
+      "image": "https://planningagarden.com/wp-content/uploads/2023/02/image-3.jpeg",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "productCount": 27,
       "slug": "herbs-greens"
     },
     {
       "id": "4",
       "name": "Dried Fruits",
+<<<<<<< HEAD
       "description": "Premium quality dried fruits and berries",
       "image": "https://images.unsplash.com/photo-1596273501048-f0f0c9e7a7f8?w=400&h=300&fit=crop",
+=======
+      "description": "Premium quality dried fruits full of natural sweetness.",
+      "image": "https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_785204_17210137222997757.jpg",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "productCount": 9,
       "slug": "dried-fruits"
     },
     {
       "id": "5",
       "name": "Dried Vegetables",
+<<<<<<< HEAD
       "description": "Sun-dried vegetables for long-lasting freshness",
       "image": "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=400&h=300&fit=crop",
+=======
+      "description": "Sun-dried vegetables for long-lasting freshness and flavor.",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.h-BRxUaPTE40ulRlQ1PlUQHaE8?w=900&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "productCount": 0,
       "slug": "dried-vegetables"
     },
     {
       "id": "6",
       "name": "Nuts",
+<<<<<<< HEAD
       "description": "Premium nuts and seeds for healthy snacking",
       "image": "https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=400&h=300&fit=crop",
+=======
+      "description": "Premium nuts and seeds for healthy snacking.",
+      "image": "https://img.freepik.com/premium-photo/top-view-composition-assorted-nuts-creating-natural-background-with-various-types-nuts_174533-37574.jpg?w=2000",
+>>>>>>> d62b402fc15e63fae3e912c83aa0f14df055d941
       "productCount": 21,
       "slug": "nuts"
     },
