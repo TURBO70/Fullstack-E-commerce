@@ -80,7 +80,6 @@
       "createdAt": "2024-02-04",
       "categoryName": "Fresh Fruits"
     },
-
     {
       "id": "201",
       "name": "Carrots",
@@ -161,7 +160,6 @@
       "createdAt": "2024-02-05",
       "categoryName": "Vegetables"
     },
-
     {
       "id": "301",
       "name": "Fresh Basil",
@@ -225,8 +223,7 @@
       "isFeatured": false,
       "createdAt": "2024-02-05",
       "categoryName": "Herbs & Green"
-    }
-,
+    },
     {
       "id": "401",
       "name": "Medjool Dates",
@@ -275,7 +272,6 @@
       "createdAt": "2024-02-02",
       "categoryName": "Dried Fruits"
     },
-
     {
       "id": "501",
       "name": "Sun-Dried Tomatoes",
@@ -308,7 +304,6 @@
       "createdAt": "2024-02-04",
       "categoryName": "Dried Vegetables"
     },
-
     {
       "id": "601",
       "name": "Raw Almonds",
@@ -358,7 +353,6 @@
       "createdAt": "2024-02-02",
       "categoryName": "Nuts"
     },
-
     {
       "id": "701",
       "name": "Vegetable Stir-Fry Mix",
@@ -391,7 +385,6 @@
       "createdAt": "2024-02-06",
       "categoryName": "Ready to Cook"
     },
-
     {
       "id": "801",
       "name": "Pre-Cut Mixed Veggies",
@@ -424,10 +417,7 @@
       "createdAt": "2024-02-06",
       "categoryName": "Ready-to-use Vegetables"
     }
-  ]
-
-,
-  
+  ],
   "categories": [
     {
       "id": "1",
@@ -654,6 +644,33 @@
       "city": "ismalia",
       "password": "Hassan_123",
       "role": "customer"
+    },
+    {
+      "id": "3f2c",
+      "name": "Youssef Mohamed gomaa",
+      "email": "whoami@gmail.com",
+      "country": "eg",
+      "city": "Cairo",
+      "password": "Yes12345-",
+      "role": "customer"
+    },
+    {
+      "id": "69ba",
+      "name": "Youssef Mohamed gomaa",
+      "email": "whoami2@gmail.com",
+      "country": "eg",
+      "city": "Cairo",
+      "password": "Yes12345-",
+      "role": "customer"
+    },
+    {
+      "name": "hassan mohamed",
+      "email": "hassanelgraihy2002@gmail.com",
+      "city": "Ajman",
+      "country": "UAE",
+      "id": "48f4",
+      "password": "Hassan_123",
+      "role": "customer"
     }
   ],
   "orders": [
@@ -722,6 +739,116 @@
       "totalPrice": 141.98,
       "status": "shipped",
       "createdAt": "2024-01-20"
+    },
+    {
+      "id": "f0aa",
+      "userId": "3f2c",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "103",
+          "productTitle": "Strawberries",
+          "price": 5.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 22.078000000000003,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala,k",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "b8db",
+      "userId": "3f2c",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 18.558,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "223d",
+      "userId": "69ba",
+      "items": [
+        {
+          "productId": "205",
+          "productTitle": "Bell Peppers",
+          "price": 3.99,
+          "quantity": 1
+        },
+        {
+          "productId": "302",
+          "productTitle": "Spinach",
+          "price": 2.29,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 16.908,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "240d",
+      "userId": "69ba",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 15.489,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala,k",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
     }
   ],
   "carts": [
@@ -805,6 +932,16 @@
           "quantity": 2
         }
       ]
+    },
+    {
+      "id": "e3ac",
+      "userId": "3f2c",
+      "items": []
+    },
+    {
+      "id": "09bb",
+      "userId": "69ba",
+      "items": []
     }
   ]
 }
