@@ -149,10 +149,13 @@
   ],
   "users": [
     {
-      "name": "Ahmed Mohamed",
-      "email": "ahmed.hassan@gmail.com",
-      "city": "Cairo",
-      "id": "1"
+      "id": "55e5",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "country": "eg",
+      "city": "ismalia",
+      "password": "Hassan_123",
+      "role": "admin"
     },
     {
       "id": "a102",
@@ -281,13 +284,11 @@
       "role": "customer"
     },
     {
-      "id": "7316",
-      "name": "hassan",
+      "name": "hassan mohamed",
       "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "id": "7316"
     },
     {
       "id": "82e0",
@@ -299,25 +300,13 @@
       "role": "customer"
     },
     {
-      "name": "Eman Refaat",
-      "email": "emyrefaat0@gmail.com",
-      "city": "Aswan",
-      "country": "Egypt",
-      "id": "903b"
-    },
-    {
-      "name": "EmanRefaat",
-      "email": "emyrefaat@gmail.com",
-      "city": "Luxor",
-      "country": "Egypt",
-      "id": "a4ba"
-    },
-    {
-      "name": "EmanRefaat",
-      "email": "emyrefaa@gmail.com",
-      "city": "Sharkia",
+      "id": "4884",
+      "name": "hassan elgraihy",
+      "email": "hassanelgraihy99@gmail.com",
       "country": "eg",
-      "id": "b989"
+      "city": "ismalia",
+      "password": "Hassan_123",
+      "role": "customer"
     }
   ],
   "orders": [
@@ -410,7 +399,7 @@
             "createdAt": "2024-01-14",
             "categoryName": "Unknown"
           },
-          "quantity": 36
+          "quantity": 21
         },
         {
           "product": {
@@ -430,7 +419,7 @@
             "createdAt": "2024-01-13",
             "categoryName": "Dried Fruits"
           },
-          "quantity": 19
+          "quantity": 21
         },
         {
           "product": {
@@ -448,7 +437,25 @@
             "isFeatured": true,
             "createdAt": "2024-01-15"
           },
-          "quantity": 23
+          "quantity": 26
+        },
+        {
+          "product": {
+            "id": "6",
+            "name": "Medjool Dates",
+            "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
+            "price": 12.99,
+            "image": "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?w=400&h=400&fit=crop",
+            "categoryId": "4",
+            "stock": 60,
+            "unit": "500g",
+            "rating": 4.9,
+            "reviews": 234,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-01-15"
+          },
+          "quantity": 2
         }
       ]
     }

@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { user } from '../../shared/models/user_model';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
+import { user } from '../../models/user_model';
 
 @Injectable({
   providedIn: 'root',
@@ -44,7 +44,7 @@ export class AuthService {
     return this.http.get<user[]>(`${this.baseUrl}/users`).pipe(
       map((users) => {
         const foundUser = users.find(
-          (u) => u.email === email && u.password === password && u.role === 'customer',
+          (u) => u.email === email && u.password === password && u.role === 'admin',
         );
         if (!foundUser) {
           throw new Error('Invalid email or password');
