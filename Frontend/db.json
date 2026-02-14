@@ -80,7 +80,6 @@
       "createdAt": "2024-02-04",
       "categoryName": "Fresh Fruits"
     },
-
     {
       "id": "201",
       "name": "Carrots",
@@ -161,7 +160,6 @@
       "createdAt": "2024-02-05",
       "categoryName": "Vegetables"
     },
-
     {
       "id": "301",
       "name": "Fresh Basil",
@@ -225,8 +223,7 @@
       "isFeatured": false,
       "createdAt": "2024-02-05",
       "categoryName": "Herbs & Green"
-    }
-,
+    },
     {
       "id": "401",
       "name": "Medjool Dates",
@@ -275,7 +272,6 @@
       "createdAt": "2024-02-02",
       "categoryName": "Dried Fruits"
     },
-
     {
       "id": "501",
       "name": "Sun-Dried Tomatoes",
@@ -308,7 +304,6 @@
       "createdAt": "2024-02-04",
       "categoryName": "Dried Vegetables"
     },
-
     {
       "id": "601",
       "name": "Raw Almonds",
@@ -358,7 +353,6 @@
       "createdAt": "2024-02-02",
       "categoryName": "Nuts"
     },
-
     {
       "id": "701",
       "name": "Vegetable Stir-Fry Mix",
@@ -391,7 +385,6 @@
       "createdAt": "2024-02-06",
       "categoryName": "Ready to Cook"
     },
-
     {
       "id": "801",
       "name": "Pre-Cut Mixed Veggies",
@@ -424,10 +417,7 @@
       "createdAt": "2024-02-06",
       "categoryName": "Ready-to-use Vegetables"
     }
-  ]
-
-,
-  
+  ],
   "categories": [
     {
       "id": "1",
@@ -631,13 +621,6 @@
       "role": "customer"
     },
     {
-      "name": "hassan mohamed",
-      "email": "hassanelgraihy2002@gmail.com",
-      "city": "Kuwait City",
-      "country": "Kuwait",
-      "id": "7316"
-    },
-    {
       "id": "82e0",
       "name": "Hassan Elgraihy",
       "email": "hassan@gmail.com",
@@ -652,6 +635,15 @@
       "email": "hassanelgraihy99@gmail.com",
       "country": "eg",
       "city": "ismalia",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "name": "hassan mohamed",
+      "email": "hassanelgraihy2002@gmail.com",
+      "city": "Ajman",
+      "country": "UAE",
+      "id": "48f4",
       "password": "Hassan_123",
       "role": "customer"
     }
@@ -722,6 +714,58 @@
       "totalPrice": 141.98,
       "status": "shipped",
       "createdAt": "2024-01-20"
+    },
+    {
+      "id": "8833",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 3
+        }
+      ],
+      "totalPrice": 26.467000000000002,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "hassan mohamed",
+        "address": "elgraqihy",
+        "city": "Suez",
+        "country": "Egypt",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "8867",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 2
+        },
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 24.047,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "hassan mohamed",
+        "address": "elgraqihy",
+        "city": "Suez",
+        "country": "Egypt",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "cod"
     }
   ],
   "carts": [
@@ -803,6 +847,88 @@
             "createdAt": "2024-01-15"
           },
           "quantity": 2
+        },
+        {
+          "product": {
+            "id": "801",
+            "name": "Pre-Cut Mixed Veggies",
+            "description": "A mix of pre-cut and washed vegetables ready to use instantly.",
+            "price": 4.99,
+            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop",
+            "categoryId": "8",
+            "stock": 80,
+            "unit": "pack",
+            "rating": 4.3,
+            "reviews": 45,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-02-05",
+            "categoryName": "Ready-to-use Vegetables"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "302",
+            "name": "Spinach",
+            "description": "Fresh leafy spinach, perfect for salads, soups, and smoothies.",
+            "price": 2.29,
+            "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&h=400&fit=crop",
+            "categoryId": "3",
+            "stock": 120,
+            "unit": "bunch",
+            "rating": 4.8,
+            "reviews": 98,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-02-03",
+            "categoryName": "Herbs & Green"
+          },
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "7aaa",
+      "userId": "48f4",
+      "items": [
+        {
+          "product": {
+            "id": "203",
+            "name": "Tomatoes",
+            "description": "Ripe and juicy tomatoes, perfect for salads, sauces, and cooking.",
+            "price": 2.79,
+            "image": "https://th.bing.com/th/id/R.5c476c3ea45bcf53cabd9d13aaae0b1f?rik=VNyQZ4Mhh%2bP8bg&riu=http%3a%2f%2fwww.primallyinspired.com%2fwp-content%2fuploads%2f2013%2f07%2ftomatoes.jpg&ehk=rGYZXIgLoY8HrJ1%2bPlt4DNyTW9CTf%2ftNIJ7LC0TFBFY%3d&risl=&pid=ImgRaw&r=0",
+            "categoryId": "2",
+            "stock": 140,
+            "unit": "kg",
+            "rating": 4.7,
+            "reviews": 110,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-02-03",
+            "categoryName": "Vegetables"
+          },
+          "quantity": 3
+        },
+        {
+          "product": {
+            "id": "205",
+            "name": "Bell Peppers",
+            "description": "Colorful bell peppers, sweet, crunchy, and full of vitamin C.",
+            "price": 3.99,
+            "image": "https://png.pngtree.com/thumb_back/fw800/background/20221014/pngtree-bell-peppers-stem-yellow-bell-pepper-photo-image_7085716.jpg",
+            "categoryId": "2",
+            "stock": 80,
+            "unit": "kg",
+            "rating": 4.8,
+            "reviews": 90,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-02-05",
+            "categoryName": "Vegetables"
+          },
+          "quantity": 1
         }
       ]
     }
