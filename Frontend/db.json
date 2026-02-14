@@ -297,6 +297,27 @@
       "city": "Port Said",
       "password": "Hassan_123",
       "role": "customer"
+    },
+    {
+      "name": "Eman Refaat",
+      "email": "emyrefaat0@gmail.com",
+      "city": "Aswan",
+      "country": "Egypt",
+      "id": "903b"
+    },
+    {
+      "name": "EmanRefaat",
+      "email": "emyrefaat@gmail.com",
+      "city": "Luxor",
+      "country": "Egypt",
+      "id": "a4ba"
+    },
+    {
+      "name": "EmanRefaat",
+      "email": "emyrefaa@gmail.com",
+      "city": "Sharkia",
+      "country": "eg",
+      "id": "b989"
     }
   ],
   "orders": [
@@ -389,7 +410,7 @@
             "createdAt": "2024-01-14",
             "categoryName": "Unknown"
           },
-          "quantity": 18
+          "quantity": 36
         },
         {
           "product": {
@@ -409,7 +430,7 @@
             "createdAt": "2024-01-13",
             "categoryName": "Dried Fruits"
           },
-          "quantity": 4
+          "quantity": 19
         },
         {
           "product": {
@@ -427,44 +448,7 @@
             "isFeatured": true,
             "createdAt": "2024-01-15"
           },
-          "quantity": 3
-        },
-        {
-          "product": {
-            "id": "6",
-            "name": "Medjool Dates",
-            "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
-            "price": 12.99,
-            "image": "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?w=400&h=400&fit=crop",
-            "categoryId": "4",
-            "stock": 60,
-            "unit": "500g",
-            "rating": 4.9,
-            "reviews": 234,
-            "isOrganic": true,
-            "isFeatured": true,
-            "createdAt": "2024-01-15"
-          },
-          "quantity": 5
-        },
-        {
-          "product": {
-            "id": "7",
-            "name": "Raw Almonds",
-            "description": "Premium raw almonds, perfect for snacking and baking.",
-            "price": 14.99,
-            "originalPrice": 17.99,
-            "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400&h=400&fit=crop",
-            "categoryId": "6",
-            "stock": 80,
-            "unit": "500g",
-            "rating": 4.9,
-            "reviews": 267,
-            "isOrganic": true,
-            "isFeatured": false,
-            "createdAt": "2024-01-15"
-          },
-          "quantity": 5
+          "quantity": 23
         }
       ]
     }
