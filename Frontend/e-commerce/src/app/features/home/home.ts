@@ -11,6 +11,11 @@ import { ProductsGrid } from "../products/products-grid/products-grid";
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
+
+
+
+
+
 export class Home {
   category = signal([] as Category[]);
   constructor(catgServ: CategoryService) {
