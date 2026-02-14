@@ -2,7 +2,7 @@
   <div class="px-4 sm:px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center gap-2 cursor-pointer" routerLink="" >
+      <div class="flex items-center gap-2 cursor-pointer" routerLink="/admin/dashboard">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -28,48 +28,15 @@
       <div class="flex items-center gap-5">
         <!-- Burger Menu Button (Mobile) -->
 
-        <!-- Nav Links -->
-        <nav class="md:flex items-center gap-5 hidden">
-          <a href="#" class="text-sm font-semibold text-gray-800 transition-colors duration-150"
-            >Products</a
-          >
-          <a
-            routerLink="/categories"
-            class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150"
-            >Categories</a
-          >
-        </nav>
-
-        <!-- Divider -->
-        <div class="w-px h-5 md:flex bg-gray-200 hidden"></div>
+     
 
         <!-- Icons -->
         <div class="flex items-center gap-2">
           <!-- Cart -->
-          <button
-            class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-shopping-cart h-5 w-5"
-            >
-              <circle cx="8" cy="21" r="1"></circle>
-              <circle cx="19" cy="21" r="1"></circle>
-              <path
-                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
-              ></path>
-            </svg>
-          </button>
+         
           <!-- User -->
           <button
+            (click)="toggleProfile()"
             class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
           >
             <svg
@@ -136,17 +103,54 @@
       (click)="closeMenu()"
     >
       <a
-        href="#"
+        routerLink="/products"
         class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150 block px-2 py-2 rounded hover:bg-gray-100"
       >
         Products
       </a>
       <a
-        href="#"
+        routerLink="/categories"
         class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150 block px-2 py-2 rounded hover:bg-gray-100"
       >
         Categories
       </a>
     </nav>
   </div>
+  @if (isOpenProfile) {
+    <div
+      class="bg-white z-10 absolute top-16 md:right-12 right-22 rounded-lg border-1 px-1 border-third text-left w-[220px] flex flex-col"
+    >
+      <div class="px-4 py-3 border-b border-gray-200">
+        <p class="text-sm font-semibold text-gray-900">{{ currentUser.name }}</p>
+        <p class="text-xs text-gray-500">{{ currentUser.email }}</p>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="py-2">
+      
+
+        <!-- Logout -->
+        <button
+          (click)="logout()"
+          class="cursor-pointer flex items-center gap-3 px-4 py-2.5 text-sm text-red-500 rounded-lg transition-colors duration-150 w-full text-left"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"></path>
+            <polyline points="16,17 21,12 16,7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Logout</span>
+        </button>
+      </div>
+    </div>
+  }
 </header>

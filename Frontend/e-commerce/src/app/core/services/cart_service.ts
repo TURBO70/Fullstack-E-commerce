@@ -1,6 +1,7 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { computed, effect, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../../shared/models/product_model';
+import { AuthService } from './auth-service';
 import { firstValueFrom } from 'rxjs';
 
 export interface CartItem {
@@ -20,7 +21,10 @@ export interface Cart {
 export class CartService {
     cartItems = signal<CartItem[]>([]);
     private baseUrl = 'http://localhost:3000/carts';
-    private userId = '1';
+
+    private get userId(): string | undefined {
+        return this.authService.currentUserSignal()?.id;
+    }
 
     subtotal = computed(() =>
         this.cartItems().reduce((acc, item) => acc + item.product.price * item.quantity, 0)
@@ -32,11 +36,23 @@ export class CartService {
 
     total = computed(() => this.subtotal() + this.tax() + this.shipping());
 
-    constructor(private http: HttpClient) {
-        this.loadCart();
+    constructor(private http: HttpClient, private authService: AuthService) {
+        effect(() => {
+            const user = this.authService.currentUserSignal();
+            if (user) {
+                this.loadCart();
+            } else {
+                this.cartItems.set([]);
+            }
+        });
     }
 
     async loadCart() {
+        if (!this.userId) {
+            this.cartItems.set([]);
+            return;
+        }
+
         try {
             const carts = await firstValueFrom(this.http.get<Cart[]>(`${this.baseUrl}?userId=${this.userId}`));
             if (carts.length > 0) {
@@ -50,6 +66,12 @@ export class CartService {
     }
 
     async addToCart(product: Product) {
+        if (!this.userId) {
+            // TODO: Handle unauthenticated user adding to cart (e.g., redirect to login or local cart)
+            console.warn('User not logged in');
+            return;
+        }
+
         try {
             const carts = await firstValueFrom(this.http.get<Cart[]>(`${this.baseUrl}?userId=${this.userId}`));
             let cart: Cart;
@@ -78,6 +100,8 @@ export class CartService {
     }
 
     async removeFromCart(productId: string) {
+        if (!this.userId) return;
+
         try {
             const carts = await firstValueFrom(this.http.get<Cart[]>(`${this.baseUrl}?userId=${this.userId}`));
             if (carts.length > 0) {
@@ -96,6 +120,8 @@ export class CartService {
             this.removeFromCart(productId);
             return;
         }
+
+        if (!this.userId) return;
 
         try {
             const carts = await firstValueFrom(this.http.get<Cart[]>(`${this.baseUrl}?userId=${this.userId}`));
@@ -118,6 +144,8 @@ export class CartService {
 
 
     async clearCart() {
+        if (!this.userId) return;
+
         try {
             const carts = await firstValueFrom(this.http.get<Cart[]>(`${this.baseUrl}?userId=${this.userId}`));
             if (carts.length > 0) {

@@ -1,70 +1,316 @@
 {
   "products": [
     {
-      "id": "2",
+      "id": "101",
+      "name": "Red Apple",
+      "description": "Crisp and juicy red apples, full of natural sweetness and vitamins.",
+      "price": 3.49,
+      "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=400&h=400&fit=crop",
+      "categoryId": "1",
+      "stock": 150,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 120,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "102",
       "name": "Banana",
       "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
       "price": 2.49,
       "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=400&fit=crop",
-      "categoryId": "3",
-      "stock": 202,
+      "categoryId": "1",
+      "stock": 200,
       "unit": "bunch",
       "rating": 4.6,
       "reviews": 89,
       "isOrganic": false,
-      "isFeatured": true,
+      "isFeatured": false,
       "createdAt": "2024-01-14",
-      "categoryName": "Herbs & Green"
+      "categoryName": "Fresh Fruits"
     },
     {
-      "id": "3",
-      "name": "Fresh Oranges",
-      "description": "Juicy navel oranges bursting with vitamin C. Perfect for juicing or eating fresh.",
+      "id": "103",
+      "name": "Strawberries",
+      "description": "Sweet and ripe strawberries, perfect for desserts or smoothies.",
       "price": 5.99,
-      "originalPrice": 7.49,
-      "image": "https://images.unsplash.com/photo-1547514701-42782101795e?w=400&h=400&fit=crop",
-      "categoryId": "6",
-      "stock": 120,
+      "image": "https://diyhomedesignideas.com/photos/800-webp/e2fo8m6o1bxd5lpsfn0q.webp",
+      "categoryId": "1",
+      "stock": 90,
       "unit": "kg",
-      "rating": 4.7,
-      "reviews": 156,
+      "rating": 4.8,
+      "reviews": 95,
       "isOrganic": true,
       "isFeatured": true,
-      "createdAt": "2024-01-13",
-      "categoryName": "Dried Fruits"
+      "createdAt": "2024-02-02",
+      "categoryName": "Fresh Fruits"
     },
     {
-      "id": "5",
+      "id": "104",
+      "name": "Green Grapes",
+      "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
+      "price": 4.99,
+      "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
+      "categoryId": "1",
+      "stock": 120,
+      "unit": "kg",
+      "rating": 4.5,
+      "reviews": 76,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "105",
+      "name": "Pineapple",
+      "description": "Tropical pineapple, sweet, juicy and rich in vitamin C.",
+      "price": 6.49,
+      "image": "https://tse4.mm.bing.net/th/id/OIP.8Oc8ua0K7P84PpoJCP4JkQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "1",
+      "stock": 50,
+      "unit": "piece",
+      "rating": 4.7,
+      "reviews": 65,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Fresh Fruits"
+    },
+
+    {
+      "id": "201",
+      "name": "Carrots",
+      "description": "Fresh farm-grown carrots, crunchy and full of beta-carotene for healthy eyes.",
+      "price": 1.99,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.EOafQATWNirsC4jeS2vPHgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 180,
+      "unit": "kg",
+      "rating": 4.5,
+      "reviews": 75,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-02",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "202",
+      "name": "Broccoli",
+      "description": "Fresh green broccoli, perfect for steaming, stir-fry, or salads.",
+      "price": 3.29,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.NN02CpCK__5Di9H_CJS_PgHaFj?w=1200&h=900&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 100,
+      "unit": "kg",
+      "rating": 4.6,
+      "reviews": 88,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "203",
+      "name": "Tomatoes",
+      "description": "Ripe and juicy tomatoes, perfect for salads, sauces, and cooking.",
+      "price": 2.79,
+      "image": "https://th.bing.com/th/id/R.5c476c3ea45bcf53cabd9d13aaae0b1f?rik=VNyQZ4Mhh%2bP8bg&riu=http%3a%2f%2fwww.primallyinspired.com%2fwp-content%2fuploads%2f2013%2f07%2ftomatoes.jpg&ehk=rGYZXIgLoY8HrJ1%2bPlt4DNyTW9CTf%2ftNIJ7LC0TFBFY%3d&risl=&pid=ImgRaw&r=0",
+      "categoryId": "2",
+      "stock": 140,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 110,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "204",
+      "name": "Cucumbers",
+      "description": "Fresh and crunchy cucumbers, perfect for salads and snacking.",
+      "price": 1.89,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.S0XqwAyhE10j_4S4wAiMdAHaHa?w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 130,
+      "unit": "kg",
+      "rating": 4.4,
+      "reviews": 64,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "205",
+      "name": "Bell Peppers",
+      "description": "Colorful bell peppers, sweet, crunchy, and full of vitamin C.",
+      "price": 3.99,
+      "image": "https://png.pngtree.com/thumb_back/fw800/background/20221014/pngtree-bell-peppers-stem-yellow-bell-pepper-photo-image_7085716.jpg",
+      "categoryId": "2",
+      "stock": 80,
+      "unit": "kg",
+      "rating": 4.8,
+      "reviews": 90,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-05",
+      "categoryName": "Vegetables"
+    },
+
+    {
+      "id": "301",
       "name": "Fresh Basil",
       "description": "Aromatic fresh basil leaves, perfect for Italian dishes and pesto.",
       "price": 2.99,
-      "image": "https://images.unsplash.com/photo-1618375569909-3c8616cf7733?w=400&h=400&fit=crop",
+      "image": "https://static.africaimages.com/photos/g/z/gzo9ijcch7FQo12xKmE3bquIX/gzo9ijcch7FQo12xKmE3bquIX_normal.jpg",
       "categoryId": "3",
       "stock": 100,
       "unit": "bunch",
       "rating": 4.8,
       "reviews": 89,
       "isOrganic": true,
-      "isFeatured": true,
-      "createdAt": "2024-01-15"
+      "isFeatured": false,
+      "createdAt": "2024-01-15",
+      "categoryName": "Herbs & Green"
     },
     {
-      "id": "6",
+      "id": "302",
+      "name": "Spinach",
+      "description": "Fresh leafy spinach, perfect for salads, soups, and smoothies.",
+      "price": 2.29,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.LOtuDfEdBmvLw1fu6O5qKwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "3",
+      "stock": 120,
+      "unit": "bunch",
+      "rating": 4.8,
+      "reviews": 98,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "303",
+      "name": "Parsley",
+      "description": "Fresh parsley, perfect for garnishing and adding flavor to any dish.",
+      "price": 1.99,
+      "image": "https://www.goodtastingmeals.com/wp-content/uploads/2021/10/what-does-parsley-taste-like.jpg",
+      "categoryId": "3",
+      "stock": 90,
+      "unit": "bunch",
+      "rating": 4.7,
+      "reviews": 70,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "304",
+      "name": "Cilantro",
+      "description": "Fresh cilantro, great for salads, salsas, and soups.",
+      "price": 2.19,
+      "image": "https://cdn11.bigcommerce.com/s-jmzfi5zcr2/products/1009/images/16162/Santo_Cilantro_Plant_Leaves__77445.1644445129.500.750.jpg?c=2",
+      "categoryId": "3",
+      "stock": 85,
+      "unit": "bunch",
+      "rating": 4.6,
+      "reviews": 65,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-05",
+      "categoryName": "Herbs & Green"
+    }
+,
+    {
+      "id": "401",
       "name": "Medjool Dates",
       "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
       "price": 12.99,
-      "image": "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?w=400&h=400&fit=crop",
+      "image": "https://th.bing.com/th/id/R.cb34397905d881db71e5efda819bd95a?rik=XraiGTjqYttXxg&riu=http%3a%2f%2fshop.goodhillfarms.com%2fcdn%2fshop%2ffiles%2fmedjool-dates-good-hill-farms-52898976530802.jpg%3fv%3d1742750784&ehk=qwmBPAexReYtZGyjmT0a5ZlwvRlaySAlyZJkpN0rlKw%3d&risl=&pid=ImgRaw&r=0",
       "categoryId": "4",
       "stock": 60,
       "unit": "500g",
       "rating": 4.9,
       "reviews": 234,
       "isOrganic": true,
-      "isFeatured": true,
-      "createdAt": "2024-01-15"
+      "isFeatured": false,
+      "createdAt": "2024-01-15",
+      "categoryName": "Dried Fruits"
     },
     {
-      "id": "7",
+      "id": "402",
+      "name": "Dried Figs",
+      "description": "Soft and sweet dried figs, great for snacking and baking.",
+      "price": 10.49,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.hT1lbtyS9Pr-RYYnuOpC7wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "4",
+      "stock": 80,
+      "unit": "500g",
+      "rating": 4.7,
+      "reviews": 145,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Dried Fruits"
+    },
+    {
+      "id": "403",
+      "name": "Raisins",
+      "description": "Sweet dried raisins, perfect for cereals, baking, or snacking.",
+      "price": 6.99,
+      "image": "https://th.bing.com/th/id/R.0e12c5914bc7ddf8d9ca1f9eff463f91?rik=%2bqZYk%2fisddFX4w&pid=ImgRaw&r=0",
+      "categoryId": "4",
+      "stock": 120,
+      "unit": "500g",
+      "rating": 4.6,
+      "reviews": 90,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Dried Fruits"
+    },
+
+    {
+      "id": "501",
+      "name": "Sun-Dried Tomatoes",
+      "description": "Intense flavor sun-dried tomatoes, perfect for pasta and sauces.",
+      "price": 8.99,
+      "image": "https://veganwithgusto.com/wp-content/uploads/2022/08/sun-dried-tomatoes-in-bowl.jpg",
+      "categoryId": "5",
+      "stock": 50,
+      "unit": "250g",
+      "rating": 4.5,
+      "reviews": 70,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-03",
+      "categoryName": "Dried Vegetables"
+    },
+    {
+      "id": "502",
+      "name": "Dried Bell Peppers",
+      "description": "Crunchy dried bell peppers, great for soups, stews, and sauces.",
+      "price": 7.49,
+      "image": "https://m.media-amazon.com/images/I/71lcWW2OoIL._SL1014_.jpg",
+      "categoryId": "5",
+      "stock": 40,
+      "unit": "250g",
+      "rating": 4.4,
+      "reviews": 50,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Dried Vegetables"
+    },
+
+    {
+      "id": "601",
       "name": "Raw Almonds",
       "description": "Premium raw almonds, perfect for snacking and baking.",
       "price": 14.99,
@@ -79,80 +325,184 @@
       "isFeatured": false,
       "createdAt": "2024-01-15",
       "categoryName": "Nuts"
+    },
+    {
+      "id": "602",
+      "name": "Cashews",
+      "description": "Delicious cashews, perfect for snacking or cooking.",
+      "price": 16.49,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.99BTuSASnXhpplED3C09iwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "6",
+      "stock": 100,
+      "unit": "500g",
+      "rating": 4.8,
+      "reviews": 200,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Nuts"
+    },
+    {
+      "id": "603",
+      "name": "Walnuts",
+      "description": "Fresh and crunchy walnuts, ideal for baking and healthy snacks.",
+      "price": 18.99,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.xHBI6PUlSitRSmQk1mobzgHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "6",
+      "stock": 80,
+      "unit": "500g",
+      "rating": 4.7,
+      "reviews": 150,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Nuts"
+    },
+
+    {
+      "id": "701",
+      "name": "Vegetable Stir-Fry Mix",
+      "description": "Pre-cut vegetables ready for a quick and healthy stir-fry meal.",
+      "price": 5.99,
+      "image": "https://tse4.mm.bing.net/th/id/OIP._dpP6W5MUeTHtp6wXaabYAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "7",
+      "stock": 60,
+      "unit": "pack",
+      "rating": 4.6,
+      "reviews": 55,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-05",
+      "categoryName": "Ready to Cook"
+    },
+    {
+      "id": "702",
+      "name": "Chicken Curry Kit",
+      "description": "All ingredients pre-measured and ready for a quick chicken curry.",
+      "price": 9.99,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.kEWDhQr7To2BE6NZtYyQEgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "7",
+      "stock": 40,
+      "unit": "kit",
+      "rating": 4.7,
+      "reviews": 60,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-06",
+      "categoryName": "Ready to Cook"
+    },
+
+    {
+      "id": "801",
+      "name": "Pre-Cut Mixed Veggies",
+      "description": "A mix of pre-cut and washed vegetables ready to use instantly.",
+      "price": 4.99,
+      "image": "https://img.freepik.com/premium-photo/variety-chopped-vegetables-ready-stew-created-with-generative-ai_419341-56888.jpg",
+      "categoryId": "8",
+      "stock": 80,
+      "unit": "pack",
+      "rating": 4.3,
+      "reviews": 45,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-05",
+      "categoryName": "Ready-to-use Vegetables"
+    },
+    {
+      "id": "802",
+      "name": "Pre-Cut Carrots",
+      "description": "Freshly washed and cut carrots, ready to add to any dish.",
+      "price": 3.49,
+      "image": "https://img.freepik.com/premium-photo/background-features-sliced-carrots_961875-393364.jpg",
+      "categoryId": "8",
+      "stock": 60,
+      "unit": "pack",
+      "rating": 4.5,
+      "reviews": 40,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-06",
+      "categoryName": "Ready-to-use Vegetables"
     }
-  ],
+  ]
+
+,
+  
   "categories": [
+    {
+      "id": "1",
+      "name": "Fresh Fruits",
+      "description": "Seasonal fresh fruits full of natural sweetness and vitamins.",
+      "image": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400&h=300&fit=crop",
+      "productCount": 18,
+      "slug": "fresh-fruits"
+    },
+    {
+      "id": "2",
+      "name": "Vegetables",
+      "description": "Farm-fresh vegetables for healthy everyday meals.",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&h=300&fit=crop",
+      "productCount": 22,
+      "slug": "vegetables"
+    },
     {
       "id": "3",
       "name": "Herbs & Green",
-      "description": "Aromatic herbs and leafy",
-      "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&h=300&fit=crop",
+      "description": "Fresh aromatic herbs and leafy greens for everyday cooking.",
+      "image": "https://planningagarden.com/wp-content/uploads/2023/02/image-3.jpeg",
       "productCount": 27,
       "slug": "herbs-greens"
     },
     {
       "id": "4",
       "name": "Dried Fruits",
-      "description": "Premium quality dried fruits and berries",
-      "image": "https://images.unsplash.com/photo-1596273501048-f0f0c9e7a7f8?w=400&h=300&fit=crop",
+      "description": "Premium quality dried fruits full of natural sweetness.",
+      "image": "https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_785204_17210137222997757.jpg",
       "productCount": 9,
       "slug": "dried-fruits"
     },
     {
       "id": "5",
       "name": "Dried Vegetables",
-      "description": "Sun-dried vegetables for long-lasting freshness",
-      "image": "https://images.unsplash.com/photo-1573246123716-6b1782bfc499?w=400&h=300&fit=crop",
+      "description": "Sun-dried vegetables for long-lasting freshness and flavor.",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.h-BRxUaPTE40ulRlQ1PlUQHaE8?w=900&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
       "productCount": 0,
       "slug": "dried-vegetables"
     },
     {
       "id": "6",
       "name": "Nuts",
-      "description": "Premium nuts and seeds for healthy snacking",
-      "image": "https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=400&h=300&fit=crop",
+      "description": "Premium nuts and seeds for healthy snacking.",
+      "image": "https://img.freepik.com/premium-photo/top-view-composition-assorted-nuts-creating-natural-background-with-various-types-nuts_174533-37574.jpg?w=2000",
       "productCount": 21,
       "slug": "nuts"
     },
     {
       "id": "7",
       "name": "Ready to Cook",
-      "description": "Pre-prepared ingredients for quick cooking",
-      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      "description": "Pre-prepared ingredients for quick and easy meals.",
+      "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop",
       "productCount": 0,
       "slug": "ready-to-cook"
     },
     {
       "id": "8",
       "name": "Ready-to-use Vegetables",
-      "description": "Pre-cut and washed vegetables ready to use",
+      "description": "Pre-cut and washed vegetables ready to use instantly.",
       "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
       "productCount": 0,
       "slug": "ready-to-use-vegetables"
-    },
-    {
-      "id": "b98c",
-      "name": "Honda Category",
-      "description": "Honda CategoryHonda CategoryHonda CategoryHonda CategoryHonda Category",
-      "image": "data:image/jpeg;base64,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",
-      "slug": "honda - category",
-      "productCount": 6
-    },
-    {
-      "id": "40f6",
-      "name": "Nasser Juices",
-      "description": "Nasser CategoryNasser CategoryNasser CategoryNasser CategoryNasser CategoryNasser CategoryNasser Category",
-      "image": "https://sunsipbeverages.com.vn/wp-content/uploads/fs542-main-1.jpg",
-      "slug": "nasser - category",
-      "productCount": 14
     }
   ],
   "users": [
     {
-      "name": "Ahmed Mohamed",
-      "email": "ahmed.hassan@gmail.com",
-      "city": "Cairo",
-      "id": "1"
+      "id": "55e5",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "country": "eg",
+      "city": "ismalia",
+      "password": "Hassan_123",
+      "role": "admin"
     },
     {
       "id": "a102",
@@ -281,13 +631,11 @@
       "role": "customer"
     },
     {
-      "id": "7316",
-      "name": "hassan",
+      "name": "hassan mohamed",
       "email": "hassanelgraihy2002@gmail.com",
-      "country": "eg",
-      "city": "Port Said",
-      "password": "Hassan_123",
-      "role": "customer"
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "id": "7316"
     },
     {
       "id": "82e0",
@@ -295,6 +643,15 @@
       "email": "hassan@gmail.com",
       "country": "eg",
       "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "4884",
+      "name": "hassan elgraihy",
+      "email": "hassanelgraihy99@gmail.com",
+      "country": "eg",
+      "city": "ismalia",
       "password": "Hassan_123",
       "role": "customer"
     }
@@ -389,7 +746,7 @@
             "createdAt": "2024-01-14",
             "categoryName": "Unknown"
           },
-          "quantity": 18
+          "quantity": 21
         },
         {
           "product": {
@@ -409,7 +766,7 @@
             "createdAt": "2024-01-13",
             "categoryName": "Dried Fruits"
           },
-          "quantity": 4
+          "quantity": 21
         },
         {
           "product": {
@@ -427,7 +784,7 @@
             "isFeatured": true,
             "createdAt": "2024-01-15"
           },
-          "quantity": 3
+          "quantity": 26
         },
         {
           "product": {
@@ -445,26 +802,7 @@
             "isFeatured": true,
             "createdAt": "2024-01-15"
           },
-          "quantity": 5
-        },
-        {
-          "product": {
-            "id": "7",
-            "name": "Raw Almonds",
-            "description": "Premium raw almonds, perfect for snacking and baking.",
-            "price": 14.99,
-            "originalPrice": 17.99,
-            "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400&h=400&fit=crop",
-            "categoryId": "6",
-            "stock": 80,
-            "unit": "500g",
-            "rating": 4.9,
-            "reviews": 267,
-            "isOrganic": true,
-            "isFeatured": false,
-            "createdAt": "2024-01-15"
-          },
-          "quantity": 5
+          "quantity": 2
         }
       ]
     }

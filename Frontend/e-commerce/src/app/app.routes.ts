@@ -4,11 +4,11 @@ import { Auth } from './features/auth/auth';
 import { Home } from './features/home/home';
 import { CategoriesPage } from './features/categories/categories-page/categories-page';
 import { Cart } from './features/cart/cart';
-import { ProfileComponent } from './features/profile/profile-component/profile-component';
-import { OrderComponent } from './features/profile/order_component/order_component';
 import { ProductDetailsComponent } from './features/products/product-details/product-details';
 import { ParentComponent } from './features/profile/parent-component/parent-component';
 import { authGuard } from './guards/auth-guard/auth-guard-guard';
+import { CheckoutComponent } from './features/checkout/checkout';
+import { OrderConfirmationComponent } from './features/checkout/order-confirmation/order-confirmation';
 
 export const routes: Routes = [
   { path: '', component: Auth, pathMatch: 'full' },
@@ -21,7 +21,11 @@ export const routes: Routes = [
       { path: 'products', component: ProductsList },
       { path: 'cart', component: Cart },
       { path: 'user-profile', component: ParentComponent },
+      { path: 'user-profile', component: ParentComponent },
       { path: 'product/details/:id', component: ProductDetailsComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      { path: 'order-confirmation', component: OrderConfirmationComponent },
     ],
   },
+  { path: '**', component: Error },
 ];

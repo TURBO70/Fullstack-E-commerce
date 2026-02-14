@@ -10,3 +10,21 @@ svg {
     display: inline-block;
     vertical-align: middle;
 }
+
+/* Checkout button styling */
+.checkout-btn {
+    background-color: #638c7f;
+}
+
+.checkout-btn:hover {
+    background-color: #5a7f72;
+}
+
+/* Browse Products button styling */
+.browse-products-btn {
+    background-color: #638c7f;
+}
+
+.browse-products-btn:hover {
+    background-color: #5a7f72;
+}

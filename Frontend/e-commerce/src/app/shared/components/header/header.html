@@ -2,7 +2,7 @@
   <div class="px-4 sm:px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center gap-2 cursor-pointer" routerLink="">
+      <div class="flex items-center gap-2 cursor-pointer" routerLink="/home">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -158,8 +158,8 @@
       class="bg-white z-10 absolute top-16 md:right-12 right-22 rounded-lg border-1 px-1 border-third text-left w-[220px] flex flex-col"
     >
       <div class="px-4 py-3 border-b border-gray-200">
-        <p class="text-sm font-semibold text-gray-900">John Doe</p>
-        <p class="text-xs text-gray-500">john@example.com</p>
+        <p class="text-sm font-semibold text-gray-900">{{ currentUser.name }}</p>
+        <p class="text-xs text-gray-500">{{ currentUser.email }}</p>
       </div>
 
       <!-- Menu Items -->
@@ -188,7 +188,8 @@
 
         <!-- Logout -->
         <button
-          class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-500 rounded-lg transition-colors duration-150 w-full text-left"
+          (click)="logout()"
+          class="cursor-pointer flex items-center gap-3 px-4 py-2.5 text-sm text-red-500 rounded-lg transition-colors duration-150 w-full text-left"
         >
           <svg
             width="16"

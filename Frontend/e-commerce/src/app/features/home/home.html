@@ -38,10 +38,14 @@
       </div>
       <!-- btns -->
       <div class="flex gap-4">
-        <button class="bg-primary hover:opacity-90 text-white px-6 py-1.5 rounded-lg">
+        <button
+          routerLink="/products"
+          class="bg-primary hover:opacity-90 text-white px-6 py-1.5 rounded-lg"
+        >
           Shop Now
         </button>
         <button
+          routerLink="/categories"
           class="hover:bg-myOrange duration-200 transition-all border-1 border-third px-6 py-1.5 rounded-lg"
         >
           Browse Categories
@@ -211,35 +215,11 @@
       </div>
     </div>
   </div>
-  <div class="px-6 flex flex-col">
+  <div class="px-6 flex flex-col mb-8x">
     <h2 class="text-3xl font-bold text-gray-900 mb-1">Featured Products</h2>
     <p class="text-md text-secondary-foreground mb-8">Handpicked fresh products just for you</p>
 
     <app-products-grid [isHome]="true"></app-products-grid>
   </div>
-  <!-- container -->
-  <div class="w-[90%] md:w-[80%] mx-auto mt-13 mb-13">
-    <div
-      class="rounded-2xl px-6 py-10 sm:py-12 flex flex-col items-center text-center"
-      style="background-color: #5a8a72"
-    >
-      <!-- Title -->
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-        Get 20% Off Your First Order
-      </h2>
-
-      <!-- Description -->
-      <p class="text-sm sm:text-base max-w-md mb-8" style="color: rgba(255, 255, 255, 0.75)">
-        Sign up today and receive a special discount on your first purchase. Fresh products,
-        delivered fresh!
-      </p>
-
-      <!-- Button -->
-      <button
-        class="bg-fourth text-gray-800 font-semibold text-sm px-8 py-3 rounded-lg hover:opacity-90 transition-colors duration-200 cursor-pointer"
-      >
-        Sign Up Now
-      </button>
-    </div>
-  </div>
+  
 </div>

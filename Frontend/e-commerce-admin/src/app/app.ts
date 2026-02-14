@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Header } from "./components/header/header";
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { Footer } from "./components/footer/footer";
+import { Header } from './header/header';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +11,18 @@ import { Footer } from "./components/footer/footer";
 })
 export class App {
   protected readonly title = signal('e-commerce-admin');
+   url = '';
+
+  constructor(private route: Router) {}
+
+  ngOnInit(): void {
+    this.route.events.subscribe((ev) => {
+      if (ev instanceof NavigationEnd) {
+        this.url = ev.url;
+      }
+    });
+
+    this.url = this.route.url || '';
+  }
+
 }
