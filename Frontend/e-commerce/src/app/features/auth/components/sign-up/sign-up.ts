@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../../../core/services/user_service';
+import { AuthService } from '../../../../core/services/auth-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -9,7 +11,7 @@ import { UserService } from '../../../../core/services/user_service';
   styleUrl: './sign-up.css',
 })
 export class SignUp {
-  constructor(private user: UserService) {}
+  constructor(private user: UserService, private auth:AuthService, private route:Router) {}
   confirmPass = signal(true);
   textReg = '^[A-Za-z]+(?: [A-Za-z]+)*$';
   passReg = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{8,}$';
@@ -93,12 +95,50 @@ export class SignUp {
 
   isSigned = signal(false);
 
+  // signUp() {
+  //   this.mathcPass();
+  //   this.signUpForm.markAllAsTouched();
+  //   if (this.signUpForm.valid && this.confirmPass() == true) {
+  //     this.isSigned.set(true);
+  //     let _user = {
+  //       name: this.signUpForm.get('name')?.value!,
+  //       email: this.signUpForm.get('email')?.value!,
+  //       country: this.signUpForm.get('country')?.value!,
+  //       city: this.signUpForm.get('city')?.value!,
+  //       password: this.signUpForm.get('password')?.value!,
+  //       role: 'customer',
+  //     };
+  //     this.user.getAllUsers().subscribe({
+  //       next: (res) => {
+  //         if (res.find((u) => u.email === _user.email)) {
+  //           this.isSigned.set(false);
+
+  //           alert('User already exists');
+  //         } else {
+  //           this.user.addUser(_user).subscribe({
+  //             next: (res) => {
+  //               console.log(res);
+  //               this.isSigned.set(false);
+  //               this.isSignedEvent.emit(true);
+  //             },
+  //             error: (err) => {
+  //               //console.log(err);
+  //             },
+  //           });
+  //         }
+  //       },
+  //     });
+  //   }
+  // }
+
   signUp() {
     this.mathcPass();
     this.signUpForm.markAllAsTouched();
-    if (this.signUpForm.valid && this.confirmPass() == true) {
+
+    if (this.signUpForm.valid && this.confirmPass()) {
       this.isSigned.set(true);
-      let _user = {
+
+      const _user = {
         name: this.signUpForm.get('name')?.value!,
         email: this.signUpForm.get('email')?.value!,
         country: this.signUpForm.get('country')?.value!,
@@ -106,26 +146,20 @@ export class SignUp {
         password: this.signUpForm.get('password')?.value!,
         role: 'customer',
       };
-      this.user.getAllUsers().subscribe({
-        next: (res) => {
-          if (res.find((u) => u.email === _user.email)) {
-            this.isSigned.set(false);
 
-            alert('User already exists');
-          } else {
-            this.user.addUser(_user).subscribe({
-              next: (res) => {
-                console.log(res);
-                this.isSigned.set(false);
-                this.isSignedEvent.emit(true);
-              },
-              error: (err) => {
-                //console.log(err);
-              },
-            });
-          }
+      this.auth.signup(_user).subscribe({
+        next: (user) => {
+          this.isSigned.set(false);
+          console.log('Signup successful', user);
+          this.isSignedEvent.emit(true);
         },
+        error: (err) => {
+          this.isSigned.set(false);
+          console.error('Signup error', err);
+          alert(err.message || 'Signup failed');
+        }
       });
     }
   }
+
 }
