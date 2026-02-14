@@ -5,6 +5,14 @@ export interface OrderItem {
   quantity: number;
 }
 
+export interface ShippingAddress {
+  fullName: string;
+  address: string;
+  city: string;
+  country: string;
+  phone: string;
+}
+
 export interface Order {
   id?: string;
   userId: string;
@@ -12,4 +20,6 @@ export interface Order {
   totalPrice: number;
   status: 'pending' | 'confirmed' | 'shipped';
   createdAt: string;
+  shippingAddress: ShippingAddress;
+  paymentMethod: 'cod' | 'credit_card';
 }

@@ -1,48 +1,56 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { user } from '../../shared/models/user_model';
 import { Observable, throwError } from 'rxjs';
-import { map, catchError,switchMap } from 'rxjs/operators';
+import { map, catchError, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   private baseUrl = 'http://localhost:3000';
-  constructor(private http:HttpClient) {}
+  currentUserSignal = signal<user | null>(null);
 
-//Set Token
+  constructor(private http: HttpClient) {
+    const user = localStorage.getItem('currentUser');
+    if (user) {
+      this.currentUserSignal.set(JSON.parse(user));
+    }
+  }
+
+  //Set Token
   setToken(token: string) {
-  localStorage.setItem('token', token);
-}
+    localStorage.setItem('token', token);
+  }
 
-//Get Token
+  //Get Token
   getToken(): string | null {
-  return localStorage.getItem('token');
-}
+    return localStorage.getItem('token');
+  }
 
 
-//IsLoggedIn
+  //IsLoggedIn
   isLoggedIn(): boolean {
     return !!this.getToken();
   }
 
-//SetCurrentUser
+  //SetCurrentUser
   setCurrentUser(user: user) {
-  const { password, ...userWithoutPassword } = user;
-  localStorage.setItem('currentUser', JSON.stringify(userWithoutPassword));
-}
+    const { password, ...userWithoutPassword } = user;
+    localStorage.setItem('currentUser', JSON.stringify(userWithoutPassword));
+    this.currentUserSignal.set(userWithoutPassword);
+  }
 
 
-//GetCurrentUser
+  //GetCurrentUser
   getCurrentUser() {
     const user = localStorage.getItem('currentUser');
     return user ? JSON.parse(user) : null;
   }
 
 
-//login
+  //login
   login(email: string, password: string): Observable<user> {
     return this.http.get<user[]>(`${this.baseUrl}/users`).pipe(
       map(users => {
@@ -64,28 +72,28 @@ export class AuthService {
   }
 
 
-//Sign-Up
-signup(newUser: user): Observable<user> {
-  return this.http.get<user[]>(`${this.baseUrl}/users`).pipe(
-    switchMap(users => {
-      if (users.find(u => u.email === newUser.email)) {
-        return throwError(() => new Error('Email already exists'));
-      }
-      return this.http.post<user>(`${this.baseUrl}/users`, newUser);
-    }),
-    map(createdUser => {
-      const token = btoa(createdUser.email + ':' + Date.now());
-      this.setToken(token);
-      this.setCurrentUser(createdUser);
-      return createdUser;
-    }),
-    catchError(err => {
-      return throwError(() => err);
-    })
-  );
-}
+  //Sign-Up
+  signup(newUser: user): Observable<user> {
+    return this.http.get<user[]>(`${this.baseUrl}/users`).pipe(
+      switchMap(users => {
+        if (users.find(u => u.email === newUser.email)) {
+          return throwError(() => new Error('Email already exists'));
+        }
+        return this.http.post<user>(`${this.baseUrl}/users`, newUser);
+      }),
+      map(createdUser => {
+        const token = btoa(createdUser.email + ':' + Date.now());
+        this.setToken(token);
+        this.setCurrentUser(createdUser);
+        return createdUser;
+      }),
+      catchError(err => {
+        return throwError(() => err);
+      })
+    );
+  }
 
-//LogOut
+  //LogOut
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('currentUser');
@@ -99,13 +107,13 @@ signup(newUser: user): Observable<user> {
 
 
 
-//   login(email:string, password:string):Observable<user | null>{
-// return this.http.get<user[]>(`${this.baseUrl}/users`).pipe(
-//   map(users => {
-//     const user = users.find((u: user) => u.email === email && u.password === password);
-//     if (user) return user;
-//     throw new Error('Invalid email or password');
-//     })
-//    );
-//   }
+  //   login(email:string, password:string):Observable<user | null>{
+  // return this.http.get<user[]>(`${this.baseUrl}/users`).pipe(
+  //   map(users => {
+  //     const user = users.find((u: user) => u.email === email && u.password === password);
+  //     if (user) return user;
+  //     throw new Error('Invalid email or password');
+  //     })
+  //    );
+  //   }
 }
