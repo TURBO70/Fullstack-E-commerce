@@ -7,7 +7,8 @@ import { Cart } from './features/cart/cart';
 import { ProductDetailsComponent } from './features/products/product-details/product-details';
 import { ParentComponent } from './features/profile/parent-component/parent-component';
 import { authGuard } from './guards/auth-guard/auth-guard-guard';
-import { Error } from './shared/components/error/error';
+import { CheckoutComponent } from './features/checkout/checkout';
+import { OrderConfirmationComponent } from './features/checkout/order-confirmation/order-confirmation';
 
 export const routes: Routes = [
   { path: '', component: Auth, pathMatch: 'full' },
@@ -20,7 +21,10 @@ export const routes: Routes = [
       { path: 'products', component: ProductsList },
       { path: 'cart', component: Cart },
       { path: 'user-profile', component: ParentComponent },
+      { path: 'user-profile', component: ParentComponent },
       { path: 'product/details/:id', component: ProductDetailsComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      { path: 'order-confirmation', component: OrderConfirmationComponent },
     ],
   },
   { path: '**', component: Error },

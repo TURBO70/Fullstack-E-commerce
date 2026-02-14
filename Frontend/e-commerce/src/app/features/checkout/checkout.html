@@ -1,0 +1,114 @@
+<div class="checkout-container">
+    <div class="back-link">
+        <a routerLink="/cart">← Back to Cart</a>
+    </div>
+
+    <h1>Checkout</h1>
+
+    <div class="checkout-layout">
+        <div class="checkout-form">
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                <div class="section">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3m14 0h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3m-7 0a3 3 0 1 0 6 0m-6 0a3 3 0 1 1 6 0"></path>
+                            <path d="M5 14h14"></path>
+                        </svg>
+                        Shipping Information
+                    </h2>
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" formControlName="fullName" placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" formControlName="address" placeholder="123 Main Street">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" formControlName="city" placeholder="Alexandria">
+                        </div>
+                        <div class="form-group">
+                            <label>Country</label>
+                            <input type="text" formControlName="country" placeholder="Egypt">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" formControlName="phone" placeholder="+20 123 456 789">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                            <line x1="2" x2="22" y1="10" y2="10"></line>
+                        </svg>
+                        Payment Method
+                    </h2>
+
+                    <div class="payment-options">
+                        <label class="payment-option" [class.selected]="checkoutForm.get('paymentMethod')?.value === 'cod'">
+                            <input type="radio" formControlName="paymentMethod" value="cod">
+                            <div class="payment-details">
+                                <span class="payment-title">Cash on Delivery</span>
+                                <span class="payment-desc">Pay when you receive</span>
+                            </div>
+                        </label>
+
+                        <label class="payment-option" [class.selected]="checkoutForm.get('paymentMethod')?.value === 'credit_card'">
+                            <input type="radio" formControlName="paymentMethod" value="credit_card">
+                            <div class="payment-details">
+                                <span class="payment-title">Credit Card</span>
+                                <span class="payment-desc">Pay securely online</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-items">
+                <div class="summary-item" *ngFor="let item of items">
+                    <img [src]="item.product.image" [alt]="item.product.name">
+                    <div class="item-info">
+                        <span class="item-name">{{item.product.name}}</span>
+                        <span class="item-qty">Qty: {{item.quantity}}</span>
+                        <span class="item-price">${{item.product.price * item.quantity | number:'1.2-2'}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-totals">
+                <div class="total-row">
+                    <span>Subtotal</span>
+                    <span>${{subtotal | number:'1.2-2'}}</span>
+                </div>
+                <div class="total-row">
+                    <span>Shipping</span>
+                    <span>${{shipping | number:'1.2-2'}}</span>
+                </div>
+                <div class="total-row">
+                    <span>Tax (10%)</span>
+                    <span>${{tax | number:'1.2-2'}}</span>
+                </div>
+                <div class="total-row grand-total">
+                    <span>Total</span>
+                    <span>${{total | number:'1.2-2'}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="place-order-btn" (click)="onSubmit()" [disabled]="checkoutForm.invalid || items.length === 0">
+        Place Order - ${{total | number:'1.2-2'}}
+    </button>
+</div>

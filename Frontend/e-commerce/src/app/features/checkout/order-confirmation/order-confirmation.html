@@ -1,0 +1,26 @@
+<div class="confirmation-container">
+    <div class="confirmation-content">
+        <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        
+        <h1>Order Confirmed!</h1>
+        
+        <p class="thank-you">Thank you for your purchase</p>
+        <p class="order-id">
+            <strong>Order ID:</strong> {{ getDisplayOrderId() }}
+        </p>
+        
+        <div class="action-buttons">
+            <a routerLink="/user-profile" class="btn-primary">
+                View My Orders
+            </a>
+            <a routerLink="/products" class="btn-secondary">
+                Continue Shopping
+            </a>
+        </div>
+    </div>
+</div>
+
