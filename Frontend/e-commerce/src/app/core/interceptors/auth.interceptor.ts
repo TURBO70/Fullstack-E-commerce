@@ -13,24 +13,9 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
         Authorization: `Bearer ${token}`
       }
     });
-    
-    // Debug: Log that token is being added
-    console.log('🔐 Auth Interceptor: Token added to request', {
-      url: req.url,
-      method: req.method,
-      hasToken: !!token
-    });
-    
     return next(clonedRequest);
   }
 
-  // Debug: Log when no token is found
-  console.log('⚠️ Auth Interceptor: No token found for request', {
-    url: req.url,
-    method: req.method
-  });
-
-  // If no token, proceed with the original request
   return next(req);
 };
 
