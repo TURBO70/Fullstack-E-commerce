@@ -34,31 +34,16 @@
         <path d="M16 10a4 4 0 0 1-8 0"></path>
       </svg>Orders</button>
     </div>
-  <!-- <div class="flex gap-3 mb-6">
-    <button
-      (click)="activeTab.set('profile')"
-      [class.bg-white]="activeTab() === 'profile'"
-      class="px-4 py-2 rounded-lg border">
-      👤 Profile
-    </button>
-
-    <button
-      (click)="activeTab.set('orders')"
-      [class.bg-white]="activeTab() === 'orders'"
-      class="px-4 py-2 rounded-lg border">
-      🛍️ Orders
-    </button>
-  </div> -->
 
 
 
   <!-- Content -->
   @if (activeTab() === 'profile') {
-  <app-profile-component [currentUser]="currentUser"></app-profile-component>
+  <app-profile-component [currentUser]="currentUser" (profileUpdated)="fetchUserData()"></app-profile-component>
 
   }
 
   @if (activeTab() === 'orders') {
-  <app-order-component [userOrders]="userOrders"></app-order-component>
+  <app-order-component [userOrders]="userOrders" (ordersUpdated)="fetchUserOrders()"></app-order-component>
   }
 </div>
