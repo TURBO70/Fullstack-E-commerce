@@ -86,7 +86,7 @@ export class Login {
           this.isLoading.set(false);
           console.log('Login successful', user);
           // Navigate to home page
-          this.route.navigate(['/home']);
+          this.route.navigate(['/']);
         },
         error: (err) => {
           this.isFound.set(true);

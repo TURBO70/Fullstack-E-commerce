@@ -664,10 +664,10 @@
       "role": "customer"
     },
     {
-      "name": "hassan mohamed",
+      "name": "hassan Ahmed",
       "email": "hassanelgraihy2002@gmail.com",
-      "city": "Ajman",
-      "country": "UAE",
+      "city": "Setif",
+      "country": "Algeria",
       "id": "48f4",
       "password": "Hassan_123",
       "role": "customer"
@@ -849,6 +849,82 @@
         "phone": "01002999739"
       },
       "paymentMethod": "cod"
+    },
+    {
+      "id": "573e",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 3
+        },
+        {
+          "productId": "205",
+          "productTitle": "Bell Peppers",
+          "price": 3.99,
+          "quantity": 2
+        },
+        {
+          "productId": "103",
+          "productTitle": "Strawberries",
+          "price": 5.99,
+          "quantity": 3
+        },
+        {
+          "productId": "603",
+          "productTitle": "Walnuts",
+          "price": 18.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 58.641000000000005,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "hassan mohamed",
+        "address": "elgraqihy",
+        "city": "Ajman",
+        "country": "UAE",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "credit_card"
+    },
+    {
+      "id": "3f92",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 1
+        },
+        {
+          "productId": "403",
+          "productTitle": "Raisins",
+          "price": 6.99,
+          "quantity": 1
+        },
+        {
+          "productId": "603",
+          "productTitle": "Walnuts",
+          "price": 18.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 41.647,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "hassan mohamed",
+        "address": "elgraqihy",
+        "city": "Ajman",
+        "country": "UAE",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "credit_card"
     }
   ],
   "carts": [
@@ -934,13 +1010,8 @@
       ]
     },
     {
-      "id": "e3ac",
-      "userId": "3f2c",
-      "items": []
-    },
-    {
-      "id": "09bb",
-      "userId": "69ba",
+      "id": "7aaa",
+      "userId": "48f4",
       "items": []
     }
   ]
