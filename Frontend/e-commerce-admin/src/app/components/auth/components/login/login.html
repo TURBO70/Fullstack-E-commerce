@@ -1,0 +1,58 @@
+<div class="flex flex-col gap-6 w-full">
+  <div class="w-full">
+    <p class="mb-1 text-xl font-bold">Welcome back</p>
+    <p style="color: #8e9c98">Enter your credentials to access your dashboard</p>
+  </div>
+  <form [formGroup]="loginForm" (submit)="login()" class="w-full flex flex-col gap-3">
+    <div class="flex flex-col gap-1">
+      <label for="email" class="font-semibold">Email</label>
+      <input
+        formControlName="email"
+        type="email"
+        name="email"
+        placeholder="hassan@gmail.com"
+        class="py-1.5 px-2 rounded-lg outline-0"
+        style="background-color: #f9faf9"
+      />
+      @if (inValidEmail()) {
+        @if (loginForm?.controls?.email?.errors!['required']) {
+          <p class="text-sm text-red-500">Email is required</p>
+        } @else if (loginForm?.controls?.email?.errors!['email']) {
+          <p class="text-sm text-red-500">Please enter a valid email address.</p>
+        }
+      }
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="password" class="font-semibold">Password</label>
+      <input
+        formControlName="password"
+        type="password"
+        name="password"
+        placeholder="****"
+        class="py-1.5 px-2 rounded-lg outline-0"
+        style="background-color: #f9faf9"
+      />
+      @if (inValidPassword()) {
+        @if (loginForm?.controls?.password?.errors!['required']) {
+          <p class="text-sm text-red-500">Password is required</p>
+        }
+      }
+    </div>
+    <button
+      type="submit"
+      class="py-2 px-2 mt-4 rounded-lg text-white font-semibold"
+      style="background-color: #638c7f"
+    >
+      @if (!isLoading()) {
+        Sign In
+      } @else {
+        <div class="w-full flex justify-center">
+          <span class="loading loading-spinner text-white"></span>
+        </div>
+      }
+    </button>
+    @if (isFound()) {
+      <p class="text-sm text-red-500">Invalid email or password</p>
+    }
+  </form>
+</div>

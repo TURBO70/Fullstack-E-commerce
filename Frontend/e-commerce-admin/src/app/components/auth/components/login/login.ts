@@ -84,12 +84,14 @@ export class Login {
       this.authService.login(email, password).subscribe({
         next: (user) => {
           this.isLoading.set(false);
+
           console.log('Login successful', user);
           // Navigate to home page
-          this.route.navigate(['/home']);
+          this.route.navigate(['/admin/dashboard']);
         },
         error: (err) => {
           this.isFound.set(true);
+
           this.isLoading.set(false);
           this.errorMessage.set(err.message || 'Login failed');
           console.error('Login error', err);

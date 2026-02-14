@@ -4,8 +4,6 @@ import { Auth } from './features/auth/auth';
 import { Home } from './features/home/home';
 import { CategoriesPage } from './features/categories/categories-page/categories-page';
 import { Cart } from './features/cart/cart';
-import { ProfileComponent } from './features/profile/profile-component/profile-component';
-import { OrderComponent } from './features/profile/order_component/order_component';
 import { ProductDetailsComponent } from './features/products/product-details/product-details';
 import { ParentComponent } from './features/profile/parent-component/parent-component';
 import { authGuard } from './guards/auth-guard/auth-guard-guard';
@@ -29,4 +27,5 @@ export const routes: Routes = [
       { path: 'order-confirmation', component: OrderConfirmationComponent },
     ],
   },
+  { path: '**', component: Error },
 ];

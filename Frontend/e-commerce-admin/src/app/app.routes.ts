@@ -5,19 +5,25 @@ import { DashboardProductsList } from './components/dashboard-products-list/dash
 import { DashboardCategoriesList } from './components/dashboard-categories-list/dashboard-categories-list';
 import { DashboardUsersList } from './components/dashboard-users-list/dashboard-users-list';
 import { DashboardOrdersList } from './components/dashboard-orders-list/dashboard-orders-list';
-
+import { Auth } from './components/auth/auth';
+import { authGuard } from './guards/auth-guard/auth-guard-guard';
 export const routes: Routes = [
-    { path: '', redirectTo: 'admin/dashboard', pathMatch: 'full' },
-    {
-        path: 'admin/dashboard', component: Dashboard,
-        children: [
-            { path: '', redirectTo: 'products', pathMatch: 'full' },
+  { path: '', component: Auth, pathMatch: 'full' },
 
-            { path: 'products', component: DashboardProductsList },
-            { path: 'categories', component: DashboardCategoriesList },
-            { path: 'users', component: DashboardUsersList },
-            { path: 'orders', component: DashboardOrdersList },
-        ]
-    },
-    { path: '**', component: Error }
+  {
+    path: 'admin/dashboard',
+    component: Dashboard,
+    canActivateChild: [authGuard],
+    canActivate: [authGuard],
+    children: [
+      { path: '', redirectTo: 'products', pathMatch: 'full' },
+
+      { path: 'products', component: DashboardProductsList },
+      { path: 'categories', component: DashboardCategoriesList },
+      { path: 'users', component: DashboardUsersList },
+      { path: 'orders', component: DashboardOrdersList },
+    ],
+  },
+
+  { path: '**', component: Error },
 ];

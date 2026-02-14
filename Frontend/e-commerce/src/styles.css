@@ -77,3 +77,22 @@
   --color-ring: #679089;
   /* Focus rings */
 }
+
+.custom-snackbar {
+  background-color: #4caf50 !important;
+  border-radius: 12px !important;
+  font-weight: 500;
+}
+
+.custom-snackbar .mat-mdc-button {
+  color: black !important;
+  font-weight: bold;
+}
+
+.custom-snackbar .mat-mdc-button:hover {
+  border-radius: 6px;
+  background-color: azure !important;
+}
+.custom-snackbar .mat-mdc-button .mdc-button__ripple::before {
+  background-color: transparent !important;
+}
