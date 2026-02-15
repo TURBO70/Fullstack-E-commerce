@@ -22,40 +22,29 @@ export class ParentComponent implements OnInit {
   constructor(private userService: UserService, private orderService: OrderService, private authService: AuthService) {}
 
   ngOnInit() {
-    const loggedInUser = this.authService.getCurrentUser();
-    if(loggedInUser){
-      this.currentUser.set(loggedInUser);
-      console.log('Logged in user:', loggedInUser);
-
-      this.orderService.getOrdersByUserId(loggedInUser.id).subscribe(orders =>{
-      this.userOrders.set(orders);
-      console.log('User orders:', orders);
-    });
-  }
+  this.fetchUserData();
+  this.fetchUserOrders();
 }
 
-  // fetchUserData(){
+fetchUserData() {
+const loggedInUser = this.authService.getCurrentUser();
+  if(!loggedInUser) return;
+      this.userService.getUserById(loggedInUser.id).subscribe(user => {
+        this.currentUser.set(user);
+        this.authService.setCurrentUser(user);
+        console.log('Data Refreshed');
+    });
+  }
 
-  // }
-  //   this.userService.getUserById('2').subscribe(user => {
-  //     this.currentUser.set(user);
-  //     console.log('Parent got user:', user);
-  //   });
-  //   this.orderService.getOrdersByUserId('2').subscribe(orders => {
-  //     this.userOrders.set(orders);
-  //     console.log('Parent got orders:', orders);
-  //   });
-  // }
-// fetchUserData() {
-// const loggedInUser = this.authService.getCurrentUser();
-    
-//     if (loggedInUser) {
-//       this.userService.getUserById(loggedInUser.id).subscribe(user => {
-//         this.currentUser.set(user);
-//         this.authService.setCurrentUser(user);
-//         console.log('Data Refreshed!');
-//     });
-//     }
-//   }
+  fetchUserOrders(){
+    const loggedInUser = this.authService.getCurrentUser();
+    if(!loggedInUser) return;
+      this.orderService.getOrdersByUserId(loggedInUser.id).subscribe({
+        next:(orders) => {
+          this.userOrders.set(orders);
+          console.log('Orders refreshed');
+        }
+      })
+  }
 }
 
