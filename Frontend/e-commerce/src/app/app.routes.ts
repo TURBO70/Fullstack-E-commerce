@@ -11,19 +11,18 @@ import { CheckoutComponent } from './features/checkout/checkout';
 import { OrderConfirmationComponent } from './features/checkout/order-confirmation/order-confirmation';
 
 export const routes: Routes = [
-  { path: 'auth', component: Auth, pathMatch: 'full' },
-  { path: 'products', component: ProductsList },
-  { path: '', component: Home },
-  { path: 'categories', component: CategoriesPage },
-  { path: 'product/details/:id', component: ProductDetailsComponent },
-  { path: 'cart', component: Cart },
-
+  { path: '', component: Auth, pathMatch: 'full' },
   {
     path: '',
     canActivateChild: [authGuard],
     children: [
+      { path: 'home', component: Home },
+      { path: 'categories', component: CategoriesPage },
+      { path: 'products', component: ProductsList },
+      { path: 'cart', component: Cart },
       { path: 'user-profile', component: ParentComponent },
       { path: 'user-profile', component: ParentComponent },
+      { path: 'product/details/:id', component: ProductDetailsComponent },
       { path: 'checkout', component: CheckoutComponent },
       { path: 'order-confirmation', component: OrderConfirmationComponent },
     ],

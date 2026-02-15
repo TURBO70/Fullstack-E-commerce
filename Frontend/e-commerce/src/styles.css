@@ -2,8 +2,6 @@
 
 @import 'tailwindcss';
 
-
-
 @theme {
   /* --color-primary: #638c7f;
   --color-secondary: #5c706a; */
@@ -93,29 +91,8 @@
 
 .custom-snackbar .mat-mdc-button:hover {
   border-radius: 6px;
-  background-color: transparent !important;
+  background-color: azure !important;
 }
 .custom-snackbar .mat-mdc-button .mdc-button__ripple::before {
-  background-color: transparent !important;
-}
-
-.custom-snackbar2 {
-  background-color: rgb(212, 6, 6) !important;
-  border-radius: 12px !important;
-  font-weight: 500;
-  color: white !important;
-}
-.custom-snackbar2 .mat-mdc-button {
-  color: white !important;
-  font-weight: bold;
-}
-
-.custom-snackbar2 .mat-mdc-button:hover {
-  border-radius: 6px;
-
-  background-color: transparent !important;
-}
-
-.custom-snackbar2 .mat-mdc-button .mdc-button__ripple::before {
   background-color: transparent !important;
 }

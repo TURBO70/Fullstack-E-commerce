@@ -11,60 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './sign-up.css',
 })
 export class SignUp {
-  constructor(
-    private user: UserService,
-    private auth: AuthService,
-    private route: Router,
-  ) {}
-
-  countries = [
-    {
-      name: 'Egypt',
-      cities: ['Cairo', 'Alexandria', 'Giza', 'Luxor', 'Aswan', 'Port Said', 'Suez', 'Mansoura'],
-    },
-    {
-      name: 'Saudi Arabia',
-      cities: ['Riyadh', 'Jeddah', 'Mecca', 'Medina', 'Dammam', 'Khobar', 'Tabuk', 'Abha'],
-    },
-    {
-      name: 'UAE',
-      cities: [
-        'Dubai',
-        'Abu Dhabi',
-        'Sharjah',
-        'Ajman',
-        'Ras Al Khaimah',
-        'Fujairah',
-        'Umm Al Quwain',
-      ],
-    },
-    {
-      name: 'Kuwait',
-      cities: ['Kuwait City', 'Hawalli', 'Salmiya', 'Sabah Al Salem', 'Jahra', 'Ahmadi'],
-    },
-    {
-      name: 'Qatar',
-      cities: ['Doha', 'Al Wakrah', 'Al Rayyan', 'Umm Salal', 'Al Khor', 'Dukhan'],
-    },
-    {
-      name: 'Lebanon',
-      cities: ['Beirut', 'Tripoli', 'Sidon', 'Tyre', 'Byblos', 'Zahle', 'Baalbek'],
-    },
-    {
-      name: 'Morocco',
-      cities: ['Casablanca', 'Rabat', 'Marrakech', 'Fes', 'Tangier', 'Agadir', 'Meknes'],
-    },
-    {
-      name: 'Algeria',
-      cities: ['Algiers', 'Oran', 'Constantine', 'Annaba', 'Blida', 'Batna', 'Setif'],
-    },
-    {
-      name: 'Tunisia',
-      cities: ['Tunis', 'Sfax', 'Sousse', 'Kairouan', 'Bizerte', 'Gabes', 'Monastir'],
-    },
-  ];
-  cities: string[] = [];
-
+  constructor(private user: UserService, private auth:AuthService, private route:Router) {}
   confirmPass = signal(true);
   textReg = '^[A-Za-z]+(?: [A-Za-z]+)*$';
   passReg = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{8,}$';
@@ -88,20 +35,6 @@ export class SignUp {
     confirmPassword: new FormControl('', [Validators.required]),
   });
 
-  onCountryChange() {
-    const selectedCountry = this.signUpForm.get('country')?.value;
-
-    const countryObj = this.countries.find((c) => c.name === selectedCountry);
-
-    this.cities = countryObj ? countryObj.cities : [];
-
-    // this. cities = this.countries.find(
-    //   c=>c.name === selectedCountry
-    // )?.cities || []
-
-    // reset city when country changes
-    this.signUpForm.get('city')?.setValue('');
-  }
   inValidName() {
     return (
       this.signUpForm.get('name')?.invalid &&
@@ -224,8 +157,9 @@ export class SignUp {
           this.isSigned.set(false);
           console.error('Signup error', err);
           alert(err.message || 'Signup failed');
-        },
+        }
       });
     }
   }
+
 }

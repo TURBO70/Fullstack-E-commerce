@@ -148,12 +148,7 @@ isFieldInvalid(fieldName: string): boolean {
     if (this.userForm.invalid) return;
 
     const userId = this.currentUser()?.id!;
-    const currentUserData = this.currentUser()!;
-    const updatedUserData = {
-      ...currentUserData,
-      ...this.userForm.value
-    };
-    this.userService.updateUserData(userId, updatedUserData)
+    this.userService.updateUserData(userId, this.userForm.value)
       .subscribe(() => {
         this.isEditing.set(false);
         this.profileUpdated.emit();

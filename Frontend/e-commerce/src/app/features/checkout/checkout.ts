@@ -61,6 +61,7 @@ export class CheckoutComponent {
 
         const userId = this.authService.currentUserSignal()?.id;
         if (!userId) {
+            // Handle not logged in
             return;
         }
 

@@ -1,14 +1,17 @@
+/* Custom styles to supplement Tailwind */
 :host {
     display: block;
     min-height: 100vh;
-    background-color: #f9fafb; 
+    background-color: #f9fafb; /* Gray 50 */
 }
 
+/* Ensure icons are aligned */
 svg {
     display: inline-block;
     vertical-align: middle;
 }
 
+/* Checkout button styling */
 .checkout-btn {
     background-color: #638c7f;
 }
@@ -17,6 +20,7 @@ svg {
     background-color: #5a7f72;
 }
 
+/* Browse Products button styling */
 .browse-products-btn {
     background-color: #638c7f;
 }

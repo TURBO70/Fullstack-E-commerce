@@ -2,7 +2,7 @@
   <div class="px-4 sm:px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center gap-2 cursor-pointer" routerLink="/home">
+      <div class="flex items-center gap-2 cursor-pointer" routerLink="/admin/dashboard">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -28,49 +28,12 @@
       <div class="flex items-center gap-5">
         <!-- Burger Menu Button (Mobile) -->
 
-        <!-- Nav Links -->
-        <nav class="md:flex items-center gap-5 hidden">
-          <a
-            routerLink="/products"
-            class="text-sm font-semibold text-gray-800 transition-colors duration-150"
-            >Products</a
-          >
-          <a
-            routerLink="/categories"
-            class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150"
-            >Categories</a
-          >
-        </nav>
-
-        <!-- Divider -->
-        <div class="w-px h-5 md:flex bg-gray-200 hidden"></div>
+     
 
         <!-- Icons -->
         <div class="flex items-center gap-2">
           <!-- Cart -->
-          <button
-            routerLink="/cart"
-            class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-shopping-cart h-5 w-5"
-            >
-              <circle cx="8" cy="21" r="1"></circle>
-              <circle cx="19" cy="21" r="1"></circle>
-              <path
-                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
-              ></path>
-            </svg>
-          </button>
+         
           <!-- User -->
           <button
             (click)="toggleProfile()"
@@ -164,27 +127,7 @@
 
       <!-- Menu Items -->
       <div class="py-2">
-        <!-- My Profile -->
-        <a
-          (click)="closeMenu()"
-          routerLink="/user-profile"
-          class="flex items-center cursor-pointer gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-myOrange rounded-lg transition-colors duration-150"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          <span>My Profile</span>
-        </a>
+      
 
         <!-- Logout -->
         <button
