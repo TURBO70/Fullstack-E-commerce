@@ -26,14 +26,10 @@
 
       <!-- Nav Links + Icons -->
       <div class="flex items-center gap-5">
-        <!-- Burger Menu Button (Mobile) -->
-
-     
-
         <!-- Icons -->
         <div class="flex items-center gap-2">
           <!-- Cart -->
-         
+
           <!-- User -->
           <button
             (click)="toggleProfile()"
@@ -53,72 +49,13 @@
               <circle cx="12" cy="8" r="4"></circle>
             </svg>
           </button>
-          <button
-            (click)="toggleMenu()"
-            class="md:hidden text-gray-700 p-2 rounded-lg transition-colors duration-150 cursor-pointer hover:bg-gray-100"
-          >
-            @if (!isMenuOpen) {
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-menu"
-              >
-                <line x1="4" y1="6" x2="20" y2="6"></line>
-                <line x1="4" y1="12" x2="20" y2="12"></line>
-                <line x1="4" y1="18" x2="20" y2="18"></line>
-              </svg>
-            } @else {
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-x"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            }
-          </button>
         </div>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
-    <nav
-      *ngIf="isMenuOpen"
-      class="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4 flex flex-col gap-3"
-      (click)="closeMenu()"
-    >
-      <a
-        routerLink="/products"
-        class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150 block px-2 py-2 rounded hover:bg-gray-100"
-      >
-        Products
-      </a>
-      <a
-        routerLink="/categories"
-        class="text-sm font-semibold text-gray-800 hover:text-green-600 transition-colors duration-150 block px-2 py-2 rounded hover:bg-gray-100"
-      >
-        Categories
-      </a>
-    </nav>
   </div>
   @if (isOpenProfile) {
     <div
-      class="bg-white z-10 absolute top-16 md:right-12 right-22 rounded-lg border-1 px-1 border-third text-left w-[220px] flex flex-col"
+      class="bg-white z-10 absolute top-16 md:right-12 right-12 rounded-lg border-1 px-1 border-third text-left w-[220px] flex flex-col"
     >
       <div class="px-4 py-3 border-b border-gray-200">
         <p class="text-sm font-semibold text-gray-900">{{ currentUser.name }}</p>
@@ -127,8 +64,6 @@
 
       <!-- Menu Items -->
       <div class="py-2">
-      
-
         <!-- Logout -->
         <button
           (click)="logout()"
