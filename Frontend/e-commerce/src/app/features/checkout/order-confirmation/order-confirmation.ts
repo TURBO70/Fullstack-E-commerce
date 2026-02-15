@@ -27,8 +27,7 @@ export class OrderConfirmationComponent implements OnInit {
 
     getDisplayOrderId(): string {
         if (this.orderId) {
-            // Format order ID like ORD-090941 (using last 6 digits)
-            // If orderId is shorter, pad it; if longer, take last 6
+            
             const idStr = String(this.orderId);
             const numericPart = idStr.length > 6 ? idStr.slice(-6) : idStr.padStart(6, '0');
             return `ORD-${numericPart}`;
