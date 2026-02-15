@@ -46,11 +46,11 @@
         <div class="w-px h-5 md:flex bg-gray-200 hidden"></div>
 
         <!-- Icons -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
           <!-- Cart -->
 
           <div class="relative">
-            @if (cartService.cartItems().length > 0&&isLoged()) {
+            @if (cartService.cartItems().length > 0) {
               <div
                 class="absolute bottom-7 -right-1 rounded-full w-5.5 h-5.5 text-center bg-primary text-white flex justify-center items-center"
               >
