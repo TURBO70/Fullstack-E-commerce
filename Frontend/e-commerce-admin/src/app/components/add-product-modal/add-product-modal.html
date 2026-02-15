@@ -26,43 +26,76 @@
             <!-- Name -->
             <div>
                 <label class="block text-sm mb-1">Name</label>
-                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="product.name" />
+                <input type="text" required minlength="3" #nameRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.name" />
+
+                @if(nameRef.errors?.['required'] && nameRef.touched){
+                <p class="text-red-500 text-sm mt-1">Name is required.</p>
+                }
+                @else if(nameRef.errors?.['minlength'] && nameRef.touched){
+                <p class="text-red-500 text-sm mt-1">Name must be at least 3 characters.</p>
+                }
             </div>
 
             <!-- Description -->
             <div>
                 <label class="block text-sm mb-1">Description</label>
-                <textarea rows="3" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="product.description">
-        </textarea>
+                <textarea rows="3" required #descriptionRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.description">
+                </textarea>
+
+                @if(descriptionRef.invalid && descriptionRef.touched){
+                <p class="text-red-500 text-sm mt-1">Description is required.</p>
+                }
             </div>
 
             <!-- Price -->
             <div>
                 <label class="block text-sm mb-1">Price</label>
-                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="product.price" />
+                <input type="number" required min="1" #priceRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.price" />
+
+                @if(priceRef.errors?.['required'] && priceRef.touched){
+                <p class="text-red-500 text-sm mt-1">Price is required.</p>
+                }
+                @else if(priceRef.errors?.['min'] && priceRef.touched){
+                <p class="text-red-500 text-sm mt-1">Price must be greater than 0.</p>
+                }
             </div>
 
             <!-- Original Price -->
             <div>
                 <label class="block text-sm mb-1">Original Price</label>
-                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="product.originalPrice" />
+                <input type="number" required min="1" #originalPriceRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.originalPrice" />
+
+                @if(originalPriceRef.errors?.['required'] && originalPriceRef.touched){
+                <p class="text-red-500 text-sm mt-1">Original Price is required.</p>
+                }
+                @else if(originalPriceRef.errors?.['min'] && originalPriceRef.touched){
+                <p class="text-red-500 text-sm mt-1">Original Price must be greater than 0.</p>
+                }
             </div>
 
             <!-- Stock -->
             <div>
                 <label class="block text-sm mb-1">Stock</label>
-                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="product.stock" />
+                <input type="number" required min="0" #stockRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.stock" />
+
+                @if(stockRef.errors?.['required'] && stockRef.touched){
+                <p class="text-red-500 text-sm mt-1">Stock is required.</p>
+                }
+                @else if(stockRef.errors?.['min'] && stockRef.touched){
+                <p class="text-red-500 text-sm mt-1">Stock must be greater than 0.</p>
+                }
             </div>
 
             <!-- Category -->
             <div>
                 <label class="block text-sm mb-1">Category</label>
-                <select class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.categoryId">
+                <select required #categoryRef="ngModel" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.categoryId">
                     <option value="" disabled>
                         --- Select Category ---
                     </option>
@@ -70,26 +103,47 @@
                     <option [value]="cat.id">{{ cat.name }}</option>
                     }
                 </select>
+
+                @if(categoryRef.invalid && categoryRef.touched){
+                <p class="text-red-500 text-sm mt-1">Category is required.</p>
+                }
             </div>
 
             <!-- Unit -->
             <div>
                 <label class="block text-sm mb-1">Unit</label>
-                <select class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="product.unit">
+                <select required #unitRef="ngModel" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.unit">
+                    <option value="" disabled>
+                        --- Select Unit ---
+                    </option>
                     <option value="kg">Kg</option>
                     <option value="g">Gram</option>
                     <option value="pcs">Piece</option>
                     <option value="ltr">Liter</option>
                 </select>
+
+                @if(unitRef.invalid && unitRef.touched){
+                <p class="text-red-500 text-sm mt-1">Unit is required.</p>
+                }
             </div>
 
             <!-- Image -->
             <div>
                 <label class="block text-sm mb-1">Image URL</label>
-                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="product.image" />
+                <input type="text" required #imageRef="ngModel" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="product.image" (ngModelChange)="checkImage($event)" />
 
-                @if (product.image) {
+                @if(imageRef.invalid && imageRef.touched){
+                <p class="text-red-500 text-sm mt-1">Image URL is required.</p>
+                }
+                @else if (!imageValid && imageRef.touched) {
+                <p class="text-red-500 text-sm mt-1">
+                    This URL is not a valid image.
+                </p>
+                }
+
+                @if (product.image && imageRef.valid && imageValid) {
                 <img [src]="product.image" class="mt-2 h-24 w-24 rounded-lg object-cover border" />
                 }
             </div>
@@ -115,9 +169,17 @@
                 Cancel
             </button>
 
+            @if(isFormValid){
             <button class="px-4 py-2 rounded-md bg-primary text-primary-foreground" (click)="onSave()">
                 Save
             </button>
+            }
+            @else{
+            <button [disabled]="true" class="px-4 py-2 rounded-md bg-gray-400 text-primary-foreground"
+                (click)="onSave()">
+                Save
+            </button>
+            }
         </div>
     </div>
 </div>
