@@ -954,6 +954,41 @@
         "phone": "+201202869975"
       },
       "paymentMethod": "credit_card"
+    },
+    {
+      "id": "8b65",
+      "userId": "4884",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 3
+        },
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 1
+        },
+        {
+          "productId": "103",
+          "productTitle": "Strawberries",
+          "price": 5.99,
+          "quantity": 3
+        }
+      ],
+      "totalPrice": 49.303000000000004,
+      "status": "pending",
+      "createdAt": "2026-02-15",
+      "shippingAddress": {
+        "fullName": "hassan elgraihy",
+        "address": "ggfghjkl",
+        "city": "Alexandria",
+        "country": "Egypt",
+        "phone": "4567"
+      },
+      "paymentMethod": "cod"
     }
   ],
   "carts": [
@@ -1085,46 +1120,7 @@
     {
       "id": "a793",
       "userId": "4884",
-      "items": [
-        {
-          "product": {
-            "id": "104",
-            "name": "Green Grapes",
-            "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
-            "price": 4.99,
-            "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
-            "categoryId": "1",
-            "stock": 120,
-            "unit": "kg",
-            "rating": 4.5,
-            "reviews": 76,
-            "isOrganic": false,
-            "isFeatured": true,
-            "createdAt": "2024-02-03",
-            "categoryName": "Fresh Fruits"
-          },
-          "quantity": 3
-        },
-        {
-          "product": {
-            "id": "203",
-            "name": "Tomatoes",
-            "description": "Ripe and juicy tomatoes, perfect for salads, sauces, and cooking.",
-            "price": 2.79,
-            "image": "https://th.bing.com/th/id/R.5c476c3ea45bcf53cabd9d13aaae0b1f?rik=VNyQZ4Mhh%2bP8bg&riu=http%3a%2f%2fwww.primallyinspired.com%2fwp-content%2fuploads%2f2013%2f07%2ftomatoes.jpg&ehk=rGYZXIgLoY8HrJ1%2bPlt4DNyTW9CTf%2ftNIJ7LC0TFBFY%3d&risl=&pid=ImgRaw&r=0",
-            "categoryId": "2",
-            "stock": 140,
-            "unit": "kg",
-            "rating": 4.7,
-            "reviews": 110,
-            "isOrganic": false,
-            "isFeatured": true,
-            "createdAt": "2024-02-03",
-            "categoryName": "Vegetables"
-          },
-          "quantity": 1
-        }
-      ]
+      "items": []
     }
   ]
 }
