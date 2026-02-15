@@ -5,11 +5,13 @@ import { user } from '../../shared/models/user_model';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = environment.apiUrl;
 
   currentUserSignal = signal<user | null>(null);
 
@@ -20,7 +22,7 @@ export class AuthService {
     }
   }
 
-//Set Token
+  //Set Token
   setToken(token: string) {
     localStorage.setItem('token', token);
   }
@@ -74,7 +76,7 @@ export class AuthService {
     );
   }
 
- 
+
 
   //Sign-Up
   signup(newUser: user): Observable<user> {

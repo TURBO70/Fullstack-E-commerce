@@ -4,14 +4,16 @@ import { Order } from '../../shared/models/order_model';
 import { AuthService } from './auth-service';
 import { Observable } from 'rxjs';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class OrderService {
 
-  private BaseUrl = 'http://localhost:3000/orders';
-  constructor(private http:HttpClient,private authService: AuthService) {}
-  
+  private BaseUrl = `${environment.apiUrl}/orders`;
+  constructor(private http: HttpClient, private authService: AuthService) { }
+
   getAllOrders() {
     return this.http.get<Order[]>(this.BaseUrl);
   }
@@ -19,18 +21,18 @@ export class OrderService {
     return this.http.get<Order[]>(`${this.BaseUrl}?userId=${userId}`);
   }
 
- // Create order - automatically adds userId from logged-in user
- createOrder(orderData: Omit<Order, 'id' | 'userId' | 'createdAt'>): Observable<Order> {
+  // Create order - automatically adds userId from logged-in user
+  createOrder(orderData: Omit<Order, 'id' | 'userId' | 'createdAt'>): Observable<Order> {
     const currentUser = this.authService.getCurrentUser();
     const order: Omit<Order, 'id'> = {
       ...orderData,
-      userId: currentUser.id, 
-      createdAt: new Date().toISOString().split('T')[0], 
+      userId: currentUser.id,
+      createdAt: new Date().toISOString().split('T')[0],
     };
     return this.http.post<Order>(this.BaseUrl, order);
   }
 
-  updateOrderStatus(orderId: string, status: 'pending' | 'confirmed' | 'shipped'):Observable<Order> {
+  updateOrderStatus(orderId: string, status: 'pending' | 'confirmed' | 'shipped'): Observable<Order> {
     return this.http.patch<Order>(`${this.BaseUrl}/${orderId}`, { status });
   }
 
