@@ -1,0 +1,1130 @@
+{
+  "products": [
+    {
+      "id": "101",
+      "name": "Red Apple",
+      "description": "Crisp and juicy red apples, full of natural sweetness and vitamins.",
+      "price": 3.49,
+      "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=400&h=400&fit=crop",
+      "categoryId": "1",
+      "stock": 150,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 120,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "102",
+      "name": "Banana",
+      "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
+      "price": 2.49,
+      "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=400&fit=crop",
+      "categoryId": "1",
+      "stock": 200,
+      "unit": "bunch",
+      "rating": 4.6,
+      "reviews": 89,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-01-14",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "103",
+      "name": "Strawberries",
+      "description": "Sweet and ripe strawberries, perfect for desserts or smoothies.",
+      "price": 5.99,
+      "image": "https://diyhomedesignideas.com/photos/800-webp/e2fo8m6o1bxd5lpsfn0q.webp",
+      "categoryId": "1",
+      "stock": 90,
+      "unit": "kg",
+      "rating": 4.8,
+      "reviews": 95,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "104",
+      "name": "Green Grapes",
+      "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
+      "price": 4.99,
+      "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
+      "categoryId": "1",
+      "stock": 120,
+      "unit": "kg",
+      "rating": 4.5,
+      "reviews": 76,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "105",
+      "name": "Pineapple",
+      "description": "Tropical pineapple, sweet, juicy and rich in vitamin C.",
+      "price": 6.49,
+      "image": "https://tse4.mm.bing.net/th/id/OIP.8Oc8ua0K7P84PpoJCP4JkQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "1",
+      "stock": 50,
+      "unit": "piece",
+      "rating": 4.7,
+      "reviews": 65,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Fresh Fruits"
+    },
+    {
+      "id": "201",
+      "name": "Carrots",
+      "description": "Fresh farm-grown carrots, crunchy and full of beta-carotene for healthy eyes.",
+      "price": 1.99,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.EOafQATWNirsC4jeS2vPHgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 180,
+      "unit": "kg",
+      "rating": 4.5,
+      "reviews": 75,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-02",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "202",
+      "name": "Broccoli",
+      "description": "Fresh green broccoli, perfect for steaming, stir-fry, or salads.",
+      "price": 3.29,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.NN02CpCK__5Di9H_CJS_PgHaFj?w=1200&h=900&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 100,
+      "unit": "kg",
+      "rating": 4.6,
+      "reviews": 88,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "203",
+      "name": "Tomatoes",
+      "description": "Ripe and juicy tomatoes, perfect for salads, sauces, and cooking.",
+      "price": 2.79,
+      "image": "https://th.bing.com/th/id/R.5c476c3ea45bcf53cabd9d13aaae0b1f?rik=VNyQZ4Mhh%2bP8bg&riu=http%3a%2f%2fwww.primallyinspired.com%2fwp-content%2fuploads%2f2013%2f07%2ftomatoes.jpg&ehk=rGYZXIgLoY8HrJ1%2bPlt4DNyTW9CTf%2ftNIJ7LC0TFBFY%3d&risl=&pid=ImgRaw&r=0",
+      "categoryId": "2",
+      "stock": 140,
+      "unit": "kg",
+      "rating": 4.7,
+      "reviews": 110,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "204",
+      "name": "Cucumbers",
+      "description": "Fresh and crunchy cucumbers, perfect for salads and snacking.",
+      "price": 1.89,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.S0XqwAyhE10j_4S4wAiMdAHaHa?w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "2",
+      "stock": 130,
+      "unit": "kg",
+      "rating": 4.4,
+      "reviews": 64,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "205",
+      "name": "Bell Peppers",
+      "description": "Colorful bell peppers, sweet, crunchy, and full of vitamin C.",
+      "price": 3.99,
+      "image": "https://png.pngtree.com/thumb_back/fw800/background/20221014/pngtree-bell-peppers-stem-yellow-bell-pepper-photo-image_7085716.jpg",
+      "categoryId": "2",
+      "stock": 80,
+      "unit": "kg",
+      "rating": 4.8,
+      "reviews": 90,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-05",
+      "categoryName": "Vegetables"
+    },
+    {
+      "id": "301",
+      "name": "Fresh Basil",
+      "description": "Aromatic fresh basil leaves, perfect for Italian dishes and pesto.",
+      "price": 2.99,
+      "image": "https://static.africaimages.com/photos/g/z/gzo9ijcch7FQo12xKmE3bquIX/gzo9ijcch7FQo12xKmE3bquIX_normal.jpg",
+      "categoryId": "3",
+      "stock": 100,
+      "unit": "bunch",
+      "rating": 4.8,
+      "reviews": 89,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-01-15",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "302",
+      "name": "Spinach",
+      "description": "Fresh leafy spinach, perfect for salads, soups, and smoothies.",
+      "price": 2.29,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.LOtuDfEdBmvLw1fu6O5qKwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "3",
+      "stock": 120,
+      "unit": "bunch",
+      "rating": 4.8,
+      "reviews": 98,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-03",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "303",
+      "name": "Parsley",
+      "description": "Fresh parsley, perfect for garnishing and adding flavor to any dish.",
+      "price": 1.99,
+      "image": "https://www.goodtastingmeals.com/wp-content/uploads/2021/10/what-does-parsley-taste-like.jpg",
+      "categoryId": "3",
+      "stock": 90,
+      "unit": "bunch",
+      "rating": 4.7,
+      "reviews": 70,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "304",
+      "name": "Cilantro",
+      "description": "Fresh cilantro, great for salads, salsas, and soups.",
+      "price": 2.19,
+      "image": "https://cdn11.bigcommerce.com/s-jmzfi5zcr2/products/1009/images/16162/Santo_Cilantro_Plant_Leaves__77445.1644445129.500.750.jpg?c=2",
+      "categoryId": "3",
+      "stock": 85,
+      "unit": "bunch",
+      "rating": 4.6,
+      "reviews": 65,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-05",
+      "categoryName": "Herbs & Green"
+    },
+    {
+      "id": "401",
+      "name": "Medjool Dates",
+      "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
+      "price": 12.99,
+      "image": "https://th.bing.com/th/id/R.cb34397905d881db71e5efda819bd95a?rik=XraiGTjqYttXxg&riu=http%3a%2f%2fshop.goodhillfarms.com%2fcdn%2fshop%2ffiles%2fmedjool-dates-good-hill-farms-52898976530802.jpg%3fv%3d1742750784&ehk=qwmBPAexReYtZGyjmT0a5ZlwvRlaySAlyZJkpN0rlKw%3d&risl=&pid=ImgRaw&r=0",
+      "categoryId": "4",
+      "stock": 60,
+      "unit": "500g",
+      "rating": 4.9,
+      "reviews": 234,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-01-15",
+      "categoryName": "Dried Fruits"
+    },
+    {
+      "id": "402",
+      "name": "Dried Figs",
+      "description": "Soft and sweet dried figs, great for snacking and baking.",
+      "price": 10.49,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.hT1lbtyS9Pr-RYYnuOpC7wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "4",
+      "stock": 80,
+      "unit": "500g",
+      "rating": 4.7,
+      "reviews": 145,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Dried Fruits"
+    },
+    {
+      "id": "403",
+      "name": "Raisins",
+      "description": "Sweet dried raisins, perfect for cereals, baking, or snacking.",
+      "price": 6.99,
+      "image": "https://th.bing.com/th/id/R.0e12c5914bc7ddf8d9ca1f9eff463f91?rik=%2bqZYk%2fisddFX4w&pid=ImgRaw&r=0",
+      "categoryId": "4",
+      "stock": 120,
+      "unit": "500g",
+      "rating": 4.6,
+      "reviews": 90,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Dried Fruits"
+    },
+    {
+      "id": "501",
+      "name": "Sun-Dried Tomatoes",
+      "description": "Intense flavor sun-dried tomatoes, perfect for pasta and sauces.",
+      "price": 8.99,
+      "image": "https://veganwithgusto.com/wp-content/uploads/2022/08/sun-dried-tomatoes-in-bowl.jpg",
+      "categoryId": "5",
+      "stock": 50,
+      "unit": "250g",
+      "rating": 4.5,
+      "reviews": 70,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-03",
+      "categoryName": "Dried Vegetables"
+    },
+    {
+      "id": "502",
+      "name": "Dried Bell Peppers",
+      "description": "Crunchy dried bell peppers, great for soups, stews, and sauces.",
+      "price": 7.49,
+      "image": "https://m.media-amazon.com/images/I/71lcWW2OoIL._SL1014_.jpg",
+      "categoryId": "5",
+      "stock": 40,
+      "unit": "250g",
+      "rating": 4.4,
+      "reviews": 50,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-04",
+      "categoryName": "Dried Vegetables"
+    },
+    {
+      "id": "601",
+      "name": "Raw Almonds",
+      "description": "Premium raw almonds, perfect for snacking and baking.",
+      "price": 14.99,
+      "originalPrice": 17.99,
+      "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=400&h=400&fit=crop",
+      "categoryId": "6",
+      "stock": 115,
+      "unit": "500g",
+      "rating": 4.9,
+      "reviews": 267,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-01-15",
+      "categoryName": "Nuts"
+    },
+    {
+      "id": "602",
+      "name": "Cashews",
+      "description": "Delicious cashews, perfect for snacking or cooking.",
+      "price": 16.49,
+      "image": "https://tse3.mm.bing.net/th/id/OIP.99BTuSASnXhpplED3C09iwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "6",
+      "stock": 100,
+      "unit": "500g",
+      "rating": 4.8,
+      "reviews": 200,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-01",
+      "categoryName": "Nuts"
+    },
+    {
+      "id": "603",
+      "name": "Walnuts",
+      "description": "Fresh and crunchy walnuts, ideal for baking and healthy snacks.",
+      "price": 18.99,
+      "image": "https://tse1.mm.bing.net/th/id/OIP.xHBI6PUlSitRSmQk1mobzgHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "6",
+      "stock": 80,
+      "unit": "500g",
+      "rating": 4.7,
+      "reviews": 150,
+      "isOrganic": true,
+      "isFeatured": true,
+      "createdAt": "2024-02-02",
+      "categoryName": "Nuts"
+    },
+    {
+      "id": "701",
+      "name": "Vegetable Stir-Fry Mix",
+      "description": "Pre-cut vegetables ready for a quick and healthy stir-fry meal.",
+      "price": 5.99,
+      "image": "https://tse4.mm.bing.net/th/id/OIP._dpP6W5MUeTHtp6wXaabYAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "7",
+      "stock": 60,
+      "unit": "pack",
+      "rating": 4.6,
+      "reviews": 55,
+      "isOrganic": false,
+      "isFeatured": false,
+      "createdAt": "2024-02-05",
+      "categoryName": "Ready to Cook"
+    },
+    {
+      "id": "702",
+      "name": "Chicken Curry Kit",
+      "description": "All ingredients pre-measured and ready for a quick chicken curry.",
+      "price": 9.99,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.kEWDhQr7To2BE6NZtYyQEgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryId": "7",
+      "stock": 40,
+      "unit": "kit",
+      "rating": 4.7,
+      "reviews": 60,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-06",
+      "categoryName": "Ready to Cook"
+    },
+    {
+      "id": "801",
+      "name": "Pre-Cut Mixed Veggies",
+      "description": "A mix of pre-cut and washed vegetables ready to use instantly.",
+      "price": 4.99,
+      "image": "https://img.freepik.com/premium-photo/variety-chopped-vegetables-ready-stew-created-with-generative-ai_419341-56888.jpg",
+      "categoryId": "8",
+      "stock": 80,
+      "unit": "pack",
+      "rating": 4.3,
+      "reviews": 45,
+      "isOrganic": false,
+      "isFeatured": true,
+      "createdAt": "2024-02-05",
+      "categoryName": "Ready-to-use Vegetables"
+    },
+    {
+      "id": "802",
+      "name": "Pre-Cut Carrots",
+      "description": "Freshly washed and cut carrots, ready to add to any dish.",
+      "price": 3.49,
+      "image": "https://img.freepik.com/premium-photo/background-features-sliced-carrots_961875-393364.jpg",
+      "categoryId": "8",
+      "stock": 60,
+      "unit": "pack",
+      "rating": 4.5,
+      "reviews": 40,
+      "isOrganic": true,
+      "isFeatured": false,
+      "createdAt": "2024-02-06",
+      "categoryName": "Ready-to-use Vegetables"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Fresh Fruits",
+      "description": "Seasonal fresh fruits full of natural sweetness and vitamins.",
+      "image": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400&h=300&fit=crop",
+      "productCount": 18,
+      "slug": "fresh-fruits"
+    },
+    {
+      "id": "2",
+      "name": "Vegetables",
+      "description": "Farm-fresh vegetables for healthy everyday meals.",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&h=300&fit=crop",
+      "productCount": 22,
+      "slug": "vegetables"
+    },
+    {
+      "id": "3",
+      "name": "Herbs & Green",
+      "description": "Fresh aromatic herbs and leafy greens for everyday cooking.",
+      "image": "https://planningagarden.com/wp-content/uploads/2023/02/image-3.jpeg",
+      "productCount": 27,
+      "slug": "herbs-greens"
+    },
+    {
+      "id": "4",
+      "name": "Dried Fruits",
+      "description": "Premium quality dried fruits full of natural sweetness.",
+      "image": "https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_785204_17210137222997757.jpg",
+      "productCount": 9,
+      "slug": "dried-fruits"
+    },
+    {
+      "id": "5",
+      "name": "Dried Vegetables",
+      "description": "Sun-dried vegetables for long-lasting freshness and flavor.",
+      "image": "https://tse4.mm.bing.net/th/id/OIP.h-BRxUaPTE40ulRlQ1PlUQHaE8?w=900&h=600&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "productCount": 0,
+      "slug": "dried-vegetables"
+    },
+    {
+      "id": "6",
+      "name": "Nuts",
+      "description": "Premium nuts and seeds for healthy snacking.",
+      "image": "https://img.freepik.com/premium-photo/top-view-composition-assorted-nuts-creating-natural-background-with-various-types-nuts_174533-37574.jpg?w=2000",
+      "productCount": 21,
+      "slug": "nuts"
+    },
+    {
+      "id": "7",
+      "name": "Ready to Cook",
+      "description": "Pre-prepared ingredients for quick and easy meals.",
+      "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop",
+      "productCount": 0,
+      "slug": "ready-to-cook"
+    },
+    {
+      "id": "8",
+      "name": "Ready-to-use Vegetables",
+      "description": "Pre-cut and washed vegetables ready to use instantly.",
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+      "productCount": 0,
+      "slug": "ready-to-use-vegetables"
+    }
+  ],
+  "users": [
+    {
+      "id": "55e5",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "country": "eg",
+      "city": "ismalia",
+      "password": "Hassan_123",
+      "role": "admin"
+    },
+    {
+      "id": "a102",
+      "name": "Mohamed Ali",
+      "email": "mohamed.ali@yahoo.com",
+      "password": "Mohamed_123",
+      "country": "Egypt",
+      "city": "Giza",
+      "role": "customer"
+    },
+    {
+      "id": "b203",
+      "name": "Youssef Mahmoud",
+      "email": "youssef.mahmoud@gmail.com",
+      "password": "Youssef_123",
+      "country": "Egypt",
+      "city": "Alexandria",
+      "role": "customer"
+    },
+    {
+      "id": "c304",
+      "name": "Omar Adel",
+      "email": "omar.adel@gmail.com",
+      "password": "Omar_123",
+      "country": "Egypt",
+      "city": "Mansoura",
+      "role": "customer"
+    },
+    {
+      "id": "d405",
+      "name": "Khaled Mostafa",
+      "email": "khaled.mostafa@yahoo.com",
+      "password": "Khaled_123",
+      "country": "Egypt",
+      "city": "Tanta",
+      "role": "customer"
+    },
+    {
+      "id": "e506",
+      "name": "Mahmoud Salah",
+      "email": "mahmoud.salah@gmail.com",
+      "password": "Mahmoud_123",
+      "country": "Egypt",
+      "city": "Fayoum",
+      "role": "customer"
+    },
+    {
+      "id": "f607",
+      "name": "Hany Fathy",
+      "email": "hany.fathy@yahoo.com",
+      "password": "Hany_123",
+      "country": "Egypt",
+      "city": "Ismailia",
+      "role": "customer"
+    },
+    {
+      "id": "g708",
+      "name": "Islam Reda",
+      "email": "islam.reda@gmail.com",
+      "password": "Islam_123",
+      "country": "Egypt",
+      "city": "Zagazig",
+      "role": "customer"
+    },
+    {
+      "id": "h809",
+      "name": "Mostafa Saeed",
+      "email": "mostafa.saeed@yahoo.com",
+      "password": "Mostafa_123",
+      "country": "Egypt",
+      "city": "Asyut",
+      "role": "customer"
+    },
+    {
+      "id": "i910",
+      "name": "Ayman Nabil",
+      "email": "ayman.nabil@gmail.com",
+      "password": "Ayman_123",
+      "country": "Egypt",
+      "city": "Minya",
+      "role": "customer"
+    },
+    {
+      "id": "j011",
+      "name": "Tamer Ashraf",
+      "email": "tamer.ashraf@yahoo.com",
+      "password": "Tamer_123",
+      "country": "Egypt",
+      "city": "Benha",
+      "role": "customer"
+    },
+    {
+      "id": "k112",
+      "name": "Hossam Ezzat",
+      "email": "hossam.ezzat@gmail.com",
+      "password": "Hossam_123",
+      "country": "Egypt",
+      "city": "Suez",
+      "role": "customer"
+    },
+    {
+      "id": "l213",
+      "name": "Amr Gamal",
+      "email": "amr.gamal@yahoo.com",
+      "password": "Amr_123",
+      "country": "Egypt",
+      "city": "Port Said",
+      "role": "customer"
+    },
+    {
+      "id": "m314",
+      "name": "Sherif Emad",
+      "email": "sherif.emad@gmail.com",
+      "password": "Sherif_123",
+      "country": "Egypt",
+      "city": "Damietta",
+      "role": "customer"
+    },
+    {
+      "id": "n415",
+      "name": "Wael Samir",
+      "email": "wael.samir@yahoo.com",
+      "password": "Wael_123",
+      "country": "Egypt",
+      "city": "Luxor",
+      "role": "customer"
+    },
+    {
+      "name": "hassan mohamed",
+      "email": "hassanelgraihy2002@gmail.com",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "id": "7316"
+    },
+    {
+      "id": "82e0",
+      "name": "Hassan Elgraihy",
+      "email": "hassan@gmail.com",
+      "country": "eg",
+      "city": "Port Said",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "4884",
+      "name": "hassan elgraihy",
+      "email": "hassanelgraihy99@gmail.com",
+      "country": "eg",
+      "city": "ismalia",
+      "password": "Hassan_123",
+      "role": "customer"
+    },
+    {
+      "id": "3f2c",
+      "name": "Youssef Mohamed gomaa",
+      "email": "whoami@gmail.com",
+      "country": "Qatar",
+      "city": "Doha",
+      "password": "Yes12345-",
+      "role": "customer"
+    },
+    {
+      "id": "69ba",
+      "name": "Youssef Mohamed gomaa",
+      "email": "whoami2@gmail.com",
+      "country": "eg",
+      "city": "Cairo",
+      "password": "Yes12345-",
+      "role": "customer"
+    },
+    {
+      "name": "hassan Ahmed",
+      "email": "hassanelgraihy2002@gmail.com",
+      "city": "Setif",
+      "country": "Algeria",
+      "id": "48f4",
+      "password": "Hassan_123",
+      "role": "customer"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "1",
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 4.99,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 9.98,
+      "status": "pending",
+      "createdAt": "2024-01-20"
+    },
+    {
+      "id": "2",
+      "userId": "6f79",
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 15,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 30,
+      "status": "pending",
+      "createdAt": "2024-01-20"
+    },
+    {
+      "id": "3",
+      "userId": "54a8",
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 200,
+          "quantity": 5
+        }
+      ],
+      "totalPrice": 1000,
+      "status": "delivered",
+      "createdAt": "2024-01-20"
+    },
+    {
+      "id": "4",
+      "userId": "be16",
+      "items": [
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 4.99,
+          "quantity": 2
+        },
+        {
+          "productId": "ff-001",
+          "productTitle": "Red Apples",
+          "price": 66,
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 141.98,
+      "status": "shipped",
+      "createdAt": "2024-01-20"
+    },
+    {
+      "id": "f0aa",
+      "userId": "3f2c",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "103",
+          "productTitle": "Strawberries",
+          "price": 5.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 22.078000000000003,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala,k",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "b8db",
+      "userId": "3f2c",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 18.558,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "223d",
+      "userId": "69ba",
+      "items": [
+        {
+          "productId": "205",
+          "productTitle": "Bell Peppers",
+          "price": 3.99,
+          "quantity": 1
+        },
+        {
+          "productId": "302",
+          "productTitle": "Spinach",
+          "price": 2.29,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 16.908,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "240d",
+      "userId": "69ba",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 15.489,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "Youssef Mohamed gomaa",
+        "address": "dala,k",
+        "city": "Cairo",
+        "country": "eg",
+        "phone": "01002999739"
+      },
+      "paymentMethod": "cod"
+    },
+    {
+      "id": "573e",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 3
+        },
+        {
+          "productId": "205",
+          "productTitle": "Bell Peppers",
+          "price": 3.99,
+          "quantity": 2
+        },
+        {
+          "productId": "103",
+          "productTitle": "Strawberries",
+          "price": 5.99,
+          "quantity": 3
+        },
+        {
+          "productId": "603",
+          "productTitle": "Walnuts",
+          "price": 18.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 58.641000000000005,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "hassan mohamed",
+        "address": "elgraqihy",
+        "city": "Ajman",
+        "country": "UAE",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "credit_card"
+    },
+    {
+      "id": "3f92",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 1
+        },
+        {
+          "productId": "403",
+          "productTitle": "Raisins",
+          "price": 6.99,
+          "quantity": 1
+        },
+        {
+          "productId": "603",
+          "productTitle": "Walnuts",
+          "price": 18.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 41.647,
+      "status": "pending",
+      "createdAt": "2026-02-14",
+      "shippingAddress": {
+        "fullName": "hassan mohamed",
+        "address": "elgraqihy",
+        "city": "Ajman",
+        "country": "UAE",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "credit_card"
+    },
+    {
+      "id": "9122",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "302",
+          "productTitle": "Spinach",
+          "price": 2.29,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 18.008000000000003,
+      "status": "pending",
+      "createdAt": "2026-02-15",
+      "shippingAddress": {
+        "fullName": "hassan Ahmed",
+        "address": "elgraqihy",
+        "city": "Setif",
+        "country": "Algeria",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "credit_card"
+    }
+  ],
+  "carts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "items": [
+        {
+          "product": {
+            "id": "2",
+            "name": "Bananas",
+            "description": "Ripe yellow bananas, naturally sweet and packed with potassium and energy.",
+            "price": 2.49,
+            "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=400&fit=crop",
+            "categoryId": "3",
+            "stock": 202,
+            "unit": "bunch",
+            "rating": 4.6,
+            "reviews": 89,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-01-14",
+            "categoryName": "Unknown"
+          },
+          "quantity": 21
+        },
+        {
+          "product": {
+            "id": "3",
+            "name": "Fresh Oranges",
+            "description": "Juicy navel oranges bursting with vitamin C. Perfect for juicing or eating fresh.",
+            "price": 5.99,
+            "originalPrice": 7.49,
+            "image": "https://images.unsplash.com/photo-1547514701-42782101795e?w=400&h=400&fit=crop",
+            "categoryId": "6",
+            "stock": 120,
+            "unit": "kg",
+            "rating": 4.7,
+            "reviews": 156,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-01-13",
+            "categoryName": "Dried Fruits"
+          },
+          "quantity": 21
+        },
+        {
+          "product": {
+            "id": "5",
+            "name": "Fresh Basil",
+            "description": "Aromatic fresh basil leaves, perfect for Italian dishes and pesto.",
+            "price": 2.99,
+            "image": "https://images.unsplash.com/photo-1618375569909-3c8616cf7733?w=400&h=400&fit=crop",
+            "categoryId": "3",
+            "stock": 100,
+            "unit": "bunch",
+            "rating": 4.8,
+            "reviews": 89,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-01-15"
+          },
+          "quantity": 26
+        },
+        {
+          "product": {
+            "id": "6",
+            "name": "Medjool Dates",
+            "description": "Premium Medjool dates, naturally sweet and packed with fiber.",
+            "price": 12.99,
+            "image": "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?w=400&h=400&fit=crop",
+            "categoryId": "4",
+            "stock": 60,
+            "unit": "500g",
+            "rating": 4.9,
+            "reviews": 234,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-01-15"
+          },
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "7aaa",
+      "userId": "48f4",
+      "items": [
+        {
+          "product": {
+            "id": "104",
+            "name": "Green Grapes",
+            "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
+            "price": 4.99,
+            "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
+            "categoryId": "1",
+            "stock": 120,
+            "unit": "kg",
+            "rating": 4.5,
+            "reviews": 76,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-02-03",
+            "categoryName": "Fresh Fruits"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "103",
+            "name": "Strawberries",
+            "description": "Sweet and ripe strawberries, perfect for desserts or smoothies.",
+            "price": 5.99,
+            "image": "https://diyhomedesignideas.com/photos/800-webp/e2fo8m6o1bxd5lpsfn0q.webp",
+            "categoryId": "1",
+            "stock": 90,
+            "unit": "kg",
+            "rating": 4.8,
+            "reviews": 95,
+            "isOrganic": true,
+            "isFeatured": true,
+            "createdAt": "2024-02-02",
+            "categoryName": "Fresh Fruits"
+          },
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "a793",
+      "userId": "4884",
+      "items": [
+        {
+          "product": {
+            "id": "104",
+            "name": "Green Grapes",
+            "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
+            "price": 4.99,
+            "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
+            "categoryId": "1",
+            "stock": 120,
+            "unit": "kg",
+            "rating": 4.5,
+            "reviews": 76,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-02-03",
+            "categoryName": "Fresh Fruits"
+          },
+          "quantity": 3
+        },
+        {
+          "product": {
+            "id": "203",
+            "name": "Tomatoes",
+            "description": "Ripe and juicy tomatoes, perfect for salads, sauces, and cooking.",
+            "price": 2.79,
+            "image": "https://th.bing.com/th/id/R.5c476c3ea45bcf53cabd9d13aaae0b1f?rik=VNyQZ4Mhh%2bP8bg&riu=http%3a%2f%2fwww.primallyinspired.com%2fwp-content%2fuploads%2f2013%2f07%2ftomatoes.jpg&ehk=rGYZXIgLoY8HrJ1%2bPlt4DNyTW9CTf%2ftNIJ7LC0TFBFY%3d&risl=&pid=ImgRaw&r=0",
+            "categoryId": "2",
+            "stock": 140,
+            "unit": "kg",
+            "rating": 4.7,
+            "reviews": 110,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-02-03",
+            "categoryName": "Vegetables"
+          },
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}
