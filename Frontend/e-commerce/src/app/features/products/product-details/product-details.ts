@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { CategoryService } from '../../../core/services/category_service';
 import { CartService } from '../../../core/services/cart_service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { AuthService } from '../../../core/services/auth-service';
 
 @Component({
   selector: 'app-product-details',
@@ -24,7 +25,8 @@ export class ProductDetailsComponent implements OnInit {
     private productservice: ProductService,
     private categoryservice: CategoryService,
     private snackBar: MatSnackBar,
-    private cartService: CartService
+    private cartService: CartService,
+    private authService: AuthService
   ) {
     this.productId = this.activeroute.snapshot.params['id'];
   }
