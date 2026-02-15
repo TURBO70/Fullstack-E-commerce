@@ -24,14 +24,23 @@ export class ProductCard {
 
   handleAddToCart(event: Event) {
     event.stopPropagation();
-    this.addToCart.emit(this.product);
+    if (localStorage.getItem('token')) {
+      this.addToCart.emit(this.product);
 
-    this.snackBar.open(`${this.product.name} added to cart 🛒`, 'Close', {
-      duration: 2000,
-      horizontalPosition: 'right',
-      verticalPosition: 'top',
-      panelClass: ['custom-snackbar'],
-    });
+      this.snackBar.open(`${this.product.name} added to cart 🛒`, 'Close', {
+        duration: 2000,
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+        panelClass: ['custom-snackbar'],
+      });
+    } else {
+      this.snackBar.open(`Please login first to add items to cart`, 'Close', {
+        duration: 2000,
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+        panelClass: ['custom-snackbar2'],
+      });
+    }
   }
 
   get discountPercent(): number {

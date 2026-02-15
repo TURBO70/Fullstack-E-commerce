@@ -48,14 +48,18 @@
       <div class="flex flex-col gap-1 flex-1 min-w-0">
         <label for="country" class="font-semibold">Country</label>
         <select
+          (change)="onCountryChange()"
           formControlName="country"
           name="country"
           class="py-1.5 px-2 rounded-lg outline-0 bg-[#f9faf9]"
         >
           <option value="" disabled selected>Select country</option>
-          <option value="eg">Egypt</option>
-          <option value="sa">Saudi Arabia</option>
-          <option value="ae">UAE</option>
+          @for (country of countries; track $index) {
+            <option [value]="country.name">
+              {{ country.name }}
+            </option>
+          }
+          >
         </select>
         @if (inValidCountry()) {
           @if (signUpForm?.controls?.country?.errors!['required']) {
@@ -65,14 +69,18 @@
       </div>
       <div class="flex flex-col gap-1 flex-1 min-w-0">
         <label for="city" class="font-semibold">City</label>
-        <input
+        <select
           formControlName="city"
-          type="text"
-          name="city"
-          placeholder="Cairo"
-          class="py-1.5 px-2 rounded-lg outline-0"
-          style="background-color: #f9faf9"
-        />
+          [disabled]="cities.length === 0"
+          class="py-1.5 px-2 rounded-lg outline-0 bg-[#f9faf9]"
+        >
+          <option value="">Select city</option>
+          @for (city of cities; track $index) {
+            <option [value]="city">
+              {{ city }}
+            </option>
+          }
+        </select>
         @if (inValidCity()) {
           @if (signUpForm?.controls?.city?.errors!['required']) {
             <p class="text-sm text-red-500">city is required</p>
