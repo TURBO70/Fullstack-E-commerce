@@ -26,39 +26,68 @@
             <!-- Name -->
             <div>
                 <label class="block text-sm mb-1">Name</label>
-                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="category.name" />
+                <input type="text" required minlength="3" #nameRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="category.name" />
+
+                @if(nameRef.errors?.['required'] && nameRef.touched){
+                <p class="text-red-500 text-sm mt-1">Name is required.</p>
+                }
+                @else if(nameRef.errors?.['minlength'] && nameRef.touched){
+                <p class="text-red-500 text-sm mt-1">Name must be at least 3 characters.</p>
+                }
+
             </div>
 
             <!-- Description -->
             <div>
                 <label class="block text-sm mb-1">Description</label>
-                <textarea rows="3" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="category.description">
+                <textarea rows="3" required #descriptionRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="category.description">
         </textarea>
+                @if(descriptionRef.invalid && descriptionRef.touched){
+                <p class="text-red-500 text-sm mt-1">Description is required.</p>
+                }
             </div>
 
             <!-- Slug -->
             <div>
                 <label class="block text-sm mb-1">Slug</label>
-                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
+                <input type="text" required #slugRef="ngModel" class="w-full border border-border rounded-md px-3 py-2"
                     [(ngModel)]="category.slug" />
+                @if(slugRef.invalid && slugRef.touched){
+                <p class="text-red-500 text-sm mt-1">Slug is required.</p>
+                }
             </div>
 
             <!-- Product Count -->
             <div>
                 <label class="block text-sm mb-1">Product Count</label>
-                <input type="number" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="category.productCount" />
+                <input type="number" required min="0" #productCountRef="ngModel"
+                    class="w-full border border-border rounded-md px-3 py-2" [(ngModel)]="category.productCount" />
+                @if(productCountRef.errors?.['required'] && productCountRef.touched){
+                <p class="text-red-500 text-sm mt-1">Product Count is required.</p>
+                }
+                @else if(productCountRef.errors?.['min'] && productCountRef.touched){
+                <p class="text-red-500 text-sm mt-1">Product Count cannot be negative.</p>
+                }
             </div>
 
             <!-- Image -->
             <div>
                 <label class="block text-sm mb-1">Image URL</label>
-                <input type="text" class="w-full border border-border rounded-md px-3 py-2"
-                    [(ngModel)]="category.image" />
+                <input type="text" required #imageRef="ngModel" class="w-full border border-border rounded-md px-3 py-2"
+                    [(ngModel)]="category.image" (ngModelChange)="checkImage($event)" />
 
-                @if (category.image) {
+                @if(imageRef.invalid && imageRef.touched){
+                <p class="text-red-500 text-sm mt-1">Image URL is required.</p>
+                }
+                @else if (!imageValid && imageRef.touched) {
+                <p class="text-red-500 text-sm mt-1">
+                    This URL is not a valid image.
+                </p>
+                }
+
+                @if (category.image && imageRef.valid && imageValid) {
                 <img [src]="category.image" class="mt-2 h-24 w-24 rounded-lg object-cover border" />
                 }
             </div>
@@ -70,9 +99,17 @@
                 Cancel
             </button>
 
+            @if(isFormValid){
             <button class="px-4 py-2 rounded-md bg-primary text-primary-foreground" (click)="onSave()">
                 Save
             </button>
+            }
+            @else{
+            <button [disabled]="true" class="px-4 py-2 rounded-md bg-gray-400 text-primary-foreground"
+                (click)="onSave()">
+                Save
+            </button>
+            }
         </div>
     </div>
 </div>

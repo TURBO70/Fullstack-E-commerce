@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddCategoryModal {
   categories = signal<Category[]>([]);
+  imageValid = true;
 
   @Input() open = false;
   @Input() category: Category | null = null;
@@ -38,5 +39,25 @@ export class AddCategoryModal {
   onSave() {
     if (!this.category) return;   // ✅ guard
     this.save.emit(this.category); // ✅ emits Category only
+  }
+
+  checkImage(url: string) {
+    const img = new Image();
+    img.onload = () => this.imageValid = true;
+    img.onerror = () => this.imageValid = false;
+    img.src = url;
+  }
+
+  get isFormValid(): boolean {
+    if (!this.category) return false;
+
+    return !!(
+      this.category.name?.trim() &&
+      this.category.description?.trim() &&
+      this.category.slug?.trim() &&
+      this.category.productCount > 0 &&
+      this.category.image &&
+      this.imageValid
+    );
   }
 }
