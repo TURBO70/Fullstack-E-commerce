@@ -925,6 +925,35 @@
         "phone": "+201202869975"
       },
       "paymentMethod": "credit_card"
+    },
+    {
+      "id": "9122",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "302",
+          "productTitle": "Spinach",
+          "price": 2.29,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 18.008000000000003,
+      "status": "pending",
+      "createdAt": "2026-02-15",
+      "shippingAddress": {
+        "fullName": "hassan Ahmed",
+        "address": "elgraqihy",
+        "city": "Setif",
+        "country": "Algeria",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "credit_card"
     }
   ],
   "carts": [
@@ -1012,7 +1041,27 @@
     {
       "id": "7aaa",
       "userId": "48f4",
-      "items": []
+      "items": [
+        {
+          "product": {
+            "id": "104",
+            "name": "Green Grapes",
+            "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
+            "price": 4.99,
+            "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
+            "categoryId": "1",
+            "stock": 120,
+            "unit": "kg",
+            "rating": 4.5,
+            "reviews": 76,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-02-03",
+            "categoryName": "Fresh Fruits"
+          },
+          "quantity": 1
+        }
+      ]
     }
   ]
 }
