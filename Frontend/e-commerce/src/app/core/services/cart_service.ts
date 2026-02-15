@@ -67,7 +67,6 @@ export class CartService {
 
     async addToCart(product: Product) {
         if (!this.userId) {
-            // TODO: Handle unauthenticated user adding to cart (e.g., redirect to login or local cart)
             console.warn('User not logged in');
             return;
         }
