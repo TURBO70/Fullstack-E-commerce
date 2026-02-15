@@ -1,10 +1,12 @@
 nav a:hover {
   color: #638c7f;
 }
-
-button:hover {
-  background-color: #e89c30;
+#btnLog:hover {
+  opacity: 0.8;
 }
+/* button:hover {
+  background-color: #e89c30;
+} */
 
 /* Mobile Menu Animation */
 @media (max-width: 768px) {

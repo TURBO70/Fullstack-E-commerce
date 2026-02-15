@@ -2,7 +2,7 @@
   <div class="px-4 sm:px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center gap-2 cursor-pointer" routerLink="/home">
+      <div class="flex items-center gap-2 cursor-pointer" routerLink="">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -50,15 +50,16 @@
           <!-- Cart -->
 
           <div class="relative">
-            @if(cartService.cartItems().length>0){
-            <div
-              class="absolute bottom-7 -right-1 rounded-full w-5.5 h-5.5 text-center bg-primary text-white flex justify-center items-center"
-            >
-              {{cartService.cartItems().length}}
-            </div>}
+            @if (cartService.cartItems().length > 0) {
+              <div
+                class="absolute bottom-7 -right-1 rounded-full w-5.5 h-5.5 text-center bg-primary text-white flex justify-center items-center"
+              >
+                {{ cartService.cartItems().length }}
+              </div>
+            }
             <button
               routerLink="/cart"
-              class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
+              class="text-gray-700 p-2.5 hover:bg-myOrange rounded-lg transition-colors duration-150 cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,24 +82,34 @@
             </button>
           </div>
           <!-- User -->
-          <button
-            (click)="toggleProfile()"
-            class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
-          >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+          @if (LogedIn()) {
+            <button
+              (click)="toggleProfile()"
+              class="text-gray-700 p-2.5 rounded-lg transition-colors duration-150 cursor-pointer"
             >
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-              <circle cx="12" cy="8" r="4"></circle>
-            </svg>
-          </button>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="8" r="4"></circle>
+              </svg>
+            </button>
+          } @else {
+            <button
+              routerLink="/auth"
+              id="btnLog"
+              class="bg-primary !hover:bg-opacity-90 cursor-pointer text-white px-6 py-1.5 rounded-lg transition-all duration-200"
+            >
+              login
+            </button>
+          }
           <button
             (click)="toggleMenu()"
             class="md:hidden text-gray-700 p-2 rounded-lg transition-colors duration-150 cursor-pointer hover:bg-gray-100"

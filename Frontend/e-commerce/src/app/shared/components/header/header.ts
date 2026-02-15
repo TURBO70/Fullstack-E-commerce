@@ -16,7 +16,7 @@ export class Header {
     private authServ: AuthService,
     private cart: CartService,
   ) {}
-    cartService = inject(CartService);
+  cartService = inject(CartService);
 
   isMenuOpen = false;
   isOpenProfile = false;
@@ -43,11 +43,10 @@ export class Header {
   }
   logout() {
     this.authServ.logout();
-    this.route.navigate([''], {
-      replaceUrl: true,
-    });
+        location.reload();
   }
   user = localStorage.getItem('currentUser');
 
   currentUser = this.user ? JSON.parse(this.user) : null;
+  LogedIn = signal(localStorage.getItem('token') ? true : false);
 }
