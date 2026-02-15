@@ -80,7 +80,6 @@
       "createdAt": "2024-02-04",
       "categoryName": "Fresh Fruits"
     },
-
     {
       "id": "201",
       "name": "Carrots",
@@ -161,7 +160,6 @@
       "createdAt": "2024-02-05",
       "categoryName": "Vegetables"
     },
-
     {
       "id": "301",
       "name": "Fresh Basil",
@@ -225,8 +223,7 @@
       "isFeatured": false,
       "createdAt": "2024-02-05",
       "categoryName": "Herbs & Green"
-    }
-,
+    },
     {
       "id": "401",
       "name": "Medjool Dates",
@@ -275,7 +272,6 @@
       "createdAt": "2024-02-02",
       "categoryName": "Dried Fruits"
     },
-
     {
       "id": "501",
       "name": "Sun-Dried Tomatoes",
@@ -308,7 +304,6 @@
       "createdAt": "2024-02-04",
       "categoryName": "Dried Vegetables"
     },
-
     {
       "id": "601",
       "name": "Raw Almonds",
@@ -358,7 +353,6 @@
       "createdAt": "2024-02-02",
       "categoryName": "Nuts"
     },
-
     {
       "id": "701",
       "name": "Vegetable Stir-Fry Mix",
@@ -391,7 +385,6 @@
       "createdAt": "2024-02-06",
       "categoryName": "Ready to Cook"
     },
-
     {
       "id": "801",
       "name": "Pre-Cut Mixed Veggies",
@@ -424,10 +417,7 @@
       "createdAt": "2024-02-06",
       "categoryName": "Ready-to-use Vegetables"
     }
-  ]
-
-,
-  
+  ],
   "categories": [
     {
       "id": "1",

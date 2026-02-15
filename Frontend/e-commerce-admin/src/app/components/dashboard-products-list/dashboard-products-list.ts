@@ -106,7 +106,7 @@ export class DashboardProductsList {
       image: '',
       categoryId: '',
       stock: 0,
-      unit: 'kg',
+      unit: '',
       isOrganic: false,
       isFeatured: false,
     };
