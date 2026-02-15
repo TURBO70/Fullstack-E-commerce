@@ -6,7 +6,7 @@ export interface ProductForm {
   image: string;
   categoryId: string;
   stock: number;
-  unit: string;
+  unit?: string;
   isOrganic: boolean;
   isFeatured: boolean;
 }

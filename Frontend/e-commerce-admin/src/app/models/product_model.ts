@@ -7,7 +7,7 @@ export interface Product {
   image: string;
   categoryId: string;
   stock: number;
-  unit: string;
+  unit?: string;
   rating: number;
   reviews: number;
   isOrganic: boolean;
