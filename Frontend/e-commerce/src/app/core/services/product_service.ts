@@ -3,11 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../../shared/models/product_model';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  private baseUrl = 'http://localhost:3000/products';
+  private baseUrl = `${environment.apiUrl}/products`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAll(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl);
@@ -21,7 +23,7 @@ export class ProductService {
     return this.http.post<Product>(this.baseUrl, product);
   }
 
-  update(id: string , product: Product): Observable<Product> {
+  update(id: string, product: Product): Observable<Product> {
     return this.http.put<Product>(`${this.baseUrl}/${id}`, product);
   }
 
