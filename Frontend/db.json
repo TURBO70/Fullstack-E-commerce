@@ -649,8 +649,8 @@
       "id": "3f2c",
       "name": "Youssef Mohamed gomaa",
       "email": "whoami@gmail.com",
-      "country": "eg",
-      "city": "Cairo",
+      "country": "Qatar",
+      "city": "Doha",
       "password": "Yes12345-",
       "role": "customer"
     },
@@ -741,27 +741,6 @@
       "createdAt": "2024-01-20"
     },
     {
-      "id": "7855",
-      "userId": "b989",
-      "items": [
-        {
-          "productId": "103",
-          "productTitle": "Strawberries",
-          "price": 5.99,
-          "quantity": 2
-        }
-      ],
-      "totalPrice": 23.178,
-      "status": "pending",
-      "createdAt": "2026-02-14",
-      "shippingAddress": {
-        "fullName": "EmanRefaat",
-        "address": "Sharqiyah‏",
-        "city": "Sharkia",
-        "country": "eg",
-        "phone": "+200101010"
-      },
-      "paymentMethod": "cod"
       "id": "f0aa",
       "userId": "3f2c",
       "items": [
@@ -1060,8 +1039,6 @@
       ]
     },
     {
-      "id": "54e6",
-      "userId": "b989",
       "id": "7aaa",
       "userId": "48f4",
       "items": [
