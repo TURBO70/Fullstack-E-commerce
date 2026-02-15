@@ -17,7 +17,6 @@ export class Header {
     private cart: CartService,
   ) {}
   cartService = inject(CartService);
-
   isMenuOpen = false;
   isOpenProfile = false;
   ngOnInit(): void {
@@ -41,9 +40,10 @@ export class Header {
     this.isMenuOpen = false;
     this.isOpenProfile = false;
   }
+  isLoged=signal(localStorage.getItem('token') ? true : false);
   logout() {
     this.authServ.logout();
-        location.reload();
+    this.route.navigate(['/auth']);
   }
   user = localStorage.getItem('currentUser');
 

@@ -2,10 +2,11 @@ import { NgClass } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { SignUp } from './components/sign-up/sign-up';
 import { Login } from './components/login/login';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-auth',
-  imports: [NgClass, SignUp, Login],
+  imports: [NgClass, SignUp, Login, RouterLink],
   templateUrl: './auth.html',
   styleUrl: './auth.css',
 })

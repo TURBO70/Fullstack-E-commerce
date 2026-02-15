@@ -666,8 +666,8 @@
     {
       "name": "hassan Ahmed",
       "email": "hassanelgraihy2002@gmail.com",
-      "city": "Setif",
-      "country": "Algeria",
+      "city": "Casablanca",
+      "country": "Morocco",
       "id": "48f4",
       "password": "Hassan_123",
       "role": "customer"
@@ -741,27 +741,6 @@
       "createdAt": "2024-01-20"
     },
     {
-      "id": "7855",
-      "userId": "b989",
-      "items": [
-        {
-          "productId": "103",
-          "productTitle": "Strawberries",
-          "price": 5.99,
-          "quantity": 2
-        }
-      ],
-      "totalPrice": 23.178,
-      "status": "pending",
-      "createdAt": "2026-02-14",
-      "shippingAddress": {
-        "fullName": "EmanRefaat",
-        "address": "Sharqiyah‏",
-        "city": "Sharkia",
-        "country": "eg",
-        "phone": "+200101010"
-      },
-      "paymentMethod": "cod"
       "id": "f0aa",
       "userId": "3f2c",
       "items": [
@@ -975,6 +954,47 @@
         "phone": "+201202869975"
       },
       "paymentMethod": "credit_card"
+    },
+    {
+      "id": "37ef",
+      "userId": "48f4",
+      "items": [
+        {
+          "productId": "203",
+          "productTitle": "Tomatoes",
+          "price": 2.79,
+          "quantity": 1
+        },
+        {
+          "productId": "801",
+          "productTitle": "Pre-Cut Mixed Veggies",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "104",
+          "productTitle": "Green Grapes",
+          "price": 4.99,
+          "quantity": 1
+        },
+        {
+          "productId": "103",
+          "productTitle": "Strawberries",
+          "price": 5.99,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 30.636,
+      "status": "pending",
+      "createdAt": "2026-02-15",
+      "shippingAddress": {
+        "fullName": "hassan Ahmed",
+        "address": "Alashir mn ramdan street",
+        "city": "Setif",
+        "country": "Algeria",
+        "phone": "+201202869975"
+      },
+      "paymentMethod": "cod"
     }
   ],
   "carts": [
@@ -1060,26 +1080,24 @@
       ]
     },
     {
-      "id": "54e6",
-      "userId": "b989",
       "id": "7aaa",
       "userId": "48f4",
       "items": [
         {
           "product": {
-            "id": "104",
-            "name": "Green Grapes",
-            "description": "Juicy green grapes, naturally sweet and perfect for snacking.",
-            "price": 4.99,
-            "image": "https://dpof9ma0om0c1.cloudfront.net/images/content-images/green-grape-landing/green-grape-header-2.jpg",
+            "id": "103",
+            "name": "Strawberries",
+            "description": "Sweet and ripe strawberries, perfect for desserts or smoothies.",
+            "price": 5.99,
+            "image": "https://diyhomedesignideas.com/photos/800-webp/e2fo8m6o1bxd5lpsfn0q.webp",
             "categoryId": "1",
-            "stock": 120,
+            "stock": 90,
             "unit": "kg",
-            "rating": 4.5,
-            "reviews": 76,
-            "isOrganic": false,
+            "rating": 4.8,
+            "reviews": 95,
+            "isOrganic": true,
             "isFeatured": true,
-            "createdAt": "2024-02-03",
+            "createdAt": "2024-02-02",
             "categoryName": "Fresh Fruits"
           },
           "quantity": 1
@@ -1100,6 +1118,25 @@
             "isFeatured": true,
             "createdAt": "2024-02-02",
             "categoryName": "Fresh Fruits"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "203",
+            "name": "Tomatoes",
+            "description": "Ripe and juicy tomatoes, perfect for salads, sauces, and cooking.",
+            "price": 2.79,
+            "image": "https://th.bing.com/th/id/R.5c476c3ea45bcf53cabd9d13aaae0b1f?rik=VNyQZ4Mhh%2bP8bg&riu=http%3a%2f%2fwww.primallyinspired.com%2fwp-content%2fuploads%2f2013%2f07%2ftomatoes.jpg&ehk=rGYZXIgLoY8HrJ1%2bPlt4DNyTW9CTf%2ftNIJ7LC0TFBFY%3d&risl=&pid=ImgRaw&r=0",
+            "categoryId": "2",
+            "stock": 140,
+            "unit": "kg",
+            "rating": 4.7,
+            "reviews": 110,
+            "isOrganic": false,
+            "isFeatured": true,
+            "createdAt": "2024-02-03",
+            "categoryName": "Vegetables"
           },
           "quantity": 1
         }

@@ -24,29 +24,29 @@ export class ProductDetailsComponent implements OnInit {
     private productservice: ProductService,
     private categoryservice: CategoryService,
     private snackBar: MatSnackBar,
-    private cartService: CartService
+    private cartService: CartService,
   ) {
     this.productId = this.activeroute.snapshot.params['id'];
   }
 
   ngOnInit(): void {
     if (this.productId) {
-    this.productservice.getById(this.productId).subscribe({
-      next: (data) => {
-        console.log('Fetched product:', data);
-        this.product.set(data);
-        if(data.categoryId){
-          this.categoryservice.getById(data.categoryId.toString()).subscribe({
-            next: (categoryData) =>{
-              this.categoryName.set(categoryData);
-            },
-            error:(err) => console.error('Error fetching category:', err),
-          });
-        }
-      },
-      error: (err) => console.error('Error fetching product:', err),
-    });
-  }
+      this.productservice.getById(this.productId).subscribe({
+        next: (data) => {
+          console.log('Fetched product:', data);
+          this.product.set(data);
+          if (data.categoryId) {
+            this.categoryservice.getById(data.categoryId.toString()).subscribe({
+              next: (categoryData) => {
+                this.categoryName.set(categoryData);
+              },
+              error: (err) => console.error('Error fetching category:', err),
+            });
+          }
+        },
+        error: (err) => console.error('Error fetching product:', err),
+      });
+    }
   }
 
   updateQuantity(step: number) {
@@ -56,19 +56,27 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   async handleAddToCart() {
-    const currentProduct = this.product(); 
-    if(currentProduct){
+    const currentProduct = this.product();
+
+    if (currentProduct && localStorage.getItem('token')) {
       const selectedQuantity = this.quantity();
-      for(let i=0; i< selectedQuantity; i++){
-       await this.cartService.addToCart(currentProduct);
+      for (let i = 0; i < selectedQuantity; i++) {
+        await this.cartService.addToCart(currentProduct);
       }
 
-     console.log('Product added, current cart items:')
-    this.snackBar.open(`${currentProduct.name} added to cart 🛒`, 'Close', {
-      duration: 2000,
-      horizontalPosition: 'right',
-      verticalPosition: 'top',
-      panelClass: ['custom-snackbar'],
+      console.log('Product added, current cart items:');
+      this.snackBar.open(`${currentProduct.name} added to cart 🛒`, 'Close', {
+        duration: 2000,
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+        panelClass: ['custom-snackbar'],
+      });
+    } else {
+      this.snackBar.open(`Please login first to add items to cart`, 'Close', {
+        duration: 2000,
+        horizontalPosition: 'right',
+        verticalPosition: 'top',
+        panelClass: ['custom-snackbar2'],
       });
     }
   }
