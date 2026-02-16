@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { user } from '../../models/user_model';
+import { environment } from '../../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private http: HttpClient) {}
-  private BaseUrl = 'http://localhost:3000/users';
+  constructor(private http: HttpClient) { }
+  private BaseUrl = `${environment.apiUrl}/users`;
 
   getAllUsers() {
     return this.http.get<user[]>(this.BaseUrl);
