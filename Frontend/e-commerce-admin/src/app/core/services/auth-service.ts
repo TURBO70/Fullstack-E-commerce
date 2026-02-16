@@ -5,12 +5,14 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
 import { user } from '../../models/user_model';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:3000';
-  constructor(private http: HttpClient) {}
+  private baseUrl = environment.apiUrl;
+  constructor(private http: HttpClient) { }
 
   //Set Token
   setToken(token: string) {

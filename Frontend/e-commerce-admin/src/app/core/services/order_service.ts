@@ -2,13 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Order } from '../../models/order_model';
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class OrderService {
 
-  private BaseUrl = 'http://localhost:3000/orders';
-  constructor(private http:HttpClient) {}
+  private BaseUrl = `${environment.apiUrl}/orders`;
+  constructor(private http: HttpClient) { }
 
   getAllOrders() {
     return this.http.get<Order[]>(this.BaseUrl);
@@ -27,5 +29,5 @@ export class OrderService {
   }
 
 
-  
+
 }
