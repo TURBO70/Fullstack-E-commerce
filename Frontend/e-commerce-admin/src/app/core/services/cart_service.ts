@@ -6,11 +6,14 @@ export interface CartItem {
     quantity: number;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root',
 })
 export class CartService {
     cartItems = signal<CartItem[]>([]);
+    private baseUrl = `${environment.apiUrl}/carts`;
 
     subtotal = computed(() =>
         this.cartItems().reduce((acc, item) => acc + item.product.price * item.quantity, 0)

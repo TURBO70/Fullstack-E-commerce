@@ -15,12 +15,14 @@ export interface Cart {
     items: CartItem[];
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root',
 })
 export class CartService {
     cartItems = signal<CartItem[]>([]);
-    private baseUrl = 'http://localhost:3000/carts';
+    private baseUrl = `${environment.apiUrl}/carts`;
 
     private get userId(): string | undefined {
         return this.authService.currentUserSignal()?.id;
