@@ -43,7 +43,7 @@ export class Header {
   }
   logout() {
     this.authServ.logout();
-        location.reload();
+    this.route.navigate(['/auth']);
   }
   user = localStorage.getItem('currentUser');
 

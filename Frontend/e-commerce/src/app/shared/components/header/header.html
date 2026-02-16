@@ -50,8 +50,7 @@
           <!-- Cart -->
 
           <div class="relative">
-            @if (cartService.cartItems().length > 0) {
-              <div
+            @if (cartService.cartItems().length > 0&&LogedIn()) {              <div
                 class="absolute bottom-7 -right-1 rounded-full w-5.5 h-5.5 text-center bg-primary text-white flex justify-center items-center"
               >
                 {{ cartService.cartItems().length }}
