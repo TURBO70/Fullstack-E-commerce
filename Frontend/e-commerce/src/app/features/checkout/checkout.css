@@ -267,6 +267,7 @@ input:focus {
     }
 
     .order-summary {
+       position: relative;
         order: -1;
     }
 }
